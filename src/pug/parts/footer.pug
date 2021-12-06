@@ -1,3 +1,34 @@
+- let footer_nav = ["Внутренний аудит", "Работа с персоналом", "Автоматизация бизнес процессов и администрирование", "Экономический анализ", "Ведение документооборота", "Оптимизация налоговых и финансовых потоков"]
+- let footer_nav2 = ["Сетка +", "Media Advertizing Group", "Афиша Казани"]
+
 footer.footer
 	.site-container
-		h1 footer
+		.footer__top-container.site-content-grid
+			.site-content-grid__block
+				a.logo(href="/")
+					img(class="logo__img" src="img/logo-black.svg" alt="Логотип компании")
+			.site-content-grid__block.footer__nav-container
+				.footer__nav-block
+					span.footer__nav-legend
+						|	Услуги
+					ul.footer__nav-list
+						for item in footer_nav
+							li.footer__nav-item
+								a.footer__nav-link(href="/")=item
+				.footer__nav-block
+					span.footer__nav-legend
+						|	Проекты
+					ul.footer__nav-list
+						for item in footer_nav2
+							li.footer__nav-item
+								a.footer__nav-link(href="/")=item
+		.footer__bottom-block
+			span.footer__copyright
+				|	Общество с ограниченной ответственностью «БИЗНЕС ГРУППА АРИОЛ»
+			span.footer__copyright
+				|	ИНН: 1657264266
+				br
+				|	ОГРН: 1201600070484
+
+			a.markweber(href="/")
+				|	 Создание сайта Mark Weber

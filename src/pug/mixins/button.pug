@@ -1,0 +1,9 @@
+mixin button(type, text)
+	if type == "btn"
+		button(class="button-rest button")&attributes(attributes)
+			span=text
+			+icon("arrow-right-button")(class="button__icon" width="20" height="20")
+	else
+		a(class="button-rest button" href="/")&attributes(attributes)
+			span=text
+			+icon("arrow-right-button")(class="button__icon" width="20" height="20")

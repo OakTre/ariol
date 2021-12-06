@@ -88,3 +88,32 @@
 	line-height: 3rem;
 	text-transform: uppercase;
 }
+
+.section-name {
+	position: relative;
+	display: inline-block;
+	font-weight: 600;
+	font-size: 1.4rem;
+	line-height: 1.7rem;
+	padding-left: 2rem;
+
+	&::before {
+		position: absolute;
+		top: 0.3rem;
+		left: 0;
+		width: 1rem;
+		height: 1rem;
+		border-radius: 50%;
+		background-color: currentColor;
+		content: "";
+	}
+}
+
+.markweber {
+	margin-left: auto;
+	transition: color var(--main-transition);
+
+	&:hover {
+		color: var(--color-green);
+	}
+}

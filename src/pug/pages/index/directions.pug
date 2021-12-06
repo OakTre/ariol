@@ -1,0 +1,16 @@
+- let acc_arr = ["Акционерам", "Руководителям", "Сотрудникам"]
+
+section.directions
+	.site-container.directions__container.site-content-grid
+		.site-content-grid__block
+			span.section-name
+				|	Направления
+		.site-content-grid__block
+			ul.directions__list
+				for item in acc_arr
+					li.directions__item
+						button.button-rest.directions__item-head
+							span.directions__item-heading=item
+							span.directions__item-icon
+								span
+								span
