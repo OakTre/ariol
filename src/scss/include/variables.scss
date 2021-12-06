@@ -1,0 +1,17 @@
+:root {
+	// Typography
+	--main-ff: "Montserrat", sans-serif;
+
+	// colors
+	--color-dark: #2D2E33;
+	--color-white: #fff;
+	--color-green: #52BA61;
+}
+
+$breakpoint-xxs: 480px;
+$breakpoint-xs: 575px;
+$breakpoint-sm: 767px;
+$breakpoint-md: 991px;
+$breakpoint-lg: 1199px;
+$breakpoint-xl: 1280px;
+$breakpoint-xxl: 1680px;
