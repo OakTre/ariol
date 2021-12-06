@@ -1,3 +1,90 @@
 @import "mixins/media";
 @import "mixins/px-to-rem";
 @import "fonts";
+
+.button-rest {
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	border-radius: 0;
+	border: none;
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.8rem 1rem;
+	border-radius: 2rem;
+	border: 2px solid var(--color-green);
+	color: var(--color-green);
+	font-weight: 500;
+	font-size: 2rem;
+	line-height: 2.4rem;
+	background-color: var(--color-white);
+	text-transform: uppercase;
+	transition: color var(--main-transition), background-color var(--main-transition);
+	cursor: pointer;
+
+	&__icon {
+		display: block;
+		margin-left: 0.7rem;
+		fill: var(--color-green);
+		transition: fill var(--main-transition);
+	}
+
+	&:hover {
+		background-color: var(--color-green);
+		color: var(--color-white);
+
+		.button__icon {
+			fill: var(--color-white);
+		}
+	}
+}
+
+
+.logo {
+	display: inline-block;
+
+	&__img {
+		max-width: 19.1rem;
+	}
+}
+
+.nav {
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		margin-right: 4rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		font-weight: 500;
+		font-size: 1.6rem;
+		line-height: 2rem;
+		text-transform: uppercase;
+		color: var(--color-white);
+		transition: color var(--main-transition);
+
+		&:hover {
+			color: var(--color-green);
+		}
+	}
+}
+
+.hero-arrow-down {
+	fill: var(--color-white);
+}
+
+.site-middle-text {
+	font-weight: 500;
+	font-size: 2.5rem;
+	line-height: 3rem;
+	text-transform: uppercase;
+}

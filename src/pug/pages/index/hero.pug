@@ -1,3 +1,20 @@
 section.hero
-	.site-container
-		h1 Hero Heading
+	.hero__layer.lazy(data-bg="img/index/hero-bg.webp" data-bg-fallback="img/index/hero-bg.jpg")
+	.site-container.hero__container
+		h1.visually-hidden
+			|	Организация бизнеса, Запуск проектов, Сопровождение
+		.hero__feautures
+			span.hero__feautures-item
+				|	Организация бизнеса
+			span.hero__feautures-item
+				|	Запуск проектов
+		.hero__text
+			span
+				|	Сопровождение
+
+		.site-content-grid.hero__info
+			.site-content-grid__block
+				+icon("hero-arrow-down")(class="hero-arrow-down" width="16" height="32")
+			.site-content-grid__block
+				span.hero__company-birth
+					|	Бизнес Группа «АРИОЛ» основана в 2020 году

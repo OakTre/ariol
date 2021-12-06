@@ -5,21 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Описание сайта">
-    <title>Главная | Название сайта</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="resourses/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="resourses/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resourses/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="resourses/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <title>Главная | Ariol Buisness Group</title>
     <link rel="stylesheet" href="./css/vendor.min.css?v=0.0.0.0">
     <link rel="stylesheet" href="./css/style.min.css?v=0.0.0.0">
   </head>
   <body class="page-home">
     <div class="page-wrapper">
       <header class="header">
-        <div class="site-container">
-          <h1>header</h1>
+        <div class="site-container site-content-grid header__container">
+          <div class="site-content-grid__block"><a class="logo" href="/"><img class="logo__img" src="img/logo-white.svg" alt="Логотип компании"></a></div>
+          <div class="site-content-grid__block header__nav-block">
+            <nav class="nav header__nav-block-item">
+              <ul class="nav__list header__nav-list">
+                <li class="nav__item"><a class="nav__link" href="/">О нас</a></li>
+                <li class="nav__item"><a class="nav__link" href="/">Услуги</a></li>
+                <li class="nav__item"><a class="nav__link" href="/">Проекты</a></li>
+              </ul>
+            </nav>
+            <div class="header__nav-block-item"><a class="header__news-link header__link" href="/">	Новости<span class="header__news-link-count">	3</span></a></div>
+            <div class="header__nav-block-item"><a class="header__contacts-link header__link" href="/">	Контакты</a></div>
+            <div class="header__nav-block-item"><a class="header__lang-page header__link" href="/">	en</a></div>
+          </div>
         </div>
       </header>
       <main class="page-main main">
         <section class="hero">
-          <div class="site-container">
-            <h1>Hero Heading</h1>
+          <div class="hero__layer lazy" data-bg="img/index/hero-bg.webp" data-bg-fallback="img/index/hero-bg.jpg"></div>
+          <div class="site-container hero__container">
+            <h1 class="visually-hidden">	Организация бизнеса, Запуск проектов, Сопровождение</h1>
+            <div class="hero__feautures"><span class="hero__feautures-item">	Организация бизнеса</span><span class="hero__feautures-item">	Запуск проектов</span></div>
+            <div class="hero__text"><span>	Сопровождение</span></div>
+            <div class="site-content-grid hero__info">
+              <div class="site-content-grid__block">
+                <svg class="icon icon-hero-arrow-down hero-arrow-down" width="16" height="32">
+                  <use xlink:href="img/sprite.svg#hero-arrow-down"></use>
+                </svg>
+              </div>
+              <div class="site-content-grid__block"><span class="hero__company-birth">	Бизнес Группа «АРИОЛ» основана в 2020 году</span></div>
+            </div>
+          </div>
+        </section>
+        <section class="about-company-info">
+          <div class="site-container about-company-info__container">
+            <div class="about-company-info__block">
+              <div class="about-company-info__heading">
+                <h2 class="visually-hidden">	Заголовок о компании для сео</h2>
+                <p class="about-company-info__heading-text">	Мы — управляющая компания, действующая в разнопрофильных  бизнесах:</p>
+                <ul class="about-company-info__list">
+                  <li class="about-company-info__list-item">	крупное производство строительных материалов,</li>
+                  <li class="about-company-info__list-item">	 наружная&nbsp;реклама,</li>
+                  <li class="about-company-info__list-item">	интернет&nbsp;издание.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="about-company-info__block">
+              <div class="about-company-info__info-text_left">
+                <div class="about-company-info__long-arrow_wrap">
+                  <svg class="icon icon-arrow-right-button about-company-info__long-arrow" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#arrow-right-button"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="about-company-info__info-text_right">
+                <p class="about-company-info__text site-middle-text">	Бизнес Группа «АРИОЛ» и все обслуживаемые бизнес направления имеют одного собственника, а значит общие бизнес интересы.</p><a class="button-reset button about-company-info__button" href="/"><span>	о компании</span>
+                  <svg class="icon icon-arrow-right-button button__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#arrow-right-button"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="ceo">
+          <div class="ceo__layer lazy" data-bg="img/index/ceo.webp" data-bg-fallback="img/index/ceo.jpg">
+            <div class="site-container ceo__container">
+              <div class="ceo__item"><span class="ceo__item-heading">	Айрат Галиуллин</span><span class="ceo__item-position">	СЕО</span></div>
+              <div class="ceo__item"><span class="ceo__item-heading">	Айрат Галиуллин</span><span class="ceo__item-position">	СЕО</span></div>
+              <div class="ceo__item"><span class="ceo__item-heading">	Айрат Галиуллин</span><span class="ceo__item-position">	СЕО</span></div>
+            </div>
           </div>
         </section>
       </main>

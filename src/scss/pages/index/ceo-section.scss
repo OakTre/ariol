@@ -1,0 +1,64 @@
+.ceo {
+	position: relative;
+	height: 76rem;
+	width: 100%;
+	color: var(--color-white);
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+		content: "";
+	}
+
+	&__layer {
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	&__container {
+		position: relative;
+		height: 100%;
+	}
+
+	&__item {
+		position: absolute;
+
+		&-heading {
+			display: block;
+			margin-bottom: 0.1rem;
+			font-weight: 500;
+			font-size: 2rem;
+			line-height: 2.5rem;
+			text-transform: uppercase;
+		}
+
+		&-position {
+			font-weight: 500;
+			font-size: 2rem;
+			line-height: 2.5rem;
+			text-transform: uppercase;
+		}
+
+		&:nth-child(1) {
+			top: 52%;
+			left: 15%;
+		}
+
+		&:nth-child(2) {
+			top: 68%;
+			left: 47%;
+		}
+
+		&:nth-child(3) {
+			top: 42%;
+			right: 13%;
+		}
+	}
+}

@@ -1,3 +1,24 @@
+- let nav_arr = ["О нас", "Услуги", "Проекты"]
+
 header.header
-	.site-container
-		h1 header
+	.site-container.site-content-grid.header__container
+		.site-content-grid__block
+			a.logo(href="/")
+				img(class="logo__img" src="img/logo-white.svg" alt="Логотип компании")
+		.site-content-grid__block.header__nav-block
+			nav.nav.header__nav-block-item
+				ul.nav__list.header__nav-list
+					for item in nav_arr
+						li.nav__item
+							a.nav__link(href="/")=item
+			.header__nav-block-item
+				a.header__news-link.header__link(href="/")
+					|	Новости
+					span.header__news-link-count
+						|	3
+			.header__nav-block-item
+				a.header__contacts-link.header__link(href="/")
+					|	Контакты
+			.header__nav-block-item
+				a.header__lang-page.header__link(href="/")
+					|	en
