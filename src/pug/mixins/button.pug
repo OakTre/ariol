@@ -1,9 +1,10 @@
-mixin button(type, text)
+mixin button(type, text, mod)
+	- let modificator = mod ? mod : ""
 	if type == "btn"
-		button(class="button-rest button")&attributes(attributes)
+		button(class=`button-rest button ${modificator}`)&attributes(attributes)
 			span=text
 			+icon("arrow-right-button")(class="button__icon" width="20" height="20")
 	else
-		a(class="button-rest button" href="/")&attributes(attributes)
+		a(class=`button-rest button ${modificator}` href="/")&attributes(attributes)
 			span=text
 			+icon("arrow-right-button")(class="button__icon" width="20" height="20")

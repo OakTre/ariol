@@ -1,13 +1,14 @@
 mixin imgLazy(src, alt)
 	img(class="lazy", data-src=src, src="img/placeholder.png" alt=alt)&attributes(attributes)
 
-mixin pictureLazy(src, alt, srcPlacegolder="img/placeholder.png")
+mixin pictureLazy(src, alt, folder, srcPlacegolder="img/placeholder.png")
 	-const srcParts = src.split(".")
 	-const [srcFirstPart, extname] = srcParts
+	-let isFolder = folder ? folder : ''
 
 	picture
-		source(type="image/webp", data-srcset="img/" + `${srcFirstPart}.webp`, srcset=srcPlacegolder)
-		img(class="lazy", data-src="img/" +`${srcFirstPart}.${extname}`, alt=alt)&attributes(attributes)
+		source(type="image/webp", data-srcset=`img${isFolder}/` + `${srcFirstPart}.webp`, srcset=srcPlacegolder)
+		img(class="lazy", data-src=`img${isFolder}/` +`${srcFirstPart}.${extname}`, alt=alt)&attributes(attributes)
 
 
 mixin picture(src, alt)

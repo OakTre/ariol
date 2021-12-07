@@ -16,6 +16,11 @@ body {
 	line-height: 2rem;
 	font-family: var(--main-ff);
 	background-color: var(--color-white);
+
+	::selection {
+		background-color: var(--color-dark);
+		color: var(--color-white);
+	}
 }
 
 img {
