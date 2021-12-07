@@ -142,3 +142,19 @@
 		color: var(--color-green);
 	}
 }
+
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 15;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-dark);
+	transition: opacity var(--main-transition), visibility var(--main-transition);
+}
+
+.preloader_is-loaded {
+	opacity: 0;
+	visibility: hidden;
+}

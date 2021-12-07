@@ -181,6 +181,24 @@
   color: var(--color-green);
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-dark);
+  -webkit-transition: opacity var(--main-transition),visibility var(--main-transition);
+  -o-transition: opacity var(--main-transition),visibility var(--main-transition);
+  transition: opacity var(--main-transition),visibility var(--main-transition);
+}
+
+.preloader_is-loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
 *,
 ::after,
 ::before {
@@ -562,6 +580,7 @@ a {
   z-index: 2;
   height: 100vh;
   color: var(--color-white);
+  overflow: hidden;
 }
 
 .hero__layer {
@@ -578,7 +597,7 @@ a {
 
 .hero__container {
   height: 100%;
-  padding-top: 30rem;
+  padding-top: 25rem;
   padding-bottom: 3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -619,6 +638,7 @@ a {
 
 .hero__feautures-item:nth-child(2) {
   text-align: right;
+  margin-top: 8.7rem;
 }
 
 .hero__text {
@@ -633,11 +653,50 @@ a {
   justify-content: flex-end;
 }
 
-.hero__text span {
+.hero__text-span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 500;
   font-size: 8rem;
   line-height: 8.8rem;
   text-transform: uppercase;
+}
+
+.hero__long-arrow {
+  -webkit-transform: scale(-1,1);
+  -ms-transform: scale(-1,1);
+  transform: scale(-1,1);
+  fill: var(--color-white);
+}
+
+.hero__long-arrow_wrap {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 20px;
+  width: 20.5rem;
+  margin-left: 3rem;
+}
+
+.hero__long-arrow_wrap::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 98%;
+  height: 2px;
+  background-color: var(--color-white);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .about-company-info {
@@ -1229,6 +1288,17 @@ a {
   margin-bottom: 2rem;
   width: 100%;
   height: 32rem;
+  overflow: hidden;
+}
+
+.content-projects__img-wrapper ._layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white);
 }
 
 .content-projects__img {
@@ -1251,5 +1321,28 @@ a {
 
 .content-projects__text.mod-max-width {
   max-width: 56rem;
+}
+
+@media screen and (min-width:2100px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:1536px) {
+  html {
+    font-size: 8px;
+  }
+
+  body {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (max-width:1366px) {
+  html {
+    font-size: 7px;
+  }
 }
 /*# sourceMappingURL=style.min.css.map */

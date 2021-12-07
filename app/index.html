@@ -15,9 +15,10 @@
     <link rel="stylesheet" href="./css/style.min.css?v=0.0.0.0">
   </head>
   <body class="page-home">
+    <div class="preloader"></div>
     <div class="page-wrapper">
       <header class="header">
-        <div class="site-container site-content-grid header__container">
+        <div class="site-container site-content-grid header__container js-animated-el">
           <div class="site-content-grid__block"><a class="logo" href="/"><img class="logo__img" src="img/logo-white.svg" alt="Логотип компании"></a></div>
           <div class="site-content-grid__block header__nav-block">
             <nav class="nav header__nav-block-item">
@@ -39,7 +40,10 @@
           <div class="site-container hero__container">
             <h1 class="visually-hidden">	Организация бизнеса, Запуск проектов, Сопровождение</h1>
             <div class="hero__feautures"><span class="hero__feautures-item">	Организация бизнеса</span><span class="hero__feautures-item">	Запуск проектов</span></div>
-            <div class="hero__text"><span>	Сопровождение</span></div>
+            <div class="hero__text"><span class="hero__text-span">	Сопровождение<span class="hero__long-arrow_wrap">
+                  <svg class="icon icon-arrow-right-button hero__long-arrow" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#arrow-right-button"></use>
+                  </svg></span></span></div>
             <div class="site-content-grid hero__info">
               <div class="site-content-grid__block">
                 <svg class="icon icon-hero-arrow-down hero-arrow-down" width="16" height="32">
@@ -63,7 +67,7 @@
                 </ul>
               </div>
             </div>
-            <div class="about-company-info__block">
+            <div class="about-company-info__block js-about-company-info-block">
               <div class="about-company-info__info-text_left">
                 <div class="about-company-info__long-arrow_wrap">
                   <svg class="icon icon-arrow-right-button about-company-info__long-arrow" width="20" height="20">
@@ -209,6 +213,7 @@
                 <ul class="projects__content-projects content-projects">
                   <li class="content-projects__item">
                     <div class="content-projects__img-wrapper">
+                      <div class="_layer js-animated-layer"></div>
                       <picture>
                         <source type="image/webp" data-srcset="img/index/project-setka0.webp" srcset="img/placeholder.png"/><img class="lazy content-projects__img" data-src="img/index/project-setka0.jpg" alt="Производство композитных гибких связей"/>
                       </picture>
@@ -217,6 +222,7 @@
                   </li>
                   <li class="content-projects__item">
                     <div class="content-projects__img-wrapper">
+                      <div class="_layer js-animated-layer"></div>
                       <picture>
                         <source type="image/webp" data-srcset="img/index/project-setka1.webp" srcset="img/placeholder.png"/><img class="lazy content-projects__img" data-src="img/index/project-setka1.jpg" alt="Производство металлических сеток"/>
                       </picture>
@@ -225,6 +231,7 @@
                   </li>
                   <li class="content-projects__item">
                     <div class="content-projects__img-wrapper">
+                      <div class="_layer js-animated-layer"></div>
                       <picture>
                         <source type="image/webp" data-srcset="img/index/project-setka2.webp" srcset="img/placeholder.png"/><img class="lazy content-projects__img" data-src="img/index/project-setka2.jpg" alt="Производство композитной арматуры"/>
                       </picture>
@@ -246,6 +253,7 @@
                 <ul class="projects__content-projects content-projects">
                   <li class="content-projects__item">
                     <div class="content-projects__img-wrapper">
+                      <div class="_layer js-animated-layer"></div>
                       <picture>
                         <source type="image/webp" data-srcset="img/index/project-mag0.webp" srcset="img/placeholder.png"/><img class="lazy content-projects__img" data-src="img/index/project-mag0.jpg" alt="Размещение наружной рекламы на собственных афишных конструкциях"/>
                       </picture>
@@ -254,6 +262,7 @@
                   </li>
                   <li class="content-projects__item">
                     <div class="content-projects__img-wrapper">
+                      <div class="_layer js-animated-layer"></div>
                       <picture>
                         <source type="image/webp" data-srcset="img/index/project-mag1.webp" srcset="img/placeholder.png"/><img class="lazy content-projects__img" data-src="img/index/project-mag1.jpg" alt="Размещение и трансляция рекламных роликов на собственных медиафасадах"/>
                       </picture>
@@ -275,6 +284,7 @@
                 <ul class="projects__content-projects content-projects">
                   <li class="content-projects__item">
                     <div class="content-projects__img-wrapper">
+                      <div class="_layer js-animated-layer"></div>
                       <picture>
                         <source type="image/webp" data-srcset="img/index/project-afisha0.webp" srcset="img/placeholder.png"/><img class="lazy content-projects__img" data-src="img/index/project-afisha0.jpg" alt="Интернет издание о жизни и событиях в Казани"/>
                       </picture>
@@ -296,6 +306,7 @@
                 <ul class="projects__content-projects content-projects">
                   <li class="content-projects__item">
                     <div class="content-projects__img-wrapper">
+                      <div class="_layer js-animated-layer"></div>
                       <picture>
                         <source type="image/webp" data-srcset="img/index/project-kvintes0.webp" srcset="img/placeholder.png"/><img class="lazy content-projects__img" data-src="img/index/project-kvintes0.jpg" alt="Сдача в аренду коммерческой недвижимости"/>
                       </picture>
