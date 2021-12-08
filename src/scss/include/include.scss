@@ -8,6 +8,7 @@
 	background-color: transparent;
 	border-radius: 0;
 	border: none;
+	font-family: var(--main-ff);
 }
 
 .button {
@@ -157,4 +158,11 @@
 .preloader_is-loaded {
 	opacity: 0;
 	visibility: hidden;
+}
+
+.drop-menu-container {
+	position: relative;
+	overflow: hidden;
+	transition: max-height var(--main-transition);
+	max-height: 0;
 }

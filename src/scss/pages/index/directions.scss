@@ -1,18 +1,60 @@
 .directions {
+	position: relative;
+	z-index: 2;
 	padding: 6.7rem 0 7.7rem 0;
 	color: var(--color-white);
 	background-color: var(--color-dark);
+
+	&_layer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		opacity: 0;
+		transition: opacity var(--main-transition);
+
+		&.mod-show {
+			opacity: 1;
+		}
+	}
 
 	&__list {
 		width: 100%;
 	}
 
 	&__item {
+		position: relative;
+		overflow: hidden;
 		width: 100%;
+		// border-bottom: 1px solid var(--color-white);
+
+		._bottom-line {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: var(--color-white);
+		}
+
+		._top-line {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: var(--color-white);
+			opacity: 0;
+		}
 
 		&:first-child {
-			.directions__item-head {
-				border-top: 1px solid var(--color-white);
+			._top-line {
+				opacity: 1;
 			}
 		}
 
@@ -22,8 +64,20 @@
 			justify-content: space-between;
 			width: 100%;
 			padding: 5.8rem 0;
-			border-bottom: 1px solid var(--color-white);
 			cursor: pointer;
+			font-weight: 500;
+
+			&.mod-open {
+				.directions__item-icon {
+					transform: rotate(-45deg) scale(2) translate(-10px, -10px);
+				}
+			}
+
+			&:hover {
+				.directions__item-heading {
+					color: var(--color-green);
+				}
+			}
 		}
 
 		&-heading {
@@ -33,6 +87,7 @@
 			line-height: 1;
 			text-transform: uppercase;
 			color: var(--color-white);
+			transition: color var(--main-transition);
 		}
 
 		&-icon {
@@ -40,6 +95,7 @@
 			display: block;
 			width: 1.6rem;
 			height: 1.6rem;
+			transition: transform var(--main-transition);
 
 			span {
 				position: absolute;
@@ -49,11 +105,35 @@
 				height: 2px;
 				background-color: var(--color-white);
 				transform: translate(-50%, -50%);
+				transition: background-color var(--main-transition);
 
 				&:first-child {
 					transform: translate(-50%, -50%) rotate(90deg);
 				}
 			}
+
+			// &:hover {
+			// 	span {
+			// 		background-color: var(--color-green);
+			// 	}
+			// }
+		}
+
+		&-body {
+			max-width: 95rem;
+			margin-left: auto;
+			padding-bottom: 5.8rem;
+
+			&-item {
+				font-size: 2.5rem;
+				line-height: 3rem;
+				margin-bottom: 2rem;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
+
 }

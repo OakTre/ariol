@@ -4,6 +4,8 @@ import map from "./modules/map";
 import indexPageAnim from "./modules/indexPageAnim";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import initDropMenu from "./modules/initDropMenu";
+import showAccordionBg from "./modules/showAccordionBg";
 
 window.onload = function() {
 	let preloader = document.querySelector(".preloader");
@@ -19,6 +21,8 @@ window.onload = function() {
 documentReady(() => {
 	lazyImages();
 	map();
+	initDropMenu();
+	showAccordionBg();
 
 	gsap.registerPlugin(ScrollTrigger);
 
@@ -34,7 +38,7 @@ documentReady(() => {
 			start: "top bottom",
 			end: "top 60%",
 			scrub: true,
-			scrub: 2,
+			scrub: 5,
 		}
 	});
 
@@ -54,6 +58,78 @@ documentReady(() => {
 
 	tl2.to(".contact-us__content-with-arrow", {
 		x: 0
+	})
+
+	// анмиация цифр о компании
+	gsap.set(".js-company-numbers1", { maxWidth: "100%" })
+
+	let tl3 = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".js-company-numbers1",
+			start: "top 70%",
+			scrub: true,
+			scrub: 1,
+		}
+	});
+
+	tl3.to(".js-company-numbers1", {
+		maxWidth: "66.3%"
+	})
+	gsap.set(".js-company-numbers2", { maxWidth: "90%" })
+
+	let tl4 = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".js-company-numbers2",
+			start: "top bottom",
+			scrub: true,
+			scrub: 1,
+		}
+	});
+
+	tl4.to(".js-company-numbers2", {
+		maxWidth: "32.6%"
+	})
+
+	// линии в секции направления
+	gsap.utils.toArray(".js-direction-lines").forEach((el)=>{
+		gsap.set(el, { x: "-100%" })
+	})
+
+
+	gsap.utils.toArray(".js-direction-lines").forEach((el)=>{
+		let tl5 = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".js-direction-lines"
+			}
+		});
+
+		tl5.to(el, {
+			x: 0,
+			duration: 0.3,
+			delay: 0.3
+		})
+	})
+
+
+	// текст в секции почему нас выбирают
+	gsap.utils.toArray(".why-us__bottom-block-text").forEach((el)=>{
+		gsap.set(el, { x: "-5.5rem" })
+	})
+
+
+	gsap.utils.toArray(".why-us__bottom-block-text").forEach((el)=>{
+		let tl6 = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				start: "top bottom",
+				scrub: true,
+				scrub: 1,
+			}
+		});
+
+		tl6.to(el, {
+			x: 0,
+		})
 	})
 
 	function animFrom(elem, direction) {

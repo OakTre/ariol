@@ -1,6 +1,10 @@
 - let acc_arr = ["Акционерам", "Руководителям", "Сотрудникам"]
 
 section.directions
+	.directions_layer.lazy(data-bg="img/index/services-bg.webp" data-bg-fallback="img/index/services-bg.jpg" data-item="Акционерам")
+	.directions_layer.lazy(data-bg="img/index/test-img.webp" data-bg-fallback="img/index/test-img.jpg" data-item="Руководителям")
+	.directions_layer.lazy(data-bg="img/index/test-img2.webp" data-bg-fallback="img/index/test-img2.jpg" data-item="Сотрудникам")
+
 	.site-container.directions__container.site-content-grid
 		.site-content-grid__block
 			span.section-name
@@ -9,8 +13,15 @@ section.directions
 			ul.directions__list
 				for item in acc_arr
 					li.directions__item
-						button.button-rest.directions__item-head
+						span._top-line.js-direction-lines
+						span._bottom-line.js-direction-lines
+						button.button-rest.directions__item-head.js-drop-menu-btn.js-btn-show-bg(data-show=item)
 							span.directions__item-heading=item
 							span.directions__item-icon
 								span
 								span
+						.drop-menu-container.js-drop-menu-container
+							ul.directions__item-body.drop-menu.js-drop-menu
+								- for (let i = 0; i<10; i++)
+									li.directions__item-body-item
+										|	Тестовый текст
