@@ -1,6 +1,6 @@
 export default () => {
 	let coordinates = { lat: 55.82595916334503, lng: 49.12286216959172 };
-	let markerImage = "../img/marker.svg"
+	let markerImage = document.querySelector(".contact-us__map").getAttribute("data-map-icon")
 	let styles = [
 		{
 			"elementType": "geometry",
