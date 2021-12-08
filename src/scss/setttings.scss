@@ -19,6 +19,14 @@ html {
 	@include mq(custom, max, 1366) {
 		font-size: 7px;
 	}
+
+	@include mq(sm) {
+		font-size: 10px;
+	}
+
+	@include mq(custom, max, 320) {
+		font-size: 9px;
+	}
 }
 
 body {
@@ -70,6 +78,14 @@ a {
 	max-width: 100%;
 	margin: 0 auto;
 	padding: 0 40px;
+
+	@include mq(md) {
+		padding: 0 20px;
+	}
+
+	@include mq(custom, max, 360) {
+		padding: 0 16px;
+	}
 }
 
 .page-wrapper {

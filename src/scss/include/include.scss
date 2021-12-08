@@ -31,6 +31,11 @@
 		margin-left: 0.7rem;
 		fill: var(--color-green);
 		transition: fill var(--main-transition);
+
+		@include mq(xxs) {
+			width: 2rem;
+			height: 2rem;
+		}
 	}
 
 	&:hover {
@@ -60,6 +65,39 @@
 			}
 		}
 	}
+
+
+	@include mq(sm) {
+		font-size: 1.8rem;
+		line-height: 2rem;
+	}
+
+	@include mq(xxs) {
+		font-size: 1.6rem;
+		line-height: 1.8rem;
+	}
+}
+
+.button-burger {
+	position: relative;
+	width: 4rem;
+	height: 4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	span {
+		display: block;
+		flex-shrink: 0;
+		width: 100%;
+		height: 0.3rem;
+		background-color: var(--color-white);
+
+		&:nth-child(2) {
+			margin: 5px 0;
+		}
+	}
 }
 
 
@@ -68,6 +106,10 @@
 
 	&__img {
 		max-width: 19.1rem;
+
+		@include mq(sm) {
+			max-width: 11.1rem;
+		}
 	}
 }
 
@@ -107,12 +149,34 @@
 	font-size: 2.5rem;
 	line-height: 3rem;
 	text-transform: uppercase;
+
+	@include mq(md) {
+		font-size: 2rem;
+		line-height: 2.6rem;
+	}
+
+	@include mq(sm) {
+		font-size: 1.5rem;
+		line-height: 1.8rem;
+	}
 }
 
 .section-title {
 	font-size: 11rem;
 	line-height: 1;
 	text-transform: uppercase;
+
+	@include mq(custom, max, 1280) {
+		font-size: 10rem;
+	}
+
+	@include mq(md) {
+		font-size: 8rem;
+	}
+
+	@include mq(sm) {
+		font-size: 4rem;
+	}
 }
 
 .section-name {
@@ -141,6 +205,11 @@
 
 	&:hover {
 		color: var(--color-green);
+	}
+
+	@include mq(xs) {
+		margin-left: 0;
+		text-decoration: underline;
 	}
 }
 

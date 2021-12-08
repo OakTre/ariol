@@ -1,6 +1,6 @@
 - let nav_arr = ["О нас", "Услуги", "Проекты"]
 
-header.header
+header.header(class=jsPageClass)
 	.site-container.site-content-grid.header__container.js-animated-el
 		.site-content-grid__block
 			a.logo(href="/")
@@ -22,3 +22,8 @@ header.header
 			.header__nav-block-item
 				a.header__lang-page.header__link(href="/")
 					|	en
+			.header__nav-block-item._mobile
+				button.button-rest.button-burger.header__button-burger
+					span
+					span
+					span

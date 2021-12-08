@@ -2,6 +2,14 @@
 	&__title {
 		max-width: 74.5rem;
 		margin-bottom: 11.7rem;
+
+		@include mq(md) {
+			margin-bottom: 6rem;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 4rem;
+		}
 	}
 
 	&__content {
@@ -12,10 +20,21 @@
 		&-block {
 			&:nth-of-type(1) {
 				grid-column: 8 span;
+
+				@include mq(md) {
+					grid-column: 12 span;
+					order: 2;
+				}
 			}
 
 			&:nth-of-type(2) {
 				grid-column: 4 span;
+
+				@include mq(md) {
+					grid-column: 12 span;
+					margin-bottom: 3.2rem;
+					order: 1;
+				}
 			}
 		}
 	}
@@ -24,6 +43,10 @@
 		font-weight: 500;
 		display: block;
 		margin-bottom: 3.8rem;
+
+		@include mq(sm) {
+			margin-bottom: 2rem;
+		}
 	}
 
 	&__tel-link {
@@ -38,6 +61,11 @@
 		&:hover {
 			color: var(--color-green);
 		}
+
+		@include mq(sm) {
+			font-size: 3rem;
+			line-height: 3.4rem;
+		}
 	}
 
 	&__mail-link {
@@ -51,6 +79,11 @@
 		&:hover {
 			color: var(--color-dark);
 		}
+
+		@include mq(sm) {
+			font-size: 2rem;
+			line-height: 2.4rem;
+		}
 	}
 
 	&__text {
@@ -59,6 +92,11 @@
 		line-height: 3rem;
 		text-transform: uppercase;
 		max-width: 52rem;
+
+		@include mq(sm) {
+			font-size: 2rem;
+			line-height: 2.4rem;
+		}
 	}
 
 	&__content-item {
@@ -75,6 +113,10 @@
 
 	&__content-with-arrow-block {
 		grid-column: 4 span;
+
+		@include mq(sm) {
+			grid-column: 8 span;
+		}
 	}
 
 	&__long-arrow {
@@ -96,6 +138,9 @@
 				background-color: var(--color-dark);
 				transform: translateY(-50%);
 			}
+			@include mq(sm) {
+				display: none;
+			}
 		}
 	}
 
@@ -104,5 +149,10 @@
 		height: 61rem;
 		background-color: var(--color-dark);
 		margin-top: 10rem;
+
+		@include mq(sm) {
+			margin-top: 6rem;
+			height: 31rem;
+		}
 	}
 }

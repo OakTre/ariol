@@ -37,6 +37,11 @@
 			font-size: 2rem;
 			line-height: 2.5rem;
 			text-transform: uppercase;
+
+			@include mq(sm) {
+				font-size: 1.1rem;
+				line-height: 1.2rem;
+			}
 		}
 
 		&-position {
@@ -44,21 +49,47 @@
 			font-size: 2rem;
 			line-height: 2.5rem;
 			text-transform: uppercase;
+
+			@include mq(sm) {
+				font-size: 1.1rem;
+				line-height: 1.2rem;
+			}
 		}
 
 		&:nth-child(1) {
 			top: 52%;
 			left: 15%;
+
+			@include mq(md) {
+				left: 5%;
+			}
 		}
 
 		&:nth-child(2) {
 			top: 68%;
 			left: 47%;
+
+			@include mq(md) {
+				top: 65%;
+				left: 44%;
+			}
 		}
 
 		&:nth-child(3) {
 			top: 42%;
 			right: 13%;
+
+			@include mq(md) {
+				right: 6%;
+			}
 		}
+	}
+
+	@include mq(sm) {
+		height: 27rem;
+	}
+
+	@include mq(custom, max, 360) {
+		height: 21rem;
 	}
 }

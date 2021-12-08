@@ -28,7 +28,24 @@
 				grid-column: 1 span;
 				text-align: right;
 			}
+
+			@include mq(md) {
+				display: none;
+			}
+
+			&._mobile {
+				display: none;
+
+				@include mq(md) {
+					display: block;
+					grid-column: 8 span;
+				}
+			}
 		}
+	}
+
+	&__button-burger {
+		margin-left: auto;
 	}
 
 	&__link {

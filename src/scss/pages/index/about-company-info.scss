@@ -9,11 +9,19 @@
 
 		&:nth-of-type(1) {
 			margin-bottom: 9.5rem;
+
+			@include mq(sm) {
+				margin-bottom: 4rem;
+			}
 		}
 	}
 
 	&__heading {
 		grid-column: 8 span;
+
+		@include mq(md) {
+			grid-column: 12 span;
+		}
 	}
 
 	&__heading-text {
@@ -22,6 +30,16 @@
 		font-size: 4.5rem;
 		line-height: 5.5rem;
 		text-transform: uppercase;
+
+		@include mq(md) {
+			font-size: 4rem;
+    		line-height: 5rem;
+		}
+
+		@include mq(sm) {
+			font-size: 2rem;
+    		line-height: 2.6rem;
+		}
 	}
 
 	&__list {
@@ -53,6 +71,13 @@
 				letter-spacing: 0.06em;
 				width: 3.2rem;
 				text-align: center;
+
+				@include mq(sm) {
+					font-size: 1.2rem;
+					line-height: 1.5rem;
+					padding: 0 0.2rem;
+					width: 2.5rem;
+				}
 			}
 
 			&:nth-last-child(2) {
@@ -62,20 +87,51 @@
 			&:last-child {
 				display: block;
 			}
+
+			@include mq(md) {
+				font-size: 4rem;
+				line-height: 5rem;
+			}
+
+			@include mq(sm) {
+				font-size: 2rem;
+				line-height: 2.6rem;
+				padding-left: 3rem;
+			}
 		}
 	}
 
 	&__text {
 		margin-bottom: 4rem;
+
+		@include mq(sm) {
+			margin-bottom: 2rem;
+		}
 	}
 
 	&__info-text {
 		&_left {
 			grid-column: 8 span;
+
+			@include mq(md) {
+				grid-column: 4 span;
+			}
+
+			@include mq(sm) {
+				display: none;
+			}
 		}
 
 		&_right {
 			grid-column: 4 span;
+
+			@include mq(md) {
+				grid-column: 8 span;
+			}
+
+			@include mq(sm) {
+				grid-column: 12 span;
+			}
 		}
 	}
 
@@ -98,5 +154,14 @@
 				transform: translateY(-50%);
 			}
 		}
+	}
+
+	@include mq(custom, max, 1280) {
+		padding-bottom: 16rem;
+	}
+
+	@include mq(sm) {
+		padding-top: 4rem;
+		padding-bottom: 7rem;
 	}
 }

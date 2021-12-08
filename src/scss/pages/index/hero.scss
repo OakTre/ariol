@@ -23,10 +23,43 @@
 		padding-bottom: 3.5rem;
 		display: flex;
 		flex-direction: column;
+
+		@include mq(custom, max, 1280) {
+			padding-top: 20rem;
+		}
+
+		@include mq(lg) {
+			padding-top: 25rem;
+		}
+
+		@include mq(md) {
+			padding-top: 30rem;
+			padding-bottom: 3.5rem;
+		}
+
+		@include mq(sm) {
+			padding-top: 18rem;
+			padding-bottom: 2rem;
+		}
+
+		@include mq(custom, max, 360) {
+			padding-top: 15rem;
+			padding-bottom: 2rem;
+		}
 	}
 
 	&__info {
 		margin-top: auto;
+
+		@include mq(sm) {
+			.hero-arrow-down {
+				display: none;
+			}
+
+			.site-content-grid__block {
+				grid-column: 12 span !important;
+			}
+		}
 	}
 
 	&__company-birth {
@@ -40,10 +73,16 @@
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 8.8rem;
-		// opacity: 0;
+
+		@include mq(sm) {
+			flex-direction: column;
+			justify-content: stretch;
+			margin-bottom: 4rem;
+		}
 	}
 
 	&__feautures-item {
+		display: inline-block;
 		font-weight: 500;
 		font-size: 8rem;
 		line-height: 8.8rem;
@@ -52,6 +91,33 @@
 		&:nth-child(2) {
 			text-align: right;
 			margin-top: 8.7rem;
+		}
+
+		@include mq(custom, max, 1280) {
+			font-size: 7rem;
+			line-height: 7.7rem;
+			max-width: 57rem;
+		}
+
+		@include mq(lg) {
+			font-size: 6rem;
+			line-height: 6.6rem;
+			max-width: 57rem;
+		}
+
+		@include mq(sm) {
+			font-size: 4rem;
+			line-height: 4.6rem;
+
+			&:nth-child(2) {
+				text-align: left;
+				margin-top: 4rem;
+			}
+		}
+
+		@include mq(xxs) {
+			font-size: 3rem;
+			line-height: 3.6rem;
 		}
 	}
 
@@ -67,6 +133,30 @@
 			font-size: 8rem;
 			line-height: 8.8rem;
 			text-transform: uppercase;
+
+			@include mq(custom, max, 1280) {
+				font-size: 7rem;
+				line-height: 7.7rem;
+			}
+
+			@include mq(lg) {
+				font-size: 6rem;
+				line-height: 6.6rem;
+			}
+
+			@include mq(sm) {
+				font-size: 4rem;
+				line-height: 4.6rem;
+			}
+
+			@include mq(xxs) {
+				font-size: 3rem;
+				line-height: 3.6rem;
+			}
+		}
+
+		@include mq(sm) {
+			justify-content: stretch;
 		}
 	}
 
@@ -92,6 +182,18 @@
 				background-color: var(--color-white);
 				transform: translateY(-50%);
 			}
+
+			@include mq(sm) {
+				display: none;
+			}
 		}
+	}
+
+	@include mq(sm) {
+		height: 67rem;
+	}
+
+	@include mq(custom, max, 360) {
+		height: 61rem;
 	}
 }
