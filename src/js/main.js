@@ -5,6 +5,7 @@ import indexPageStartAnim from "./modules/indexPageStartAnim";
 import initDropMenu from "./modules/initDropMenu";
 import showAccordionBg from "./modules/showAccordionBg";
 import indexPageAnim from "./modules/indexPageAnim";
+import initMobileMenu from "./modules/initMobileMenu";
 
 window.onload = function() {
 	let preloader = document.querySelector(".preloader");
@@ -17,6 +18,7 @@ window.onload = function() {
 }
 
 documentReady(() => {
+	initMobileMenu();
 	lazyImages();
 	map();
 	initDropMenu();

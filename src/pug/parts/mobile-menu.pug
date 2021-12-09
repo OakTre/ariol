@@ -1,0 +1,8 @@
+- let nav_arr_mob = ["О нас", "Услуги", "Проекты", "Новости", "Контакты", "en"]
+
+.mobile-menu
+	.mobile-menu__container
+		ul.mobile-menu__nav
+			for item in nav_arr_mob
+				li.mobile-menu__nav-item
+					a.mobile-menu__nav-link(href="/")=item

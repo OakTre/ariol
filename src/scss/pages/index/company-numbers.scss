@@ -22,6 +22,36 @@
 			line-height: 13.4rem;
 			text-transform: uppercase;
 
+			& > span {
+				position: relative;
+				display: inline-block;
+				padding-right: 2rem;
+
+				@include mq(sm) {
+					padding-right: 1rem;
+				}
+			}
+
+			._plus {
+				position: absolute;
+				top: 1rem;
+				right: -2rem;
+				font-weight: 500;
+				font-size: 5rem;
+				line-height: 1;
+
+				@include mq(md) {
+					top: 0.4rem;
+					right: 0;
+					font-size: 3rem;
+				}
+
+				@include mq(sm) {
+					right: -0.5rem;
+					font-size: 1.8rem;
+				}
+			}
+
 			@include mq(md) {
 				font-size: 7rem;
 				line-height: 7.8rem;

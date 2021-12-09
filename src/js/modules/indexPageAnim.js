@@ -6,6 +6,37 @@ export default () => {
 
 	if (document.querySelector(".js-index-page")) {
 		ScrollTrigger.matchMedia({
+			"(min-width: 1200px)": function () {
+				// анмиация цифр о компании
+				gsap.set(".js-company-numbers1", { maxWidth: "100%" })
+
+				let tl3 = gsap.timeline({
+					scrollTrigger: {
+						trigger: ".js-company-numbers1",
+						start: "top 70%",
+						scrub: true,
+						scrub: 1,
+					}
+				});
+
+				tl3.to(".js-company-numbers1", {
+					maxWidth: "66.3%"
+				})
+				gsap.set(".js-company-numbers2", { maxWidth: "90%" })
+
+				let tl4 = gsap.timeline({
+					scrollTrigger: {
+						trigger: ".js-company-numbers2",
+						start: "top bottom",
+						scrub: true,
+						scrub: 1,
+					}
+				});
+
+				tl4.to(".js-company-numbers2", {
+					maxWidth: "32.6%"
+				})
+			},
 			"(min-width: 767px)": function () {
 				gsap.set(".js-about-company-info-block", { x: "-66%" })
 				gsap.set(".contact-us__content-with-arrow", { x: "-50%" })
@@ -52,7 +83,7 @@ export default () => {
 				});
 
 				tl3.to(".js-company-numbers1", {
-					maxWidth: "66.3%"
+					maxWidth: "76.3%"
 				})
 				gsap.set(".js-company-numbers2", { maxWidth: "90%" })
 
@@ -66,7 +97,7 @@ export default () => {
 				});
 
 				tl4.to(".js-company-numbers2", {
-					maxWidth: "32.6%"
+					maxWidth: "52.6%"
 				})
 
 				// линии в секции направления
