@@ -1,0 +1,23 @@
+section.about-group-hero
+	.site-container.about-group-hero__container
+		h1.visually-hidden
+			|	Заголовок для сео
+		.about-group-hero__feautures
+			span.about-group-hero__feautures-item.site-hero-text
+				| используем накопленный потенциал
+			span.about-group-hero__feautures-item.site-hero-text
+				| максимально эффективно
+		.site-content-grid.about-group-hero__info
+			.site-content-grid__block
+				+icon("hero-arrow-down")(class="hero-arrow-down" width="16" height="32")
+			.site-content-grid__block
+				.about-group-hero__links
+					a.about-group-hero__link(href="/")
+						span(data-count="3")
+							|	Вакансии
+						+icon("arrow-right-button")(class="about-group-hero__link-icon" width="20" height="20")
+					a.about-group-hero__link._no-count(href="/")
+						span
+							|	команда
+						+icon("arrow-right-button")(class="about-group-hero__link-icon" width="20" height="20")
+

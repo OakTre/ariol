@@ -235,3 +235,11 @@
 	transition: max-height var(--main-transition);
 	max-height: 0;
 }
+
+
+.site-hero-text {
+	font-weight: 500;
+	font-size: 6rem;
+	line-height: 6.6rem;
+	text-transform: uppercase;
+}

@@ -1,0 +1,32 @@
+.about-group-hero {
+	height: 100vh;
+	background-color: var(--color-dark);
+	color: var(--color-white);
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		background-color: var(--color-dark);
+		height: 100%;
+		padding-top: 21rem;
+	}
+
+	&__feautures {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&-item {
+			display: block;
+			max-width: 54rem;
+
+			&:last-child {
+				text-align: right;
+			}
+		}
+	}
+
+	&__info {
+		margin-top: auto;
+	}
+}
