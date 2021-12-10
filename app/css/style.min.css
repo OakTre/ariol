@@ -2057,6 +2057,10 @@ a {
     align-self: flex-end;
   }
 
+  .company-numbers__item-text br {
+    display: none;
+  }
+
   .company-numbers__item:nth-child(2) {
     max-width: 100%;
   }
