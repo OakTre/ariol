@@ -1,4 +1,4 @@
-- let acc_arr = ["Акционерам", "Руководителям", "Сотрудникам"]
+- let acc_arr = [{name: "Акционерам", items: ["ТРАНСФОРМАЦИЯ ИДЕИ В БИЗНЕС-ПЛАН", "ПОСТРОЕНИЕ БИЗНЕС-МОДЕЛИ", "ВНЕДРЕНИЕ И ОТЛАДКА КАЖДОГО ЕЁ ЗВЕНА", "СОПРОВОЖДЕНИЕ РАБОТЫ БИЗНЕСА", "ПРОЗРАЧНОСТЬ РЕЗУЛЬТАТОВ РАБОТЫ И РЫЧАГОВ ВЛИЯНИЯ НА НИХ", "ПОЗИТИВНЫЙ КОНТРОЛЬ БИЗНЕСА И УПРАВЛЕНЧЕСКИХ РЕШЕНИЙ", "УВЕРЕННОСТЬ В СОБЛЮДЕНИИ ДЕЙСТВУЮЩЕГО ЗАКОНОДАТЕЛЬСТВА"]}, {name: "Руководителям", items: ["ГОТОВАЯ СИСТЕМА БИЗНЕСА", "ПОКАЗАТЕЛИ ЭФФЕКТИВНОСТИ РАБОТЫ ВСЕХ ЦЕНТРОВ ОТВЕТСТВЕННОСТИ", "АНАЛИТИЧЕСКАЯ ИНФОРМАЦИЯ ДЛЯ ПРИНЯТИЯ РЕШЕНИЙ", "УВЕРЕННОСТЬ В РАБОТЕ С ВНЕШНИМ МИРОМ", "РАЗРАБОТКА ВАРИАНТОВ ОПТИМАЛЬНОГО РЕШЕНИЯ", "ПОНЯТНАЯ МОТИВАЦИОННАЯ МАТРИЦА"]}, {name: "Сотрудникам", items: ["ПРОЗРАЧНОСТЬ ФУНКЦИОНАЛЬНЫХ ЗАДАЧ И УСЛОВИЙ РАБОТЫ", "МОНИТОРИНГ РАБОТЫ СОТРУДНИКА И ЕГО ВОЗМОЖНОСТЕЙ РОСТА", "СВОЕВРЕМЕННОЕ ИЗМЕНЕНИЕ ФУНКЦИОНАЛЬНЫХ ЗАДАЧ И МОТИВАЦИИ", "ПРОВЕДЕНИЕ МЕРОПРИЯТИЙ ПО РАЗВИТИЮ ПРОФЕССИОНАЛЬНЫХ КАЧЕСТВ", "МОТИВАЦИЯ ЕДИНЕНИЯ КОЛЛЕКТИВА В ЦЕЛЯХ РАБОТЫ БИЗНЕСА"]}]
 
 section.directions
 	.directions_layer.lazy(data-bg="img/index/services-bg.webp" data-bg-fallback="img/index/services-bg.jpg" data-item="Акционерам")
@@ -16,12 +16,11 @@ section.directions
 						span._top-line.js-direction-lines
 						span._bottom-line.js-direction-lines
 						button.button-rest.directions__item-head.js-drop-menu-btn.js-btn-show-bg(data-show=item)
-							span.directions__item-heading=item
+							span.directions__item-heading=item.name
 							span.directions__item-icon
 								span
 								span
 						.drop-menu-container.js-drop-menu-container
 							ul.directions__item-body.drop-menu.js-drop-menu
-								- for (let i = 0; i<10; i++)
-									li.directions__item-body-item
-										|	Тестовый текст
+								for val in item.items
+									li.directions__item-body-item=val
