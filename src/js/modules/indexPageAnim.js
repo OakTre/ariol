@@ -13,7 +13,7 @@ export default () => {
 				let tl3 = gsap.timeline({
 					scrollTrigger: {
 						trigger: ".js-company-numbers1",
-						start: "top 70%",
+						start: "top bottom",
 						scrub: true,
 						scrub: 1,
 					}
@@ -61,6 +61,7 @@ export default () => {
 					scrollTrigger: {
 						trigger: ".contact-us__content-with-arrow",
 						start: "top bottom",
+						end: "bottom center",
 						scrub: true,
 						scrub: 1,
 					}
@@ -76,7 +77,7 @@ export default () => {
 				let tl3 = gsap.timeline({
 					scrollTrigger: {
 						trigger: ".js-company-numbers1",
-						start: "top 70%",
+						start: "top bottom",
 						scrub: true,
 						scrub: 1,
 					}
@@ -122,16 +123,17 @@ export default () => {
 
 
 				// текст в секции почему нас выбирают
-				gsap.utils.toArray(".why-us__bottom-block-text").forEach((el) => {
+				gsap.utils.toArray(".why-us__text-block p").forEach((el) => {
 					gsap.set(el, { x: "-5.5rem" })
 				})
 
 
-				gsap.utils.toArray(".why-us__bottom-block-text").forEach((el) => {
+				gsap.utils.toArray(".why-us__text-block p").forEach((el) => {
 					let tl6 = gsap.timeline({
 						scrollTrigger: {
 							trigger: el,
 							start: "top bottom",
+							end: "bottom 80%",
 							scrub: true,
 							scrub: 1,
 						}
@@ -171,10 +173,10 @@ export default () => {
 							animFrom(el)
 						},
 						onEnterBack: function () {
-							animFrom(el, 1)
+							// animFrom(el, 1)
 						},
 						onLeave: function () {
-							gsap.set(el, { y: "100%" })
+							// gsap.set(el, { y: "100%" })
 						}
 					});
 				})

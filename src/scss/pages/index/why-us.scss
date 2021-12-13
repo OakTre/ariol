@@ -132,23 +132,39 @@
 		}
 	}
 
-	&__bottom-block-text {
-		grid-column: 4 span;
+	&__text-block {
+		p {
+			grid-column: 4 span;
+			font-weight: 500;
+			font-size: 2.5rem;
+			line-height: 3rem;
+			text-transform: uppercase;
 
-		span {
-			color: var(--color-green);
-		}
-
-		&:nth-child(1) {
-			padding-top: 9rem;
-		}
-
-		@include mq(sm) {
-			grid-column: 12 span;
+			span {
+				color: var(--color-green);
+			}
 
 			&:nth-child(1) {
-				padding-top: 0;
-				margin-bottom: 3.2rem;
+				padding-top: 9rem;
+			}
+
+			@include mq(md) {
+				font-size: 2rem;
+				line-height: 2.6rem;
+			}
+
+			@include mq(sm) {
+				font-size: 1.5rem;
+				line-height: 1.8rem;
+			}
+
+			@include mq(sm) {
+				grid-column: 12 span;
+
+				&:nth-child(1) {
+					padding-top: 0;
+					margin-bottom: 3.2rem;
+				}
 			}
 		}
 	}
