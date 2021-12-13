@@ -1,13 +1,15 @@
 .ceo {
 	position: relative;
-	height: 76rem;
+	height: 67rem;
 	width: 100%;
 	color: var(--color-white);
+	overflow: hidden;
 
 	&::before {
 		position: absolute;
 		top: 0;
 		left: 0;
+		z-index: 1;
 		width: 100%;
 		height: 100%;
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
@@ -15,11 +17,18 @@
 	}
 
 	&__layer {
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
-		height: 100%;
+		height: 76rem;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+
+		@include mq(sm) {
+			height: 100%;
+		}
 	}
 
 	&__container {
@@ -29,6 +38,7 @@
 
 	&__item {
 		position: absolute;
+		z-index: 2;
 
 		&-heading {
 			display: block;

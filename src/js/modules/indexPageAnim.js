@@ -41,6 +41,23 @@ export default () => {
 				gsap.set(".js-about-company-info-block", { x: "-66%" })
 				gsap.set(".contact-us__content-with-arrow", { x: "-50%" })
 
+				// paralax
+				const tmln = gsap.timeline({
+					scrollTrigger: {
+						trigger: ".ceo",
+						start: "top 20%",
+						end: "bottom 50%",
+						scrub: true
+					}
+				});
+
+				gsap.utils.toArray(".parallax").forEach(layer => {
+					const depth = layer.dataset.depth;
+					const movement = -(layer.offsetHeight * depth)
+					tmln.to(layer, {y: movement, ease: "none"}, 0)
+				});
+
+
 				// анмиация в о компании
 				let tl = gsap.timeline({
 					scrollTrigger: {
@@ -110,7 +127,7 @@ export default () => {
 				gsap.utils.toArray(".js-direction-lines").forEach((el) => {
 					let tl5 = gsap.timeline({
 						scrollTrigger: {
-							trigger: ".js-direction-lines"
+							trigger: el
 						}
 					});
 

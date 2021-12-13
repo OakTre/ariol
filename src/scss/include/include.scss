@@ -143,6 +143,7 @@
 	}
 
 	&__item {
+		position: relative;
 		margin-right: 4rem;
 
 		&:last-child {
@@ -151,6 +152,7 @@
 	}
 
 	&__link {
+		position: relative;
 		font-weight: 500;
 		font-size: 1.6rem;
 		line-height: 2rem;

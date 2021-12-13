@@ -7,6 +7,10 @@ import showAccordionBg from "./modules/showAccordionBg";
 import indexPageAnim from "./modules/indexPageAnim";
 import initMobileMenu from "./modules/initMobileMenu";
 
+if ('scrollRestoration' in history) {
+	history.scrollRestoration = 'manual';
+}
+
 window.onload = function() {
 	let preloader = document.querySelector(".preloader");
 

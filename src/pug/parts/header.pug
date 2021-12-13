@@ -1,4 +1,4 @@
-- let nav_arr = ["О группе", "Услуги", "Проекты"]
+- let nav_arr = ["О группе", "Услуги"]
 
 header.header(class=jsPageClass)
 	.site-container.site-content-grid.header__container.js-animated-el
@@ -11,6 +11,11 @@ header.header(class=jsPageClass)
 					for item in nav_arr
 						li.nav__item
 							a.nav__link(href="/")=item
+					li.nav__item
+						a.nav__link(href="/")
+							|	Проекты
+							span.header__news-link-count
+								|	3
 			.header__nav-block-item
 				a.header__news-link.header__link(href="/")
 					|	Новости
