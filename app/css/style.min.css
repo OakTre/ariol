@@ -783,7 +783,7 @@ a {
   position: absolute;
   top: 50%;
   left: 0;
-  width: 99%;
+  width: 99.7%;
   height: 2px;
   background-color: var(--color-white);
   -webkit-transform: translateY(-50%);
@@ -1375,7 +1375,9 @@ a {
   text-transform: uppercase;
 }
 
-.why-us__text-block p span {
+.why-us__text-block p b,
+.why-us__text-block p strong {
+  font-weight: 500;
   color: var(--color-green);
 }
 

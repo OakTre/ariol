@@ -140,7 +140,9 @@
 			line-height: 3rem;
 			text-transform: uppercase;
 
-			span {
+			b,
+			strong {
+				font-weight: 500;
 				color: var(--color-green);
 			}
 
