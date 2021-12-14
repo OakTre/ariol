@@ -1,6 +1,12 @@
 .company-numbers {
 	padding: 8.8rem 0 12.5rem 0;
 
+	&.mod-with-section-name {
+		.section-name {
+			margin-bottom: 5rem;
+		}
+	}
+
 	&__list {
 		width: 100%;
 	}

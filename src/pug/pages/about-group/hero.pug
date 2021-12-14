@@ -1,5 +1,7 @@
 section.about-group-hero
+	.about-group-hero__layer.lazy(data-bg="img/about-group/hero-layer.webp" data-bg-fallback="img/about-group/hero-layer.jpg")
 	.site-container.about-group-hero__container
+		+breadcrumbs([['Главная', "/index.html"], ['О группе']])
 		h1.visually-hidden
 			|	Заголовок для сео
 		.about-group-hero__feautures
@@ -7,17 +9,15 @@ section.about-group-hero
 				| используем накопленный потенциал
 			span.about-group-hero__feautures-item.site-hero-text
 				| максимально эффективно
-		.site-content-grid.about-group-hero__info
-			.site-content-grid__block
-				+icon("hero-arrow-down")(class="hero-arrow-down" width="16" height="32")
-			.site-content-grid__block
-				.about-group-hero__links
-					a.about-group-hero__link(href="/")
-						span(data-count="3")
-							|	Вакансии
-						+icon("arrow-right-button")(class="about-group-hero__link-icon" width="20" height="20")
-					a.about-group-hero__link._no-count(href="/")
-						span
-							|	команда
-						+icon("arrow-right-button")(class="about-group-hero__link-icon" width="20" height="20")
+		.about-group-hero__links.js-magic-line-container
+			span.about-group-hero__nav-line.js-magic-line
+			.about-group-hero__links-item.js-magic-line-item._is-active
+				a.about-group-hero__link(href="/")
+					| О нас
+			.about-group-hero__links-item.js-magic-line-item
+				a.about-group-hero__link(href="/")
+					| Команда
+			.about-group-hero__links-item.js-magic-line-item
+				a.about-group-hero__link(href="/")
+					| карьера
 

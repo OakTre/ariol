@@ -6,6 +6,7 @@ import initDropMenu from "./modules/initDropMenu";
 import showAccordionBg from "./modules/showAccordionBg";
 import indexPageAnim from "./modules/indexPageAnim";
 import initMobileMenu from "./modules/initMobileMenu";
+import magicLine from "./modules/magicLine";
 
 if ('scrollRestoration' in history) {
 	history.scrollRestoration = 'manual';
@@ -28,4 +29,5 @@ documentReady(() => {
 	initDropMenu();
 	showAccordionBg();
 	indexPageAnim();
+	magicLine();
 });

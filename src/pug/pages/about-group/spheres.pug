@@ -1,0 +1,18 @@
+- let spheresList = ["ФИНАНСЫ и экономика", "бухгалтерия", "ЮРИСПРЮДЕНЦИЯ", "IT-технологии"]
+
+section.spheres
+	.site-container.spheres__container.site-content-grid
+		.site-content-grid__block
+			span.section-name._color-white
+				|	Наши специалисты из следующих сфер
+		.site-content-grid__block.spheres__content-text
+			ul
+				for item in spheresList
+					li=item
+	.site-container.spheres__arrow.site-content-grid
+		.spheres__arrow-long
+			+icon("arrow-right-button")(class="spheres__arrow-arrow" width="20" height="20")
+		.spheres__arrow-content-text.site-middle-text
+			p
+				|	наша команда состоит из разных специалистов, но мы объединены общей целью и&nbsp;неугосаемым стремлением к&nbsp;совершенству
+

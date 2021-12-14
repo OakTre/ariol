@@ -66,6 +66,10 @@
 		}
 	}
 
+	&_transparent {
+		background-color: transparent;
+	}
+
 
 	@include mq(sm) {
 		font-size: 1.8rem;
@@ -213,6 +217,14 @@
 	line-height: 1.7rem;
 	padding-left: 2rem;
 
+	&._color-green {
+		color: var(--color-green);
+	}
+
+	&._color-white {
+		color: var(--color-white);
+	}
+
 	&::before {
 		position: absolute;
 		top: 0.3rem;
@@ -268,4 +280,44 @@
 	font-size: 6rem;
 	line-height: 6.6rem;
 	text-transform: uppercase;
+}
+
+
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+	margin-bottom: 5rem;
+
+	&__item {
+		margin-right: 1rem;
+		font-weight: 500;
+		font-size: 1.6rem;
+		line-height: 2rem;
+		color: rgba($color: #fff, $alpha: 0.6);
+		transition: color var(--main-transition);
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__arrow {
+		fill: rgba($color: #fff, $alpha: 0.6);
+		width: 2rem;
+		height: 0.8rem;
+		display: block;
+		margin-right: 1rem;
+	}
+
+	&__item-link {
+		font-weight: 500;
+		font-size: 1.6rem;
+		line-height: 2rem;
+		color: rgba($color: #fff, $alpha: 0.6);
+		transition: color var(--main-transition);
+
+		&:hover {
+			color: var(--color-white);
+		}
+	}
 }
