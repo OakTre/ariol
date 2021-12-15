@@ -3,6 +3,7 @@
 ## Ссылки
 
 1. [Главная](https://oaktre.github.io/ariol/app/)
+2. [О группе](https://oaktre.github.io/ariol/app/about-group.html)
 
 
 ## Список команд
