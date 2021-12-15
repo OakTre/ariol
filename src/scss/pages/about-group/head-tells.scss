@@ -1,6 +1,7 @@
 .head-tells {
 	background-color: var(--color-dark);
 	color: var(--color-white);
+	margin-bottom: 18rem;
 
 	::selection {
 		background-color: var(--color-white);
@@ -31,6 +32,11 @@
 
 	&__content-text {
 		margin-bottom: 6rem;
+		max-width: 106rem;
+
+		@include mq(custom, max, 1680) {
+			max-width: 93rem;
+		}
 
 		p {
 			font-weight: 500;
@@ -62,5 +68,32 @@
 		&-block {
 			grid-column: 4 span;
 		}
+	}
+
+	&__author {
+		display: block;
+		font-weight: 500;
+		font-size: 2rem;
+		line-height: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	&__position {
+		font-weight: 500;
+		font-size: 1.5rem;
+		line-height: 2rem;
+		color: rgba(236, 237, 240, 0.6);
+		max-width: 39.7rem;
+	}
+
+	&__img {
+		width: 56rem;
+		height: 65rem;
+		margin-left: auto;
+		display: block;
+	}
+
+	&__arrow-long {
+		margin-top: 0.5rem;
 	}
 }
