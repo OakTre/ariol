@@ -10,11 +10,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="resourses/favicon/favicon-16x16.png">
     <link rel="mask-icon" href="resourses/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
-    <title>Главная | Ariol Buisness Group</title>
+    <title>О группе | Ariol Buisness Group</title>
     <link rel="stylesheet" href="./css/vendor.min.css?v=0.0.2.0">
     <link rel="stylesheet" href="./css/style.min.css?v=0.0.2.0">
   </head>
-  <body class="page-home">
+  <body class="page-about-group">
     <div class="preloader"></div>
     <div class="page-wrapper">
       <header class="header js-about-group-page">
@@ -87,9 +87,9 @@
       </div>
       <main class="page-main main">
         <section class="about-group-hero">
-          <div class="about-group-hero__layer lazy" data-bg="img/about-group/hero-layer.webp" data-bg-fallback="img/about-group/hero-layer.jpg"></div>
+          <div class="about-group-hero__layer lazy parallax" data-bg="img/about-group/hero-layer.webp" data-bg-fallback="img/about-group/hero-layer.jpg" data-depth="0.10"></div>
           <div class="site-container about-group-hero__container">
-            <div class="breadcrumbs__container">
+            <div class="breadcrumbs__container about-group-hero__breadcrumbs">
               <div class="breadcrumbs">
                 <div class="breadcrumbs__item">
                   <a class="breadcrumbs__item-link" href="/index.html">Главная</a>
@@ -103,6 +103,11 @@
             <h1 class="visually-hidden">	Заголовок для сео</h1>
             <div class="about-group-hero__feautures">
               <span class="about-group-hero__feautures-item site-hero-text">используем накопленный потенциал</span>
+              <div class="site-long-arrow about-group-hero__long-arrow">
+                <svg class="icon icon-arrow-right-button site-long-arrow__arrow" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#arrow-right-button"></use>
+                </svg>
+              </div>
               <span class="about-group-hero__feautures-item site-hero-text">максимально эффективно</span>
             </div>
             <div class="about-group-hero__links js-magic-line-container">
@@ -215,7 +220,7 @@
                     <p class="head-tells__position">Генеральный директор и единственный собственник бизнес-группы АРИОЛ</p>
                   </div>
                 </div>
-                <div class="head-tells__content-grid">
+                <div class="head-tells__content-grid head-tells__nav-block">
                   <div class="head-tells__content-grid-block">
                     <div class="slider-nav">
                       <button class="button-rest slider-nav__button"><svg class="slider-nav__button-icon" viewBox="0 0 52 45" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,12 +1,14 @@
 section.about-group-hero
-	.about-group-hero__layer.lazy(data-bg="img/about-group/hero-layer.webp" data-bg-fallback="img/about-group/hero-layer.jpg")
+	.about-group-hero__layer.lazy.parallax(data-bg="img/about-group/hero-layer.webp" data-bg-fallback="img/about-group/hero-layer.jpg" data-depth="0.10")
 	.site-container.about-group-hero__container
-		+breadcrumbs([['Главная', "/index.html"], ['О группе']])
+		+breadcrumbs([['Главная', "/index.html"], ['О группе']])(class="about-group-hero__breadcrumbs")
 		h1.visually-hidden
 			|	Заголовок для сео
 		.about-group-hero__feautures
 			span.about-group-hero__feautures-item.site-hero-text
 				| используем накопленный потенциал
+			.site-long-arrow.about-group-hero__long-arrow
+				+icon("arrow-right-button")(class="site-long-arrow__arrow" width="20" height="20")
 			span.about-group-hero__feautures-item.site-hero-text
 				| максимально эффективно
 		.about-group-hero__links.js-magic-line-container

@@ -7,6 +7,8 @@ import showAccordionBg from "./modules/showAccordionBg";
 import indexPageAnim from "./modules/indexPageAnim";
 import initMobileMenu from "./modules/initMobileMenu";
 import magicLine from "./modules/magicLine";
+import aboutGroupStartAnim from "./modules/aboutGroupStartAnim";
+import aboutGroupAnim from "./modules/aboutGroupAnim";
 
 if ('scrollRestoration' in history) {
 	history.scrollRestoration = 'manual';
@@ -19,6 +21,7 @@ window.onload = function() {
 		preloader.classList.add("preloader_is-loaded");
 
 		indexPageStartAnim();
+		aboutGroupStartAnim();
 	}, 300);
 }
 
@@ -29,5 +32,6 @@ documentReady(() => {
 	initDropMenu();
 	showAccordionBg();
 	indexPageAnim();
+	aboutGroupAnim();
 	magicLine();
 });

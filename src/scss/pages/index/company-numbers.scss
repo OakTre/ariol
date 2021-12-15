@@ -4,6 +4,10 @@
 	&.mod-with-section-name {
 		.section-name {
 			margin-bottom: 5rem;
+
+			@include mq(sm) {
+				margin-bottom: 2rem;
+			}
 		}
 	}
 
