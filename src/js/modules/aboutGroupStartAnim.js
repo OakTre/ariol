@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default () => {
 	gsap.registerPlugin(ScrollTrigger);
 
-	if (document.querySelector(".js-about-group-page")) {
+	if (document.querySelector(".js-hero-anim")) {
 		ScrollTrigger.matchMedia({
 			"(min-width: 767px)": function () {
 				gsap.set(".about-group-hero__links", { opacity: 0 });

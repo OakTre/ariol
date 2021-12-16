@@ -9,6 +9,8 @@ import initMobileMenu from "./modules/initMobileMenu";
 import magicLine from "./modules/magicLine";
 import aboutGroupStartAnim from "./modules/aboutGroupStartAnim";
 import aboutGroupAnim from "./modules/aboutGroupAnim";
+import accordionImg from "./modules/accordionImg";
+import teamAnim from "./modules/teamAnim";
 
 if ('scrollRestoration' in history) {
 	history.scrollRestoration = 'manual';
@@ -33,5 +35,7 @@ documentReady(() => {
 	showAccordionBg();
 	indexPageAnim();
 	aboutGroupAnim();
+	teamAnim();
 	magicLine();
+	accordionImg();
 });

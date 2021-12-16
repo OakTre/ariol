@@ -1,16 +1,16 @@
-- let nav_arr = ["О группе", "Услуги"]
+- let nav_arr = [{name: "О группе", link: "/about-group.html"}, {name: "Услуги", link: "/"}]
 
 header.header(class=jsPageClass)
 	.site-container.site-content-grid.header__container.js-animated-el
 		.site-content-grid__block
-			a.logo(href="/")
+			a.logo(href="/index.html")
 				img(class="logo__img" src="img/logo-white.svg" alt="Логотип компании")
 		.site-content-grid__block.header__nav-block
 			nav.nav.header__nav-block-item
 				ul.nav__list.header__nav-list
 					for item in nav_arr
 						li.nav__item
-							a.nav__link(href="/")=item
+							a.nav__link(href=item.link)=item.name
 					li.nav__item
 						a.nav__link(href="/")
 							|	Проекты

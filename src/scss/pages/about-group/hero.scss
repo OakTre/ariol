@@ -203,4 +203,16 @@
 			line-height: 1.6rem;
 		}
 	}
+
+	&.mod-team {
+		.about-group-hero__feautures {
+			height: 19.7rem;
+		}
+
+		.about-group-hero__long-arrow {
+			position: relative;
+			top: auto;
+			left: auto;
+		}
+	}
 }

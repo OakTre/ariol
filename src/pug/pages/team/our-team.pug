@@ -1,0 +1,48 @@
+- let team_arr = [{name: "ИВАН КУЗНЕЦОВ", position: "генеральный директор"}, {name: "СЕРГЕЙ БЕЛОВ", position: "заместитель генерального директора"}, {name: "ИГОРЬ БОРИСОВ", position: "HR-директор"}, {name: "ДИМИТРИЙ САВИНОВ", position: "финансовый директор"}, {name: "ЛЮБОВЬ ЗУБАРЕВА", position: "руководитель юридической службы"}, {name: "АЛИНА СИБГАТОВА", position: "главный бухгалтер"}, {name: "ИЛЬнур фатхутдинов", position: "руководитель отдела планирования"}, {name: "эльвина камалова", position: "бизнес-ассистент"}]
+
+section.our-team
+	.site-container
+		span.section-name._color-white
+			| Познакомимся ближе?
+
+		.our-team__container.site-content-grid.js-show-img-container
+			.site-content-grid__block
+				for item,index in team_arr
+					- let isFirst = index == 0 ? "mod-show" : ""
+					img(src=`img/team/team${index}.jpg`, alt=item.name data-item=index class=`our-team__img js-imgs`)
+
+			.site-content-grid__block
+				ul.our-team__list.our-team-accordion
+					for item, index in team_arr
+						li.our-team__item.our-team-accordion__item
+							span._top-line
+							button.button-rest.our-team-accordion__head.js-drop-menu-btn.js-btn-show-img(data-show=index)
+								._block
+									span.our-team-accordion__head-name=item.name
+								._block
+									span.our-team-accordion__head-position=item.position
+								._block
+									span.our-team-accordion__burger
+										span
+										span
+							.drop-menu-container.js-drop-menu-container
+								.our-team-accordion__body.drop-menu.js-drop-menu
+									h3
+										|	опыт и образование
+									p
+										| Окончил в 1997 году Казанский государственный финасово-экономический институт по специальности “Экономист: бухгалтерский учет и аудит”.
+									p
+										| В 2002 году получил должность финансового директора Казанского текстильного торгового дома.
+									p
+										| С 2005 по 2020 год возглавлял департамент экономики в региональном медиахолдинге “Барс Медиа Групп”.
+									p
+										| С 2020 года назначен директором компании “Сетка Плюс”, компании по производству металлических сеток и композитной арматуры. С 2020 года является заместителем генерального директора “БГ АРИОЛ”.
+
+				.our-team__links
+					.our-team__text
+						p
+							|	Хотите к нам в команду? Мы всегда рады новым знакомствам.
+					+button(null, "наши вакансии", "button_transparent")
+
+
+
