@@ -11,6 +11,7 @@ import aboutGroupStartAnim from "./modules/aboutGroupStartAnim";
 import aboutGroupAnim from "./modules/aboutGroupAnim";
 import accordionImg from "./modules/accordionImg";
 import teamAnim from "./modules/teamAnim";
+import initGroupSlider from "./modules/initGroupSlider";
 
 if ('scrollRestoration' in history) {
 	history.scrollRestoration = 'manual';
@@ -38,4 +39,5 @@ documentReady(() => {
 	teamAnim();
 	magicLine();
 	accordionImg();
+	initGroupSlider();
 });

@@ -339,6 +339,11 @@
 		cursor: pointer;
 		transition: opacity var(--main-transition), transform var(--main-transition);
 
+		&.swiper-button-disabled {
+			opacity: 0.5;
+			pointer-events: none;
+		}
+
 		&:nth-child(2) {
 			.slider-nav__button-icon {
 				transform: translateY(1px);

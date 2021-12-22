@@ -4,29 +4,34 @@ section.head-tells
 			span.section-name._color-white
 				| Обращение руководителя
 			.head-tells__content
-				.head-tells__content-text
-					p
-						| С первого дня основания компании мы следуем строгим правилам работы с клиентами и жестким принципам отбора инвестиционных проектов. В первую очередь мы руководствуемся интересами клиентов, смотрим на мир «их глазами», ставим себя на место заказчика. <b>Наши инвестиции – результат скрупулезного анализа рынка и учета всех факторов риска.</b>
+				.head-tells__slider.swiper
+					.swiper-wrapper
+						- for (let i=0; i<3; i++)
+							.swiper-slide
+								.head-tells__content-text
+									p
+										| С первого дня основания компании мы следуем строгим правилам работы с клиентами и жестким принципам отбора инвестиционных проектов. В первую очередь мы руководствуемся интересами клиентов, смотрим на мир «их глазами», ставим себя на место заказчика. <b>Наши инвестиции – результат скрупулезного анализа рынка и учета всех факторов риска.</b>
 
-				.head-tells__content-grid
-					.head-tells__content-grid-block
-						.site-long-arrow.head-tells__arrow-long
-							+icon("arrow-right-button")(class="site-long-arrow__arrow" width="20" height="20")
+								.head-tells__content-grid.js-slider-arrow-anim
+									.head-tells__content-grid-block
+										.site-long-arrow.head-tells__arrow-long
+											+icon("arrow-right-button")(class="site-long-arrow__arrow" width="20" height="20")
 
-					.head-tells__content-grid-block.head-tells__authors
-						span.head-tells__author
-							| ИВАН КУЗНЕЦОВ
-						p.head-tells__position
-							| Генеральный директор и единственный собственник бизнес-группы АРИОЛ
+									.head-tells__content-grid-block.head-tells__authors
+										span.head-tells__author
+											| ИВАН КУЗНЕЦОВ
+										p.head-tells__position
+											| Генеральный директор и единственный собственник бизнес-группы АРИОЛ
+
 				.head-tells__content-grid.head-tells__nav-block
 					.head-tells__content-grid-block
 						.slider-nav
-							button.button-rest.slider-nav__button
+							button.button-rest.slider-nav__button.js-swiper-button-prev.head-tells__nav-btn
 								<svg class="slider-nav__button-icon" viewBox="0 0 52 45" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<line x1="51.0002" y1="23" x2="3.49529" y2="23" stroke="white" stroke-width="2" stroke-linecap="round"/>
 									<path d="M22.0509 1.66814C22.4199 1.25722 22.3859 0.624969 21.975 0.255965C21.5641 -0.113039 20.9319 -0.07906 20.5628 0.331859L22.0509 1.66814ZM20.5628 44.6681C20.9319 45.0791 21.5641 45.113 21.975 44.744C22.3859 44.375 22.4199 43.7428 22.0509 43.3319L20.5628 44.6681ZM1.99995 22.5L1.25592 21.8319L0.655931 22.5L1.25592 23.1681L1.99995 22.5ZM20.5628 0.331859L1.25592 21.8319L2.74399 23.1681L22.0509 1.66814L20.5628 0.331859ZM1.25592 23.1681L20.5628 44.6681L22.0509 43.3319L2.74399 21.8319L1.25592 23.1681Z" fill="white"/>
 								</svg>
-							button.button-rest.slider-nav__button
+							button.button-rest.slider-nav__button.js-swiper-button-next.head-tells__nav-btn
 								<svg class="slider-nav__button-icon" viewBox="0 0 52 45" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<line x1="0.999756" y1="22" x2="48.5047" y2="22" stroke="white" stroke-width="2" stroke-linecap="round"/>
 									<path d="M29.9491 43.3319C29.5801 43.7428 29.6141 44.375 30.025 44.744C30.4359 45.113 31.0681 45.0791 31.4372 44.6681L29.9491 43.3319ZM31.4372 0.33186C31.0681 -0.0790596 30.4359 -0.113037 30.025 0.255966C29.6141 0.624969 29.5801 1.25722 29.9491 1.66814L31.4372 0.33186ZM50 22.5L50.7441 23.1681L51.3441 22.5L50.7441 21.8319L50 22.5ZM31.4372 44.6681L50.7441 23.1681L49.256 21.8319L29.9491 43.3319L31.4372 44.6681ZM50.7441 21.8319L31.4372 0.33186L29.9491 1.66814L49.256 23.1681L50.7441 21.8319Z" fill="white"/>
@@ -36,4 +41,10 @@ section.head-tells
 						+button(null, "наша команда", "button_transparent")(class="head-tells__link")
 
 		.site-content-grid__block.head-tells__right-block
-			img(src="img/about-group/head.jpg" alt="ИВАН КУЗНЕЦОВ" class="head-tells__img")
+			.head-tells__imgs-slider.swiper
+				.swiper-wrapper
+					- for (let i=0; i<3; i++)
+						.swiper-slide
+							.head-tells__imgs-slider-img-wrapper
+								._layer.js-img-layer
+								img(src="img/about-group/head.jpg" alt="ИВАН КУЗНЕЦОВ" class="head-tells__img")
