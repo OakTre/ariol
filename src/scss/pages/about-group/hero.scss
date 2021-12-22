@@ -215,4 +215,27 @@
 			left: auto;
 		}
 	}
+
+	&.mod-career {
+		.about-group-hero__feautures {
+			height: 20.2rem;
+		}
+
+		.about-group-hero__long-arrow {
+			position: relative;
+			top: auto;
+			left: auto;
+			right: -5rem;
+			width: 100%;
+
+			@include mq(custom, max, 1680) {
+				width: 80%;
+    			right: -6rem;
+			}
+
+			@include mq(lg) {
+				width: 60%;
+			}
+		}
+	}
 }

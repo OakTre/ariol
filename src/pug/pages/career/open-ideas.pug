@@ -1,0 +1,66 @@
+- let vac_arr = ["БИЗНЕС-АССИСТЕНТ", "менеджер", "БИЗНЕС-АССИСТЕНТ", "БИЗНЕС-АССИСТЕНТ"];
+
+section.open-ideas.lazy(data-bg="img/career/bg.webp" data-bg-fallback="img/career/bg.png")
+	.site-container.open-ideas__container
+		.open-ideas__title-wrapper
+			h2.open-ideas__title.section-title
+				| открыты новым идеям
+			+button("btn", "отправить резюме", "button_transparent")
+
+		.open-ideas__vacancies.vacancies
+			.vacancies__head.vacancies__grid
+				._block
+					span.vacancies__head-heading
+						|	Вакансия
+				._block
+					span.vacancies__head-heading
+						|	Краткое описание
+				._block
+					span.vacancies__head-heading
+						|	Опыт работы
+			ul.vacancies__body
+				for item in vac_arr
+					li.vacancies__item
+						._top-line
+						button.button-rest.vacancies__item-head.vacancies__grid.js-drop-menu-btn
+							._block
+								span.vacancies__item-vac-name=item
+							._block
+								p
+									|	Если вы специалист в своей области и желаете присоединиться к команде профессионалов ARIOL, вы&nbsp;можете направить нам свое резюме
+							._block
+								span.vacancies__item-vac-exp
+									|	от 3 лет
+						.drop-menu-container.js-drop-menu-container
+							.vacancies__item-body.vacancies__grid.drop-menu.js-drop-menu
+								._body-block
+								._body-block
+									p
+										|	Чем предстоит заниматься:
+									ul
+										li
+											|	Своевременно, качественно и в срок исполнять прямые распоряжения руководителя;
+										li
+											|	Осуществлять всю необходимую помощь руководителю в рабочих и личных вопросах;
+									p
+										|	Что мы ожидаем:
+									ul
+										li
+											|	Наличие домашнего компьютера или ноутбука, работающего под ОС Windows;
+										li
+											|	Готовность, умение и желание обучаться и развиваться;
+										li
+											|	Коммуникабельность, стрессоустойчивость, внимательность;
+										li
+											|	Аналитический подход к решению задач;
+
+									+button("btn", "ОТКЛИКНУТЬСЯ", "button_green")(class="vacancies__item-body-btn")
+		.vacancies__links.vacancies__grid
+			._links-block
+			._links-block
+				.our-team__text
+					p
+						|	Хотите к нам в команду?
+						br
+						|	 Мы всегда рады новым знакомствам.
+				+button(null, "ВСЕ вакансии", "button_transparent")
