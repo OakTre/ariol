@@ -1236,7 +1236,7 @@ a {
   text-transform: uppercase;
 }
 
-.company-numbers__item-number>span {
+.company-numbers__item-number > span {
   position: relative;
   display: inline-block;
   padding-right: 2rem;
@@ -2999,7 +2999,7 @@ a {
     margin-bottom: 2rem;
   }
 
-  .company-numbers__item-number>span {
+  .company-numbers__item-number > span {
     padding-right: 1rem;
   }
 
@@ -3501,4 +3501,3 @@ a {
     font-size: 9px;
   }
 }
-/*# sourceMappingURL=style.min.css.map */
