@@ -152,13 +152,8 @@
 				}
 
 				@include mq(sm) {
-					font-size: 1.8rem;
-					line-height: 2.2rem;
-				}
-
-				@include mq(xxs) {
 					font-size: 1.6rem;
-					line-height: 1.8rem;
+					line-height: 2rem;
 				}
 			}
 
@@ -176,7 +171,7 @@
 		&:nth-of-type(1) {
 			@include mq(md) {
 				grid-column: 12 span;
-				margin-bottom: 2.4rem;
+				margin-bottom: 4rem;
 			}
 		}
 

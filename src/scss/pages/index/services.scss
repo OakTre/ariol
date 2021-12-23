@@ -8,6 +8,10 @@
 
 	&__button {
 		background-color: transparent;
+
+		@include mq(sm) {
+			margin-left: 5.8rem;
+		}
 	}
 
 	&__text-info {
@@ -34,6 +38,8 @@
 
 		@include mq(sm) {
 			margin-bottom: 2.4rem;
+			max-width: 25.7rem;
+			margin-left: 5.8rem;
 		}
 	}
 

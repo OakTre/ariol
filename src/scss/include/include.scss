@@ -107,24 +107,24 @@
 
 	&_is-active {
 
-		span {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+		// span {
+		// 	position: absolute;
+		// 	top: 50%;
+		// 	left: 50%;
+		// 	transform: translate(-50%, -50%);
 
-			&:nth-child(2) {
-				opacity: 0;
-			}
+		// 	&:nth-child(2) {
+		// 		opacity: 0;
+		// 	}
 
-			&:nth-child(1) {
-				transform: translate(-50%, -50%) rotate(45deg);
-			}
+		// 	&:nth-child(1) {
+		// 		transform: translate(-50%, -50%) rotate(45deg);
+		// 	}
 
-			&:nth-child(3) {
-				transform: translate(-50%, -50%) rotate(-45deg);
-			}
-		}
+		// 	&:nth-child(3) {
+		// 		transform: translate(-50%, -50%) rotate(-45deg);
+		// 	}
+		// }
 	}
 }
 
@@ -245,9 +245,11 @@
 		color: var(--color-green);
 	}
 
-	@include mq(xs) {
+	@include mq(sm) {
 		margin-left: 0;
 		text-decoration: underline;
+		font-size: 1.5rem;
+		line-height: 2rem;
 	}
 }
 

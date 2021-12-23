@@ -8,7 +8,7 @@
 		}
 
 		@include mq(sm) {
-			margin-bottom: 4rem;
+			margin-bottom: 5.5rem;
 		}
 	}
 
@@ -17,13 +17,21 @@
 		grid-template-columns: repeat(12, 1fr);
 		column-gap: 20px;
 
+		@include mq(sm) {
+			grid-template-columns: repeat(8, 1fr);
+		}
+
 		&-block {
 			&:nth-of-type(1) {
 				grid-column: 8 span;
 
 				@include mq(md) {
 					grid-column: 12 span;
-					order: 2;
+					margin-bottom: 5rem;
+				}
+
+				@include mq(sm) {
+					grid-column: 8 span;
 				}
 			}
 
@@ -32,8 +40,26 @@
 
 				@include mq(md) {
 					grid-column: 12 span;
-					margin-bottom: 3.2rem;
-					order: 1;
+				}
+
+				@include mq(sm) {
+					grid-column: 8 span;
+
+					.contact-us__content-item {
+						display: grid;
+						grid-template-columns: repeat(8, 1fr);
+						column-gap: 20px;
+
+						._block {
+							&:nth-of-type(1) {
+								grid-column: 1 span;
+							}
+
+							&:nth-of-type(2) {
+								grid-column: 7 span;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -46,6 +72,9 @@
 
 		@include mq(sm) {
 			margin-bottom: 2rem;
+			font-size: 1.5rem;
+			line-height: 2rem;
+			margin-bottom: 1.5rem;
 		}
 	}
 
@@ -63,8 +92,9 @@
 		}
 
 		@include mq(sm) {
-			font-size: 3rem;
-			line-height: 3.4rem;
+			font-size: 3.5rem;
+			line-height: 5rem;
+			margin-bottom: 1.5rem;
 		}
 	}
 
@@ -81,8 +111,8 @@
 		}
 
 		@include mq(sm) {
-			font-size: 2rem;
-			line-height: 2.4rem;
+			font-size: 2.5rem;
+			line-height: 3rem;
 		}
 	}
 
@@ -94,8 +124,8 @@
 		max-width: 52rem;
 
 		@include mq(sm) {
-			font-size: 2rem;
-			line-height: 2.4rem;
+			font-size: 1.5rem;
+			line-height: 1.6rem;
 		}
 	}
 
@@ -109,13 +139,24 @@
 		display: grid;
 		grid-template-columns: repeat(8, 1fr);
 		column-gap: 20px;
+
+		@include mq(sm) {
+			grid-template-columns: repeat(8, 1fr);
+
+		}
 	}
 
 	&__content-with-arrow-block {
 		grid-column: 4 span;
 
 		@include mq(sm) {
-			grid-column: 8 span;
+			&:nth-of-type(1) {
+				grid-column: 1 span;
+			}
+
+			&:nth-of-type(2) {
+				grid-column: 7 span;
+			}
 		}
 	}
 
@@ -138,8 +179,11 @@
 				background-color: var(--color-dark);
 				transform: translateY(-50%);
 			}
+
 			@include mq(sm) {
-				display: none;
+				margin-top: 5rem;
+				margin-left: -100%;
+				padding-left: 100%;
 			}
 		}
 	}
@@ -151,8 +195,8 @@
 		margin-top: 10rem;
 
 		@include mq(sm) {
-			margin-top: 6rem;
-			height: 31rem;
+			margin-top: 5rem;
+			height: 61rem;
 		}
 	}
 }

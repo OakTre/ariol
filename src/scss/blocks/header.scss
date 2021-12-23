@@ -6,6 +6,10 @@
 	width: 100%;
 	padding-top: 3.5rem;
 
+	@include mq(sm) {
+		padding-top: 1.6rem;
+	}
+
 	&__nav-block {
 		display: grid;
 		grid-template-columns: repeat(8, 1fr);
@@ -37,7 +41,7 @@
 				display: none;
 
 				@include mq(md) {
-					display: block;
+					display: flex;
 					grid-column: 8 span;
 				}
 			}
@@ -45,7 +49,7 @@
 	}
 
 	&__button-burger {
-		margin-left: auto;
+		margin-left: 3.7rem;
 	}
 
 	&__link {
@@ -71,6 +75,16 @@
 			font-size: 1rem;
 			line-height: 1rem;
 			color: var(--color-green);
+		}
+	}
+
+	&__link-eng-page {
+		display: inline-block;
+		margin-left: auto;
+		transform: translateY(0.4rem);
+
+		@include mq(xxs) {
+			transform: translateY(0.9rem);
 		}
 	}
 }
