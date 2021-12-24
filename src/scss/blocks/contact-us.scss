@@ -105,6 +105,7 @@
 		text-transform: uppercase;
 		color: var(--color-green);
 		transition: color var(--main-transition);
+		text-decoration: underline;
 
 		&:hover {
 			color: var(--color-dark);

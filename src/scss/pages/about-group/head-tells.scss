@@ -15,6 +15,7 @@
 	.site-content-grid__block {
 		&:nth-of-type(1) {
 			grid-column: 8 span;
+			overflow: hidden;
 
 			@include mq(lg) {
 				grid-column: 12 span;
