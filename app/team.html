@@ -28,10 +28,16 @@
             <nav class="nav header__nav-block-item">
               <ul class="nav__list header__nav-list">
                 <li class="nav__item">
-                  <a class="nav__link" href="/about-group.html">О группе</a>
+                  <a class="nav__link _about-group _is-current" href="/">	О группе
+                    <span class="header__nav-link-current">
+                      <svg class="icon icon-icon-plus _plus" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                      </svg>
+                    </span>
+                  </a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="/">Услуги</a>
+                  <a class="nav__link" href="/">	Услуги</a>
                 </li>
                 <li class="nav__item">
                   <a class="nav__link" href="/">	Проекты
@@ -88,7 +94,7 @@
       </div>
       <main class="page-main main">
         <section class="about-group-hero mod-team">
-          <div class="about-group-hero__layer lazy parallax" data-bg="img/team/hero-layer.webp" data-bg-fallback="img/team/hero-layer.jpg" data-depth="0.10"></div>
+          <div class="about-group-hero__layer lazy parallax" data-bg="img/team/hero-layer3.webp" data-bg-fallback="img/team/hero-layer3.png" data-depth="0.10"></div>
           <div class="site-container about-group-hero__container">
             <div class="breadcrumbs__container about-group-hero__breadcrumbs">
               <div class="breadcrumbs">
@@ -126,7 +132,9 @@
                 <a class="about-group-hero__link" href="/team.html">Команда</a>
               </div>
               <div class="about-group-hero__links-item js-magic-line-item">
-                <a class="about-group-hero__link" href="/career.html">карьера</a>
+                <a class="about-group-hero__link" href="/career.html">карьера
+                  <span class="header__news-link-count">	3</span>
+                </a>
               </div>
             </div>
           </div>
@@ -386,7 +394,7 @@
                 </ul>
                 <div class="our-team__links">
                   <div class="our-team__text">
-                    <p>	Хотите к нам в команду? Мы всегда рады новым знакомствам.</p>
+                    <p>	Хотите к нам в команду?<br>	Мы всегда рады новым знакомствам.</p>
                   </div>
                   <a class="button-rest button button_transparent" href="/">
                     <span>наши вакансии</span>
@@ -476,6 +484,9 @@
                   </li>
                   <li class="footer__nav-item">
                     <a class="footer__nav-link" href="/">Афиша Казани</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="/">КВИНТЭС ГРУПП</a>
                   </li>
                 </ul>
               </div>

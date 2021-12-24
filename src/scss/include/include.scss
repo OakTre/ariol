@@ -167,6 +167,34 @@
 		&:hover {
 			color: var(--color-green);
 		}
+
+		.header__nav-link-current {
+			display: none;
+		}
+
+		&._is-current {
+			color: var(--color-green);
+		}
+
+		&._about-group._is-current {
+			display: flex;
+			align-items: center;
+			color: var(--color-white);
+
+			.header__nav-link-current {
+				display: block;
+				width: 1.6rem;
+				height: 1.6rem;
+
+				.icon {
+					width: 100%;
+					height: 100%;
+					fill: var(--color-green);
+					stroke: var(--color-green);
+					margin-left: 0.6rem;
+				}
+			}
+		}
 	}
 }
 

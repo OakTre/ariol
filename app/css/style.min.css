@@ -176,6 +176,38 @@
   color: var(--color-green);
 }
 
+.nav__link .header__nav-link-current {
+  display: none;
+}
+
+.nav__link._is-current {
+  color: var(--color-green);
+}
+
+.nav__link._about-group._is-current {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--color-white);
+}
+
+.nav__link._about-group._is-current .header__nav-link-current {
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.nav__link._about-group._is-current .header__nav-link-current .icon {
+  width: 100%;
+  height: 100%;
+  fill: var(--color-green);
+  stroke: var(--color-green);
+  margin-left: .6rem;
+}
+
 .hero-arrow-down {
   fill: var(--color-white);
 }
@@ -1219,7 +1251,7 @@ a {
   text-transform: uppercase;
 }
 
-.company-numbers__item-number > span {
+.company-numbers__item-number>span {
   position: relative;
   display: inline-block;
   padding-right: 2rem;
@@ -1855,6 +1887,7 @@ a {
 }
 
 .about-group-hero__link {
+  position: relative;
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 2rem;
@@ -3319,7 +3352,7 @@ a {
     margin-bottom: 2rem;
   }
 
-  .company-numbers__item-number > span {
+  .company-numbers__item-number>span {
     padding-right: 1rem;
   }
 
@@ -3784,3 +3817,4 @@ a {
     font-size: 9px;
   }
 }
+/*# sourceMappingURL=style.min.css.map */

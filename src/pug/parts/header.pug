@@ -1,4 +1,4 @@
-- let nav_arr = [{name: "О группе", link: "/about-group.html"}, {name: "Услуги", link: "/"}]
+- let nav_arr = [{name: "О группе", link: "/about-group.html"}]
 
 header.header(class=jsPageClass)
 	.site-container.site-content-grid.header__container.js-animated-el
@@ -8,21 +8,26 @@ header.header(class=jsPageClass)
 		.site-content-grid__block.header__nav-block
 			nav.nav.header__nav-block-item
 				ul.nav__list.header__nav-list
-					for item in nav_arr
-						li.nav__item
-							a.nav__link(href=item.link)=item.name
 					li.nav__item
-						a.nav__link(href="/")
+						a.nav__link._about-group(href="/")(class=(name === "projects" || "team" || "career" ? "_is-current" : false))
+							|	О группе
+							span.header__nav-link-current
+								+icon("icon-plus")(class="_plus" width="16" height="16")
+					li.nav__item
+						a.nav__link(href="/")(class=(name === "services" ? "_is-current" : false))
+							|	Услуги
+					li.nav__item
+						a.nav__link(href="/")(class=(name === "projects" ? "_is-current" : false))
 							|	Проекты
 							span.header__news-link-count
 								|	3
 			.header__nav-block-item
-				a.header__news-link.header__link(href="/")
+				a.header__news-link.header__link(href="/")(class=(name === "news" ? "_is-current" : false))
 					|	Новости
 					span.header__news-link-count
 						|	3
 			.header__nav-block-item
-				a.header__contacts-link.header__link(href="/")
+				a.header__contacts-link.header__link(href="/")(class=(name === "contacts" ? "_is-current" : false))
 					|	Контакты
 			.header__nav-block-item
 				a.header__lang-page.header__link(href="/")
