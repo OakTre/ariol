@@ -5,8 +5,8 @@
 	color: var(--color-white);
 	height: 73.2rem;
 
-	@include mq(xxs) {
-		height: 64.2rem;
+	@include mq(sm) {
+		height: 56.4rem;
 	}
 
 	&__layer {
@@ -22,7 +22,7 @@
 
 		@include mq(sm) {
 			height: 100%;
-			background-position: 100% 100%;
+			background-position: 40% 100%;
 		}
 	}
 
@@ -38,11 +38,11 @@
 		}
 
 		@include mq(sm) {
-			padding-top: 13rem;
+			padding-top: 15.4rem;
 		}
 
 		@include mq(custom, max, 360) {
-			padding-top: 13rem;
+			padding-top: 15.4rem;
 		}
 	}
 
@@ -66,30 +66,34 @@
 				align-self: flex-end;
 			}
 
-			@include mq(sm) {
-				font-size: 4rem;
-				line-height: 4.6rem;
-
+			@include mq(md) {
 				&:nth-child(1) {
-					align-self: stretch;
+					width: 100%;
 					margin-bottom: 4rem;
 				}
 
 				&:last-child {
-					text-align: left;
-					align-self: stretch;
+					max-width: 50%;
 				}
 			}
 
-			@include mq(xxs) {
+			@include mq(sm) {
 				font-size: 3rem;
 				line-height: 3.6rem;
+
+				&:last-child {
+					text-align: left;
+					max-width: 80%;
+				}
 			}
 		}
 
+		@include mq(md) {
+			flex-wrap: wrap;
+		}
+
 		@include mq(sm) {
-			flex-direction: column;
-			justify-content: stretch;
+			height: auto;
 		}
 	}
 
@@ -111,7 +115,19 @@
 		}
 
 		@include mq(md) {
-			display: none;
+			width: 50%;
+			top: -3rem;
+		}
+
+		@include mq(sm) {
+			width: 20%;
+			max-width: 20%;
+			top: -1rem;
+		}
+
+		@include mq(xxs) {
+			top: -2rem;
+			left: -2rem;
 		}
 	}
 
@@ -198,28 +214,68 @@
 		&:hover {
 			color: var(--color-white);
 		}
-
-		@include mq(xxs) {
-			font-size: 1.4rem;
-			line-height: 1.6rem;
-		}
 	}
 
 	&.mod-team {
 		.about-group-hero__feautures {
 			height: 19.7rem;
+
+			@include mq(sm) {
+				height: auto;
+
+				.about-group-hero__feautures-item {
+					&:nth-child(1) {
+						margin-bottom: 7.3rem;
+					}
+				}
+			}
+		}
+
+		.about-group-hero__layer {
+			@include mq(sm) {
+				background-position: 60% 100%;
+			}
 		}
 
 		.about-group-hero__long-arrow {
 			position: relative;
 			top: auto;
 			left: auto;
+
+			@include mq(md) {
+				top: -3rem;
+			}
+
+			@include mq(sm) {
+				top: -1rem;
+				left: -3rem;
+			}
 		}
 	}
 
 	&.mod-career {
 		.about-group-hero__feautures {
 			height: 20.2rem;
+
+			@include mq(md) {
+				height: auto;
+
+				.about-group-hero__feautures-item {
+					&:nth-child(1) {
+						margin-bottom: 7.3rem;
+					}
+
+					&:last-child {
+						max-width: 40%;
+
+						@include mq(sm) {
+							max-width: 60%;
+							width: 60%;
+							text-align: right;
+						}
+					}
+				}
+			}
 		}
 
 		.about-group-hero__long-arrow {
@@ -236,6 +292,20 @@
 
 			@include mq(lg) {
 				width: 60%;
+			}
+
+			@include mq(md) {
+				top: -3rem;
+				width: 60%;
+				max-width: 60%;
+				right: auto;
+			}
+
+			@include mq(sm) {
+				top: -2rem;
+				left: 0rem;
+				width: 40%;
+				max-width: 40%;
 			}
 		}
 	}

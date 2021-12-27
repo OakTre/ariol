@@ -5,6 +5,10 @@
 	margin-bottom: 18rem;
 
 	@include mq(sm) {
+		margin-bottom: 10rem;
+	}
+
+	@include mq(sm) {
 		padding: 4rem 0 7rem 0;
 	}
 
@@ -17,21 +21,25 @@
 		margin-bottom: 8rem;
 
 		@include mq(md) {
-			margin-bottom: 3.2rem;
-		}
-
-		@include mq(sm) {
-			margin-bottom: 2rem;
+			margin-bottom: 4rem;
 		}
 	}
 
 	.site-content-grid__block {
 		position: relative;
+
+		@include mq(lg) {
+			grid-column: 12 span;
+		}
 	}
 
 	&__container {
 		padding-top: 5rem;
 		border-top: 1px solid rgba($color: #fff, $alpha: 0.2);
+
+		@include mq(sm) {
+			padding-top: 2rem;
+		}
 	}
 
 	&__img {
@@ -45,161 +53,53 @@
 		&:not(.mod-show) {
 			display: none;
 		}
+
+		@include mq(lg) {
+			display: none;
+
+			&.mod-mobile {
+				display: block;
+				position: static;
+				top: auto;
+				left: auto;
+				margin-bottom: 3rem;
+				flex-shrink: 0;
+				width: 33.5rem;
+				height: 33.3rem;
+
+				@include mq(sm) {
+					margin-bottom: 0;
+				}
+
+				@include mq(custom, max, 370) {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&__img-mob-wrapper {
+		@include mq(lg) {
+			&:nth-child(1) {
+				flex-shrink: 0;
+				margin-right: 4rem;
+			}
+		}
+
+		@include mq(sm) {
+			&:nth-child(1) {
+				flex-shrink: 0;
+				margin-right: 0;
+				margin-bottom: 3rem;
+			}
+		}
 	}
 
 	&__list {
 		margin-bottom: 8.5rem;
-	}
 
-	.our-team-accordion {
-		&__item {
-			position: relative;
-			border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
-			transition: border-color var(--main-transition);
-
-			&:nth-child(1) {
-				.our-team-accordion__head {
-					padding-top: 0;
-				}
-
-				._top-line {
-					display: none;
-				}
-			}
-
-			.our-team-accordion__head {
-				padding: 5rem 0;
-			}
-
-			._top-line {
-				position: absolute;
-				top: 0;
-				left: 0;
-				height: 1px;
-				background-color: var(--color-green);
-				width: 100%;
-				opacity: 0;
-				transition: opacity var(--main-transition);
-			}
-
-			&:hover {
-				border-color: var(--color-green);
-
-				.our-team-accordion__head-name {
-					color: var(--color-green);
-				}
-
-				._top-line {
-					opacity: 1;
-				}
-			}
-		}
-
-		&__head {
-			display: grid;
-			grid-template-columns: repeat(8, 1fr);
-			align-items: center;
-			column-gap: 20px;
-			width: 100%;
-			cursor: pointer;
-
-			&.mod-open {
-				.our-team-accordion__burger {
-					transform: rotate(45deg);
-
-					span {
-						background-color: var(--color-green);
-					}
-				}
-			}
-
-			._block {
-				justify-self: start;
-
-				&:nth-child(1) {
-					grid-column: 4 span;
-				}
-				&:nth-child(2) {
-					grid-column: 3 span;
-				}
-				&:nth-child(3) {
-					grid-column: 1 span;
-					justify-self: end;
-				}
-			}
-
-			&-name {
-				font-weight: 500;
-				font-size: 3.5rem;
-				line-height: 4.5rem;
-				text-transform: uppercase;
-				color: var(--color-white);
-				transition: color var(--main-transition);
-			}
-
-			&-position {
-				display: inline-block;
-				padding: 0 1rem;
-				font-weight: 500;
-				font-size: 1.4rem;
-				line-height: 2rem;
-				text-transform: uppercase;
-				border-radius: 4rem;
-				border: 1px solid var(--color-white);
-				color: var(--color-white);
-			}
-		}
-
-		&__burger {
-			position: relative;
-			display: block;
-			width: 2.4rem;
-			height: 2.4rem;
-			transition: transform var(--main-transition);
-
-			span {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				display: block;
-				width: 1.6rem;
-				height: 2px;
-				background-color: var(--color-white);
-				transition: background-color var(--main-transition);
-
-				&:nth-child(2) {
-					transform: translate(-50%, -50%) rotate(90deg);
-				}
-			}
-		}
-
-		&__body {
-			padding-bottom: 5.2rem;
-
-			h3,
-			h2,
-			h4,
-			h5,
-			h6 {
-				font-weight: 500;
-				font-size: 1.4rem;
-				line-height: 4.5rem;
-				color: rgba($color: #fff, $alpha: 0.6);
-				text-transform: uppercase;
-				margin-bottom: 3.5rem;
-			}
-
-			p {
-				font-weight: 500;
-				font-size: 2rem;
-				line-height: 2.5rem;
-				margin-bottom: 1rem;
-
-				&:last-of-type {
-					margin-bottom: 0;
-				}
-			}
+		@include mq(sm) {
+			margin-bottom: 4rem;
 		}
 	}
 
@@ -207,6 +107,16 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		@include mq(sm) {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: stretch;
+
+			.our-team__text {
+				margin-bottom: 2rem;
+			}
+		}
 	}
 
 	&__text {
@@ -215,6 +125,201 @@
 			font-weight: 500;
 			font-size: 1.5rem;
 			line-height: 2rem;
+		}
+	}
+}
+
+
+.our-team-accordion {
+	&__item {
+		position: relative;
+		border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
+		transition: border-color var(--main-transition);
+
+		&:nth-child(1) {
+			.our-team-accordion__head {
+				padding-top: 0;
+			}
+
+			._top-line {
+				display: none;
+			}
+		}
+
+		._top-line {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 1px;
+			background-color: var(--color-green);
+			width: 100%;
+			opacity: 0;
+			transition: opacity var(--main-transition);
+		}
+
+		&:hover {
+			border-color: var(--color-green);
+
+			.our-team-accordion__head-name {
+				color: var(--color-green);
+			}
+
+			._top-line {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__head {
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		align-items: center;
+		column-gap: 20px;
+		width: 100%;
+		cursor: pointer;
+		padding: 5rem 0;
+
+		@include mq(sm) {
+			grid-template-columns: repeat(6, 1fr);
+			padding: 2rem 0;
+		}
+
+		&.mod-open {
+			.our-team-accordion__burger {
+				transform: rotate(45deg);
+
+				span {
+					background-color: var(--color-green);
+				}
+			}
+		}
+
+		._block {
+			justify-self: start;
+
+			&:nth-child(1) {
+				grid-column: 4 span;
+
+				@include mq(sm) {
+					grid-column: 5 span;
+				}
+			}
+			&:nth-child(2) {
+				grid-column: 3 span;
+
+				@include mq(sm) {
+					display: none;
+				}
+			}
+			&:nth-child(3) {
+				grid-column: 1 span;
+				justify-self: end;
+			}
+		}
+
+		&-name {
+			font-weight: 500;
+			font-size: 3.5rem;
+			line-height: 4.5rem;
+			text-transform: uppercase;
+			color: var(--color-white);
+			transition: color var(--main-transition);
+
+			@include mq(sm) {
+				font-size: 2rem;
+				line-height: 4.5rem;
+			}
+		}
+
+		&-position {
+			display: inline-block;
+			padding: 0 1rem;
+			font-weight: 500;
+			font-size: 1.4rem;
+			line-height: 2rem;
+			text-transform: uppercase;
+			border-radius: 4rem;
+			border: 1px solid var(--color-white);
+			color: var(--color-white);
+
+			@include mq(sm) {
+				&.mod-mobile {
+					display: inline-block;
+					margin-bottom: 3rem;
+					font-size: 1.2rem;
+					line-height: 2rem;
+				}
+			}
+		}
+	}
+
+	&__burger {
+		position: relative;
+		display: block;
+		width: 2.4rem;
+		height: 2.4rem;
+		transition: transform var(--main-transition);
+
+		span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: block;
+			width: 1.6rem;
+			height: 2px;
+			background-color: var(--color-white);
+			transition: background-color var(--main-transition);
+
+			&:nth-child(2) {
+				transform: translate(-50%, -50%) rotate(90deg);
+			}
+		}
+	}
+
+	&__body {
+		padding-bottom: 5.2rem;
+
+		@include mq(lg) {
+			display: flex;
+		}
+
+		@include mq(sm) {
+			flex-direction: column;
+			padding-bottom: 3rem;
+		}
+
+		h3,
+		h2,
+		h4,
+		h5,
+		h6 {
+			font-weight: 500;
+			font-size: 1.4rem;
+			line-height: 4.5rem;
+			color: rgba($color: #fff, $alpha: 0.6);
+			text-transform: uppercase;
+			margin-bottom: 3.5rem;
+
+			@include mq(sm) {
+				line-height: 1.8rem;
+			}
+		}
+
+		p {
+			font-weight: 500;
+			font-size: 2rem;
+			line-height: 2.5rem;
+			margin-bottom: 1rem;
+
+			@include mq(sm) {
+				font-size: 1.2rem;
+				line-height: 1.7rem;
+			}
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
 		}
 	}
 }

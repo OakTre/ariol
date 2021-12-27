@@ -14,6 +14,78 @@
 			@include mq(md) {
 				grid-column: 12 span;
 			}
+
+			p {
+				display: inline;
+				font-weight: 500;
+				font-size: 4.5rem;
+				line-height: 5.5rem;
+				text-transform: uppercase;
+
+				&._block {
+					display: block;
+				}
+
+				@include mq(md) {
+					font-size: 4rem;
+					line-height: 5rem;
+				}
+
+				@include mq(sm) {
+					font-size: 2rem;
+					line-height: 2.6rem;
+				}
+			}
+
+			ul {
+				display: inline;
+				counter-reset: section;
+
+				li {
+					position: relative;
+					display: inline;
+					font-weight: 500;
+					font-size: 4.5rem;
+					line-height: 5.5rem;
+					text-transform: uppercase;
+					padding-left: 3.5rem;
+
+					&::before {
+						counter-increment: section;
+						content: "0" counter(section);
+						position: absolute;
+						top: 0.5rem;
+						left: 0;
+						display: inline-block;
+						padding: 0 0.3rem;
+						border: 1px solid var(--color-dark);
+						font-weight: 700;
+						font-size: 1.7rem;
+						line-height: 1.7rem;
+						border-radius: 2rem;
+						letter-spacing: 0.06em;
+						width: 3.2rem;
+						text-align: center;
+
+						@include mq(sm) {
+							font-size: 1.2rem;
+							line-height: 1.5rem;
+							padding: 0 0.2rem;
+							width: 2.5rem;
+						}
+					}
+
+					@include mq(md) {
+						font-size: 4rem;
+						line-height: 5rem;
+					}
+
+					@include mq(sm) {
+						font-size: 2rem;
+						line-height: 2.6rem;
+					}
+				}
+			}
 		}
 
 		&_right {
@@ -32,78 +104,6 @@
 
 		@include mq(sm) {
 			margin-bottom: 2rem;
-		}
-	}
-
-	&__p-text {
-		display: inline;
-		font-weight: 500;
-		font-size: 4.5rem;
-		line-height: 5.5rem;
-		text-transform: uppercase;
-
-		&._block {
-			display: block;
-		}
-
-		@include mq(md) {
-			font-size: 4rem;
-    		line-height: 5rem;
-		}
-
-		@include mq(sm) {
-			font-size: 2rem;
-    		line-height: 2.6rem;
-		}
-	}
-
-	&__list {
-		display: inline;
-		counter-reset: section;
-	}
-
-	&__item {
-		position: relative;
-		display: inline;
-		font-weight: 500;
-		font-size: 4.5rem;
-		line-height: 5.5rem;
-		text-transform: uppercase;
-		padding-left: 3.5rem;
-
-		&::before {
-			counter-increment: section;
-			content: "0" counter(section);
-			position: absolute;
-			top: 0.5rem;
-			left: 0;
-			display: inline-block;
-			padding: 0 0.3rem;
-			border: 1px solid var(--color-dark);
-			font-weight: 700;
-			font-size: 1.7rem;
-			line-height: 1.7rem;
-			border-radius: 2rem;
-			letter-spacing: 0.06em;
-			width: 3.2rem;
-			text-align: center;
-
-			@include mq(sm) {
-				font-size: 1.2rem;
-				line-height: 1.5rem;
-				padding: 0 0.2rem;
-				width: 2.5rem;
-			}
-		}
-
-		@include mq(md) {
-			font-size: 4rem;
-    		line-height: 5rem;
-		}
-
-		@include mq(sm) {
-			font-size: 2rem;
-    		line-height: 2.6rem;
 		}
 	}
 
@@ -175,5 +175,53 @@
 	@include mq(sm) {
 		padding-top: 4rem;
 		padding-bottom: 7rem;
+	}
+}
+
+
+.why-us_team {
+	.why-us__top-block_left {
+		max-width: 100%;
+
+		p {
+			@include mq(sm) {
+				display: block;
+				margin-bottom: 2rem;
+				font-size: 2.5rem;
+				line-height: 2.7rem;
+
+				&:nth-last-of-type(1) {
+					display: none;
+				}
+			}
+		}
+
+		ul {
+			li {
+				@include mq(sm) {
+					font-size: 2.5rem;
+					line-height: 2.7rem;
+					display: block;
+					margin-bottom: 1.2rem;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.why-us__text-block {
+		p {
+			&:nth-of-type(1) {
+				margin-bottom: 3rem;
+				padding-left: 3rem;
+			}
+
+			&:nth-of-type(2) {
+				padding-left: 5rem;
+			}
+		}
 	}
 }

@@ -355,6 +355,10 @@
 			color: var(--color-white);
 		}
 	}
+
+	@include mq(sm) {
+		display: none;
+	}
 }
 
 .slider-nav {

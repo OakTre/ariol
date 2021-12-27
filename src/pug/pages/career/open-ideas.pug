@@ -5,7 +5,7 @@ section.open-ideas.lazy(data-bg="img/career/bg.webp" data-bg-fallback="img/caree
 		.open-ideas__title-wrapper
 			h2.open-ideas__title.section-title
 				| открыты новым идеям
-			+button("btn", "отправить резюме", "button_transparent")
+			+button("btn", "отправить резюме", "button_transparent")(class="open-ideas__button")
 
 		.open-ideas__vacancies.vacancies
 			.vacancies__head.vacancies__grid
@@ -35,6 +35,9 @@ section.open-ideas.lazy(data-bg="img/career/bg.webp" data-bg-fallback="img/caree
 							.vacancies__item-body.vacancies__grid.drop-menu.js-drop-menu
 								._body-block
 								._body-block
+									._text-block
+										p
+											|	Если вы специалист в своей области и желаете присоединиться к команде профессионалов ARIOL, вы&nbsp;можете направить нам свое резюме
 									p
 										|	Чем предстоит заниматься:
 									ul

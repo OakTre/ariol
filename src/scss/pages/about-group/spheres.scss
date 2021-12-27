@@ -88,6 +88,7 @@
 
 		@include mq(sm) {
 			margin-top: 6rem;
+			grid-template-columns: repeat(6, 1fr)
 		}
 	}
 
@@ -112,11 +113,7 @@
 		}
 
 		@include mq(md) {
-			grid-column: 6 span;
-		}
-
-		@include mq(sm) {
-			display: none;
+			grid-column: 2 span;
 		}
 	}
 
@@ -130,11 +127,7 @@
 		grid-column: 4 span;
 
 		@include mq(md) {
-			grid-column: 6 span;
-		}
-
-		@include mq(sm) {
-			grid-column: 12 span;
+			grid-column: 4 span;
 		}
 	}
 
