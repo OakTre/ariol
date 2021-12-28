@@ -1,0 +1,14 @@
+section.group-projects-hero
+	.group-projects-hero__layer.lazy.parallax(data-bg="img/projects/hero.webp" data-bg-fallback="img/projects/hero.png" data-depth="0.10")
+	.site-container.group-projects-hero__container
+		+breadcrumbs([['Главная', "/index.html"], ['Проекты в управлении']])(class="group-projects-hero__breadcrumbs")
+		h1.visually-hidden
+			|	Заголовок для сео
+		.group-projects-hero__feautures
+			span.group-projects-hero__feautures-item.site-hero-text
+				| управляем проектами
+			.site-long-arrow.group-projects-hero__long-arrow
+				+icon("arrow-right-button")(class="site-long-arrow__arrow" width="20" height="20")
+			span.group-projects-hero__feautures-item.site-hero-text
+				| строим будущее
+

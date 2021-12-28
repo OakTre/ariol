@@ -1,0 +1,133 @@
+.group-projects-hero {
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+	color: var(--color-white);
+	height: 73.2rem;
+
+	@include mq(sm) {
+		height: 56.4rem;
+	}
+
+	&__layer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		height: 99.9rem;
+		width: 100%;
+		background-position: 100% 379%;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		@include mq(sm) {
+			height: 100%;
+			background-position: 40% 100%;
+		}
+	}
+
+	&__container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		padding-top: 21.5rem;
+
+		@include mq(md) {
+			padding-top: 18rem;
+		}
+
+		@include mq(sm) {
+			padding-top: 15.4rem;
+		}
+
+		@include mq(custom, max, 360) {
+			padding-top: 15.4rem;
+		}
+	}
+
+	&__feautures {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 20.5rem;
+
+		&-item {
+			display: block;
+			max-width: 54rem;
+
+			&:nth-child(1) {
+				align-self: flex-start;
+			}
+
+			&:last-child {
+				text-align: right;
+				align-self: flex-end;
+			}
+
+			@include mq(md) {
+				&:nth-child(1) {
+					width: 100%;
+					margin-bottom: 4rem;
+				}
+
+				&:last-child {
+					max-width: 50%;
+				}
+			}
+
+			@include mq(sm) {
+				font-size: 3rem;
+				line-height: 3.6rem;
+
+				&:last-child {
+					text-align: left;
+					max-width: 80%;
+				}
+			}
+		}
+
+		@include mq(md) {
+			flex-wrap: wrap;
+		}
+
+		@include mq(sm) {
+			height: auto;
+		}
+	}
+
+	&__long-arrow {
+		flex-grow: 1;
+		width: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+
+		&::before {
+			@include mq(custom, max, 1536) {
+				width: 98.9%;
+			}
+
+			@include mq(lg) {
+				width: 97.3%;
+			}
+		}
+
+		@include mq(md) {
+			width: 50%;
+			top: -3rem;
+		}
+
+		@include mq(sm) {
+			width: 20%;
+			max-width: 20%;
+			top: -1rem;
+		}
+
+		@include mq(xxs) {
+			top: -2rem;
+			left: -2rem;
+		}
+	}
+}

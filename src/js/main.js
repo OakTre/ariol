@@ -13,6 +13,8 @@ import accordionImg from "./modules/accordionImg";
 import teamAnim from "./modules/teamAnim";
 import initGroupSlider from "./modules/initGroupSlider";
 import careerAnim from "./modules/careerAnim.js";
+import projectsStartAnim from "./modules/projectsStartAnim.js";
+import projectsAnim from "./modules/projectsAnim.js";
 
 if ('scrollRestoration' in history) {
 	history.scrollRestoration = 'manual';
@@ -26,6 +28,7 @@ window.onload = function() {
 
 		indexPageStartAnim();
 		aboutGroupStartAnim();
+		projectsStartAnim();
 	}, 300);
 }
 
@@ -42,4 +45,5 @@ documentReady(() => {
 	magicLine();
 	accordionImg();
 	initGroupSlider();
+	projectsAnim();
 });

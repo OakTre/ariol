@@ -1,0 +1,11 @@
+extends layout/default
+
+block variables
+	- const bodyClass = "page-projects"
+	- const pageTitle = "Проекты"
+	- const siteLang = "ru"
+	- let jsPageClass = "js-projects-page js-projects-hero-anim"
+	- let name = "projects"
+
+block content
+	include pages/projects/main
