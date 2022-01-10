@@ -1,6 +1,6 @@
 - let nav_arr_mob = ["О нас", "Услуги", "Проекты", "Новости", "Контакты", "en"]
 
-.mobile-menu
+.mobile-menu(class=(name === "contacts" ? "mobile-menu_dark" : false))
 	.mobile-menu__container
 		ul.mobile-menu__nav
 			for item in nav_arr_mob

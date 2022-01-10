@@ -1,0 +1,14 @@
+main.page-main.main
+	section.error-page.lazy(data-bg="img/error-page.webp" data-bg-fallback="img/error-page.png")
+		.site-container.error-page__container
+			.error-page__title-wrap
+				h1.error-page__title
+					|	страница не найдена
+				span._line
+			.error-page__link-wrap
+				+button(null, "на главную", "button_green")
+				.div
+					span._number
+						|	404
+					._arrow-container
+						+icon("arrow-right-button")(class="contact-us__long-arrow" width="20" height="20")

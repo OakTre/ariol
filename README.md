@@ -5,8 +5,11 @@
 1. [Главная](https://oaktre.github.io/ariol/app/)
 2. [О группе](https://oaktre.github.io/ariol/app/about-group.html)
 3. [Команда](https://oaktre.github.io/ariol/app/team.html)
-3. [Карьера](https://oaktre.github.io/ariol/app/career.html)
-3. [Проекты](https://oaktre.github.io/ariol/app/projects.html)
+4. [Карьера](https://oaktre.github.io/ariol/app/career.html)
+5. [Проекты](https://oaktre.github.io/ariol/app/projects.html)
+6. [Контакты](https://oaktre.github.io/ariol/app/contacts.html)
+7. [404 страница](https://oaktre.github.io/ariol/app/404.html)
+
 
 
 

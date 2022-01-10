@@ -1,0 +1,11 @@
+extends layout/default
+
+block variables
+	- const bodyClass = "page-contacts"
+	- const pageTitle = "Контакты"
+	- const siteLang = "ru"
+	- let jsPageClass = "js-page-contacts"
+	- let name = "contacts"
+
+block content
+	include pages/contacts/main

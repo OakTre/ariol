@@ -1,10 +1,13 @@
 - let nav_arr = [{name: "О группе", link: "/about-group.html"}]
 
-header.header(class=jsPageClass)
+header.header(class=jsPageClass)(class=(name === "contacts" ? "header_dark" : false))
 	.site-container.site-content-grid.header__container.js-animated-el
 		.site-content-grid__block
 			a.logo(href="/index.html")
-				img(class="logo__img" src="img/logo-white.svg" alt="Логотип компании")
+				- if (name === "contacts")
+					img(class="logo__img" src="img/logo-black.svg" alt="Логотип компании")
+				- else
+					img(class="logo__img" src="img/logo-white.svg" alt="Логотип компании")
 		.site-content-grid__block.header__nav-block
 			nav.nav.header__nav-block-item
 				ul.nav__list.header__nav-list

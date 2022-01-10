@@ -1,0 +1,37 @@
+- let dept_arr = ["отдел маркетинга", "hr-отдел", "отдел инвестиций"]
+
+main.page-main.main
+	section.page-contacts
+		.site-container.page-contacts__container
+			+breadcrumbs([['Главная', "/index.html"], ['Проекты в управлении']])(class="page-contacts__breadcrumbs")
+			h1.page-contacts__title.site-hero-text
+				|	КОНТАКТЫ
+			.site-content-grid.page-contacts__text
+				.site-content-grid__block
+					p
+						|	По всем интересующим вопросам или предложениям вы можете написать нам на почту
+				.site-content-grid__block
+			.site-content-grid.page-contacts__arrow
+				.site-content-grid__block
+					.contact-us__long-arrow_wrap
+						+icon("arrow-right-button")(class="contact-us__long-arrow" width="20" height="20")
+				.site-content-grid__block
+					a.page-contacts__mail(href="mailto:info@ariol.ru")
+						|	info@ariol.ru
+			.site-content-grid.page-contacts__departments
+				.site-content-grid__block
+					span.section-name._color-green
+						|	Контакты отделов
+				.site-content-grid__block
+					ul.page-contacts__list
+						for item in dept_arr
+							li.page-contacts__item
+								span.page-contacts__item-heading=item
+								.page-contacts__item-links
+									a(href="tel:+78435610096")
+										|	8 843 561-00-96
+									a(href="mailto:marketing@ariol.ru")
+										|	marketing@ariol.ru
+
+	section.contact-us
+		.contact-us__map(id="contact-us-map" data-map-icon="img/marker.svg")

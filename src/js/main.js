@@ -15,6 +15,7 @@ import initGroupSlider from "./modules/initGroupSlider";
 import careerAnim from "./modules/careerAnim.js";
 import projectsStartAnim from "./modules/projectsStartAnim.js";
 import projectsAnim from "./modules/projectsAnim.js";
+import contactsPageAnimation from "./modules/contactsPageAnimation.js";
 
 if ('scrollRestoration' in history) {
 	history.scrollRestoration = 'manual';
@@ -29,6 +30,7 @@ window.onload = function() {
 		indexPageStartAnim();
 		aboutGroupStartAnim();
 		projectsStartAnim();
+		contactsPageAnimation();
 	}, 300);
 }
 

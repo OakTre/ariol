@@ -88,3 +88,37 @@
 		}
 	}
 }
+
+.header_dark {
+	position: static;
+	top: auto;
+	left: auto;
+	z-index: 27;
+	width: 100%;
+	color: var(--color-dark);
+	margin-bottom: 10rem;
+
+	@include mq(sm) {
+		margin-bottom: 5.4rem;
+	}
+
+
+	.nav__link,
+	.header__link {
+		color: var(--color-dark);
+
+		&:hover {
+			color: var(--color-green);
+		}
+
+		&._is-current {
+			color: var(--color-green);
+		}
+	}
+
+	.header__button-burger {
+		span {
+			background-color: var(--color-dark);
+		}
+	}
+}

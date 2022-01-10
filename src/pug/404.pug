@@ -1,0 +1,11 @@
+extends layout/default
+
+block variables
+	- const bodyClass = "page-error"
+	- const pageTitle = "Страница не найдена"
+	- const siteLang = "ru"
+	- let jsPageClass = "js-page-error"
+	- let name = "error"
+
+block content
+	include pages/error-page/main
