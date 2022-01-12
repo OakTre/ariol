@@ -1,0 +1,53 @@
+.projects-spheres {
+	&__list {
+		ul {
+			li {
+				display: grid;
+				grid-template-columns: 4fr 4fr;
+				&::before {
+					content: none;
+				}
+
+				p {
+					font-size: 1.6rem;
+					line-height: 1.9rem;
+					text-transform: none;
+					max-width: 52.3rem;
+
+					&:nth-child(1) {
+						font-size: 4.5rem;
+						line-height: 4.5rem;
+						text-transform: uppercase;
+					}
+				}
+
+				@include mq(sm) {
+					display: flex;
+					flex-direction: column;
+					grid-template-columns: none;
+
+					p {
+						font-size: 1.4rem;
+						line-height: 1.6rem;
+
+						&:nth-child(1) {
+							font-size: 3.5rem;
+							line-height: 3.5rem;
+							margin-bottom: 2.4rem;
+						}
+					}
+				}
+
+				@include mq(custom, max, 480) {
+
+					p {
+						&:nth-child(1) {
+							font-size: 2.6rem;
+							line-height: 3rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}

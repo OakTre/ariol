@@ -1,0 +1,151 @@
+.projects-detail-hero {
+	&__layer {
+		background-position: center center;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 8rem;
+		line-height: 8.8rem;
+		color: var(--color-white);
+		text-transform: uppercase;
+
+		@include mq(sm) {
+			font-size: 4rem;
+			line-height: 4.6rem;
+		}
+	}
+
+	&__year {
+		p {
+			display: flex;
+			align-items: flex-start;
+			font-size: 6rem;
+			line-height: 7.3rem;
+			text-transform: uppercase;
+			color: var(--color-white);
+
+			span {
+				position: relative;
+				top: 1rem;
+				left: 1rem;
+				display: block;
+				font-weight: 500;
+				font-size: 1.6rem;
+				line-height: 1.8rem;
+				color: var(--color-white);
+				opacity: 0.8;
+				text-transform: lowercase;
+				max-width: 9.5rem;
+			}
+
+			@include mq(sm) {
+				font-size: 3rem;
+				line-height: 3.6rem;
+
+				span {
+					top: 0.3rem;
+					font-size: 1.4rem;
+					line-height: 1.6rem;
+				}
+			}
+		}
+	}
+
+	&__bottom-block {
+		@include mq(sm) {
+			padding-bottom: 3rem;
+		}
+
+		.site-content-grid__block {
+			position: relative;
+
+			&:nth-child(1) {
+				grid-column: 4 span;
+
+				@include mq(sm) {
+					display: none;
+				}
+			}
+			&:nth-child(2) {
+				grid-column: 6 span;
+
+				@include mq(md) {
+					grid-column: 4 span;
+				}
+
+				@include mq(sm) {
+					grid-column: 6 span;
+				}
+
+				// @include mq(custom, max, 480) {
+				// 	display: none;
+				// }
+			}
+			&:nth-child(3) {
+				grid-column: 2 span;
+
+				@include mq(md) {
+					grid-column: 4 span;
+				}
+
+				@include mq(sm) {
+					grid-column: 6 span;
+				}
+			}
+		}
+	}
+
+	&__link {
+		position: absolute;
+		bottom: -3.5rem;
+		left: 0;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		width: 100%;
+		height: 43.6rem;
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		@include mq(sm) {
+			height: 28.6rem;
+			bottom: -3rem;
+		}
+
+		@include mq(custom, max, 480) {
+			height: 21.6rem;
+		}
+
+		a {
+			display: inline-flex;
+			align-items: center;
+			margin-bottom: 4.6rem;
+			font-weight: 600;
+			font-size: 1.6rem;
+			line-height: 2rem;
+			transition: color 200ms;
+
+			.icon {
+				fill: var(--color-white);
+				width: 2rem;
+				height: 2rem;
+				margin-left: 0.4rem;
+				transition: fill 200ms;
+
+				@include mq(custom, max, 480) {
+					display: none;
+				}
+			}
+
+			&:hover {
+				color: var(--color-green);
+
+				.icon {
+					fill: var(--color-green);
+				}
+			}
+		}
+	}
+}

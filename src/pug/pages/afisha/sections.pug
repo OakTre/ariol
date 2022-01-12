@@ -1,0 +1,15 @@
+- let spheresList = ["СОБЫТИЯ", "Места", "ЛЮДИ", "с детьми", "активная жизнь", "экогород"]
+
+section.spheres.projects-spheres
+	.site-container.spheres__container.site-content-grid
+		.site-content-grid__block
+			span.section-name._color-white
+				|	Основные разделы
+		.site-content-grid__block.spheres__content-text.projects-spheres__list
+			ul
+				for item in spheresList
+					li
+						p=item
+						p
+							|	Все самые интересные события в Казани: концертыи выступления, стенд-апы любимых комиков,организованные митинги и сборы, встречи единомышленников и многое другое
+
