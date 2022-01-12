@@ -82,7 +82,7 @@
 				line-height: 3.6rem;
 
 				&:last-child {
-					text-align: left;
+					text-align: right;
 					max-width: 80%;
 				}
 			}
@@ -227,6 +227,10 @@
 					&:nth-child(1) {
 						margin-bottom: 7.3rem;
 					}
+
+					&:last-child {
+						max-width: 77%;
+					}
 				}
 			}
 		}
@@ -247,8 +251,10 @@
 			}
 
 			@include mq(sm) {
-				top: -1rem;
-				left: -3rem;
+				top: -1.8rem;
+				left: -1rem;
+				width: 22.9%;
+    			max-width: 22.9%;
 			}
 		}
 	}

@@ -43,6 +43,12 @@
 			display: inline;
 			counter-reset: section;
 
+			@include mq(sm, min) {
+				br {
+					display: none;
+				}
+			}
+
 			li {
 				position: relative;
 				display: inline;
