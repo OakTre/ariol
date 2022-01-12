@@ -25,22 +25,17 @@ header.header(class=jsPageClass)(class=(name === "contacts" ? "header_dark" : fa
 							span.header__news-link-count
 								|	3
 			.header__nav-block-item
-				a.header__news-link.header__link(href="/")(class=(name === "news" ? "_is-current" : false))
-					|	Новости
-					span.header__news-link-count
-						|	3
-			.header__nav-block-item
 				a.header__contacts-link.header__link(href="/")(class=(name === "contacts" ? "_is-current" : false))
 					|	Контакты
 			.header__nav-block-item
 				a.header__lang-page.header__link(href="/")
 					|	en
-			.header__nav-block-item._mobile
-				a.header__lang-page.header__link.header__link-eng-page(href="/")
-					|	en
-				button.button-rest.button-burger.header__button-burger
-					span
-					span
+				._mobile
+					a.header__lang-page.header__link.header__link-eng-page(href="/")
+						|	en
+					button.button-rest.button-burger.header__button-burger
+						span
+						span
 
 include mobile-menu
 
