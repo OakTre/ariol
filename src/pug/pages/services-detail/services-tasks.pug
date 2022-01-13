@@ -1,0 +1,21 @@
+- let serv_arr = ["Распределение ответственности", "Независимость от незаменимых сотрудников", "Время адаптации новых сотрудников", "Возможности для расширения бизнеса", "Возможности для расширения бизнеса", "Делегирование обязанностей", "Мотивация персонала", "Проведение реинжиниринга"]
+
+
+
+section.services-tasks.lazy(data-bg="img/index/services-bg2.webp" data-bg-fallback="img/index/services-bg2.png")
+	.site-container.services-tasks__container
+		h2.services-tasks__title.section-title
+			|	Какие задачи решаем
+		ul.services-tasks__list
+			for item in serv_arr
+				li.services-tasks__item
+					.services-tasks__content
+						button.services-tasks__content-heading.button-rest.js-drop-menu-btn
+							span.services-tasks__content-heading-text=item
+							span.services-tasks__content-heading-cross
+								span
+								span
+						.drop-menu-container.js-drop-menu-container
+							.services-tasks__content-body.drop-menu.js-drop-menu
+								p
+									|	Кадровая текучка больше не влияет на наработанный рабочий ритм, роль и ценность ключевых сотрудников уменьшается, ценная рабочая информация не покидает пределы компании. Процессная модель позволяет формировать собственную базу знаний предприятия и минимизировать значение человеческого фактора.

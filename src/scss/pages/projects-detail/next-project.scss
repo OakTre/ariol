@@ -49,24 +49,45 @@
 
 		span {
 			position: relative;
-			display: block;
+			display: flex;
+			align-items: center;
+			width: 100%;
 
 			&::before {
-				position: absolute;
-				top: 50%;
-				left: calc(100% + 4rem);
-				width: 100%;
+				order: 1;
+				display: block;
+				margin-left: 4rem;
+				flex-grow: 1;
 				height: 2px;
 				background-color: var(--color-white);
-				transform: translateY(-50%);
 				content: "";
 
-				@include mq(md) {
+				@include mq(sm) {
 					display: none;
 				}
 			}
 
-			@include mq(md) {
+			&::after {
+				display: block;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				width: 2rem;
+				height: 2rem;
+				background-image: url(../img/arrow.svg);
+				background-position: center right;
+				background-repeat: no-repeat;
+				background-size: cover;
+				transform: translateY(-50%);
+				content: "";
+
+				@include mq(sm) {
+					display: none;
+				}
+			}
+
+
+			@include mq(sm) {
 				display: inline-block;
 			}
 		}

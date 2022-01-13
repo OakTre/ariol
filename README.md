@@ -8,8 +8,9 @@
 4. [Карьера](https://oaktre.github.io/ariol/app/career.html)
 5. [Проекты](https://oaktre.github.io/ariol/app/projects.html)
 6. [Услуги](https://oaktre.github.io/ariol/app/services.html)
-7. [Контакты](https://oaktre.github.io/ariol/app/contacts.html)
-8. [404 страница](https://oaktre.github.io/ariol/app/404.html)
+7. [Услуги-детальная](https://oaktre.github.io/ariol/app/services-detail.html)
+8. [Контакты](https://oaktre.github.io/ariol/app/contacts.html)
+9. [404 страница](https://oaktre.github.io/ariol/app/404.html)
 
 
 
