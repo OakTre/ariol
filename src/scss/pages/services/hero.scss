@@ -1,0 +1,41 @@
+.services-page-hero {
+	.group-projects-hero__feautures-item {
+		max-width: 60rem;
+
+		&:last-child {
+			max-width: 50rem;
+		}
+
+		@include mq(md) {
+			max-width: 54rem;
+
+			&:last-child {
+				max-width: 46rem;
+			}
+		}
+
+		@include mq(sm) {
+			&:last-child {
+				max-width: 25rem;
+			}
+		}
+	}
+
+	.group-projects-hero__layer {
+		background-position: 100% -250%;
+	}
+
+	.group-projects-hero__long-arrow {
+		width: auto;
+
+		@include mq(md) {
+			width: 50%;
+		}
+
+		@include mq(sm) {
+			max-width: 23%;
+			width: 22%;
+		}
+	}
+
+}

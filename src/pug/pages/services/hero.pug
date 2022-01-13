@@ -1,0 +1,18 @@
+section.group-projects-hero.services-page-hero
+	.group-projects-hero__layer.lazy.parallax(data-bg="img/services/hero2.webp" data-bg-fallback="img/services/hero2.png" data-depth="0.10")
+	.site-container.group-projects-hero__container
+		+breadcrumbs([['Главная', "/index.html"], ['Услуги']])(class="group-projects-hero__breadcrumbs")
+		h1.visually-hidden
+			|	Заголовок для сео
+		.group-projects-hero__feautures
+			span.group-projects-hero__feautures-item.site-hero-text
+				| нацелены на&nbsp;построение
+			.site-long-arrow.group-projects-hero__long-arrow
+				+icon("arrow-right-button")(class="site-long-arrow__arrow" width="20" height="20")
+			span.group-projects-hero__feautures-item.site-hero-text
+				| надежного партнерства
+
+		.site-content-grid.group-projects-hero__arrow
+			.site-content-grid__block
+				+icon("hero-arrow-down")(class="hero-arrow-down" width="16" height="32")
+			.site-content-grid__block

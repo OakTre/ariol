@@ -1,0 +1,53 @@
+@import "hero";
+
+
+.about-services {
+	padding-bottom: 14rem;
+	padding-top: 8rem;
+
+	.section-name {
+		margin-bottom: 3rem;
+	}
+
+	&__heading-text {
+		display: block;
+		margin-bottom: 11rem;
+
+		@include mq(sm) {
+			margin-bottom: 5.7rem;
+		}
+	}
+
+	.about-company-info__block:nth-of-type(1) {
+		margin-bottom: 0;
+	}
+
+	@include mq(sm) {
+		padding-top: 5.7rem;
+		padding-bottom: 9.2rem;
+
+		.about-company-info__info-text_left {
+			display: block;
+			grid-column: 1 span;
+		}
+
+		.about-company-info__info-text_right {
+			grid-column: 5 span;
+		}
+
+
+		.about-company-info__block {
+			grid-template-columns: repeat(6, 1fr);
+		}
+
+		.about-company-info__heading {
+			grid-column: 6 span;
+		}
+	}
+}
+
+.services-page {
+	&__mission {
+		padding-bottom: 18rem;
+	}
+}

@@ -3305,6 +3305,44 @@ a {
   text-transform: uppercase;
 }
 
+.services-page-hero .group-projects-hero__feautures-item {
+  max-width: 60rem;
+}
+
+.services-page-hero .group-projects-hero__feautures-item:last-child {
+  max-width: 50rem;
+}
+
+.services-page-hero .group-projects-hero__layer {
+  background-position: 100% -250%;
+}
+
+.services-page-hero .group-projects-hero__long-arrow {
+  width: auto;
+}
+
+.about-services {
+  padding-bottom: 14rem;
+  padding-top: 8rem;
+}
+
+.about-services .section-name {
+  margin-bottom: 3rem;
+}
+
+.about-services__heading-text {
+  display: block;
+  margin-bottom: 11rem;
+}
+
+.about-services .about-company-info__block:nth-of-type(1) {
+  margin-bottom: 0;
+}
+
+.services-page__mission {
+  padding-bottom: 18rem;
+}
+
 @media screen and (min-width:767px) {
   .mission__conten-text ul br {
     display: none;
@@ -3968,6 +4006,18 @@ a {
   .about-detail-project__text p {
     font-size: 2rem;
     line-height: 2.6rem;
+  }
+
+  .services-page-hero .group-projects-hero__feautures-item {
+    max-width: 54rem;
+  }
+
+  .services-page-hero .group-projects-hero__feautures-item:last-child {
+    max-width: 46rem;
+  }
+
+  .services-page-hero .group-projects-hero__long-arrow {
+    width: 50%;
   }
 }
 
@@ -5073,6 +5123,45 @@ a {
     font-size: 3.5rem;
     line-height: 3.5rem;
     margin-bottom: 2.4rem;
+  }
+
+  .services-page-hero .group-projects-hero__feautures-item:last-child {
+    max-width: 25rem;
+  }
+
+  .services-page-hero .group-projects-hero__long-arrow {
+    max-width: 23%;
+    width: 22%;
+  }
+
+  .about-services__heading-text {
+    margin-bottom: 5.7rem;
+  }
+
+  .about-services {
+    padding-top: 5.7rem;
+    padding-bottom: 9.2rem;
+  }
+
+  .about-services .about-company-info__info-text_left {
+    display: block;
+    -ms-grid-column-span: 1;
+    grid-column: 1 span;
+  }
+
+  .about-services .about-company-info__info-text_right {
+    -ms-grid-column-span: 5;
+    grid-column: 5 span;
+  }
+
+  .about-services .about-company-info__block {
+    -ms-grid-columns: (1fr)[6];
+    grid-template-columns: repeat(6,1fr);
+  }
+
+  .about-services .about-company-info__heading {
+    -ms-grid-column-span: 6;
+    grid-column: 6 span;
   }
 }
 

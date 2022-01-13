@@ -16,6 +16,7 @@ import careerAnim from "./modules/careerAnim.js";
 import projectsStartAnim from "./modules/projectsStartAnim.js";
 import projectsAnim from "./modules/projectsAnim.js";
 import contactsPageAnimation from "./modules/contactsPageAnimation.js";
+import servicesPageAnim from "./modules/servicesPageAnim.js";
 
 if ('scrollRestoration' in history) {
 	history.scrollRestoration = 'manual';
@@ -48,4 +49,5 @@ documentReady(() => {
 	accordionImg();
 	initGroupSlider();
 	projectsAnim();
+	servicesPageAnim();
 });
