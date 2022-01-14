@@ -19,6 +19,8 @@ import contactsPageAnimation from "./modules/contactsPageAnimation.js";
 import servicesPageAnim from "./modules/servicesPageAnim.js";
 import servicesDetailStartAnim from "./modules/servicesDetailStartAnim.js";
 import servicesDetailAnim from "./modules/servicesDetailAnim.js";
+import projectsDetailStartAnim from "./modules/projectsDetailStartAnim.js";
+import projectsDetailAnim from "./modules/projectsDetailAnim.js";
 
 if ('scrollRestoration' in history) {
 	history.scrollRestoration = 'manual';
@@ -35,6 +37,7 @@ window.onload = function() {
 		projectsStartAnim();
 		contactsPageAnimation();
 		servicesDetailStartAnim();
+		projectsDetailStartAnim();
 	}, 300);
 }
 
@@ -54,4 +57,5 @@ documentReady(() => {
 	projectsAnim();
 	servicesPageAnim();
 	servicesDetailAnim();
+	projectsDetailAnim();
 });
