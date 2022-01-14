@@ -1,0 +1,12 @@
+- let spheresList2 = ["современное оборудование", "склад готовой продукции", "быстрое исполнение заявок", "сертифицированная продукция"]
+
+section.spheres.projects-spheres.projects-spheres_type2
+	.site-container.spheres__container.site-content-grid
+		.site-content-grid__block
+			span.section-name._color-white
+				|	Основные преимущества
+		.site-content-grid__block.spheres__content-text.projects-spheres__list
+			ul
+				for item in spheresList2
+					li
+						p=item

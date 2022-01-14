@@ -21,6 +21,7 @@ import servicesDetailStartAnim from "./modules/servicesDetailStartAnim.js";
 import servicesDetailAnim from "./modules/servicesDetailAnim.js";
 import projectsDetailStartAnim from "./modules/projectsDetailStartAnim.js";
 import projectsDetailAnim from "./modules/projectsDetailAnim.js";
+import showImg from "./modules/showImg.js";
 
 if ('scrollRestoration' in history) {
 	history.scrollRestoration = 'manual';
@@ -58,4 +59,5 @@ documentReady(() => {
 	servicesPageAnim();
 	servicesDetailAnim();
 	projectsDetailAnim();
+	showImg();
 });

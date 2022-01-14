@@ -1,0 +1,19 @@
+- let spheresList3 = [{name: "площадь тукая", subname: "Станция метро", square: "561 кв.м"},{name: "Ямашева-Амирхана", subname: "Подземный переход", square: "650 кв.м"},{name: "Станция метро", subname: "проспект победы", square: "1788 кв.м"}]
+
+section.spheres.projects-spheres.projects-spheres_images.js-show-img-container
+	.site-container.spheres__container.site-content-grid
+		.site-content-grid__block
+			span.section-name._color-white
+				|	Основные объекты для аренды
+			.projects-spheres_images-img
+				for item, index in spheresList3
+					- let isFirst = index == 0 ? "mod-show" : false
+					img(src="img/spheres-img.png" alt="Основные объекты для аренды" class="js-img" data-item=`b${index}`)
+		.site-content-grid__block.spheres__content-text.projects-spheres__list
+			ul
+				for item, index in spheresList3
+					li(class="js-show-img-btn" data-show=`b${index}`)
+						span.projects-spheres_images-subname=item.subname
+						.projects-spheres_images-text-wrapper
+							span=item.name
+							span=item.square
