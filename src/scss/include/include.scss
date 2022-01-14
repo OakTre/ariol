@@ -14,6 +14,8 @@
 .button {
 	display: inline-flex;
 	align-items: center;
+	justify-content: space-between;
+	min-width: 20rem;
 	padding: 0.8rem 1rem;
 	border-radius: 2rem;
 	border: 2px solid var(--color-green);
@@ -51,6 +53,7 @@
 	&_green {
 		background-color: var(--color-green);
 		color: var(--color-white);
+		min-width: 0;
 
 		.button__icon {
 			fill: var(--color-white);

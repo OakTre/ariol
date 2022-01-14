@@ -38,4 +38,13 @@
 		}
 	}
 
+	.group-projects-hero__arrow {
+		@include mq(sm) {
+			.site-content-grid__block {
+				grid-column: 12 span;
+				justify-self: center;
+			}
+		}
+	}
+
 }
