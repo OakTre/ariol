@@ -1,5 +1,9 @@
 export default () => {
-	let coordinates = { lat: 55.82595916334503, lng: 49.12286216959172 };
+	let inptCoords = document.querySelector("input[name=coordinates]").value;
+	let latlngStr = inptCoords.split(',', 2);
+	let lat = parseFloat(latlngStr[0]);
+	let lng = parseFloat(latlngStr[1]);
+	let coordinates = { lat: lat, lng: lng };
 	let markerImage = document.querySelector(".contact-us__map").getAttribute("data-map-icon")
 	let styles = [
 		{
