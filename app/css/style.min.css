@@ -491,15 +491,15 @@
 .cookies p {
   color: var(--color-white);
   text-transform: uppercase;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  max-width: 92.5rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  max-width: 86.5rem;
 }
 
 .cookies p a {
   text-transform: uppercase;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
   text-decoration: underline;
 }
 
@@ -1366,7 +1366,7 @@ a {
   text-transform: uppercase;
 }
 
-.company-numbers__item-number > span {
+.company-numbers__item-number>span {
   position: relative;
   display: inline-block;
   padding-right: 2rem;
@@ -4705,7 +4705,7 @@ a {
     margin-bottom: 2rem;
   }
 
-  .company-numbers__item-number > span {
+  .company-numbers__item-number>span {
     padding-right: 1rem;
   }
 
@@ -5789,3 +5789,4 @@ a {
     font-size: 9px;
   }
 }
+/*# sourceMappingURL=style.min.css.map */
