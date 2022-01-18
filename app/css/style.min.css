@@ -458,6 +458,65 @@
   overflow: visible;
 }
 
+.cookies {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 90;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 40px;
+  color: var(--color-white);
+  background-color: var(--color-green);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .2s,visibility .2s;
+  -o-transition: opacity .2s,visibility .2s;
+  transition: opacity .2s,visibility .2s;
+}
+
+.cookies.cookies_is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cookies p {
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  max-width: 92.5rem;
+}
+
+.cookies p a {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-decoration: underline;
+}
+
+.cookies p a:hover {
+  text-decoration: none;
+}
+
+.cookies .button {
+  color: var(--color-white);
+  background-color: transparent;
+  border-color: var(--color-white);
+}
+
+.cookies .button .icon {
+  fill: var(--color-white);
+}
+
 *,
 ::after,
 ::before {
@@ -3857,6 +3916,36 @@ a {
     line-height: 5.6rem;
   }
 
+  .cookies {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: stretch;
+    -ms-flex-pack: stretch;
+    justify-content: stretch;
+    padding: 2rem 20px;
+  }
+
+  .cookies .button {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+
+  .cookies p {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .cookies p a {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
   .site-container {
     padding: 0 20px;
   }
@@ -4337,6 +4426,17 @@ a {
 
   .breadcrumbs {
     display: none;
+  }
+
+  .cookies p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+
+  .cookies p a {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
   }
 
   html {
@@ -5643,6 +5743,10 @@ a {
 }
 
 @media screen and (max-width:360px) {
+  .cookies {
+    padding: 2rem 16px;
+  }
+
   .site-container {
     padding: 0 16px;
   }

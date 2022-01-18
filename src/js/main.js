@@ -60,4 +60,15 @@ documentReady(() => {
 	servicesDetailAnim();
 	projectsDetailAnim();
 	showImg();
+
+	const cookies = document.querySelector(".cookies");
+	const cookiesBtn = document.querySelector(".cookies button");
+
+	setTimeout(() => {
+		cookies.classList.add("cookies_is-active");
+	}, 7000);
+
+	cookiesBtn.addEventListener("click", ()=>{
+		cookies.classList.remove("cookies_is-active");
+	});
 });
