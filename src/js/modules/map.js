@@ -1,4 +1,5 @@
 export default () => {
+	if (!document.querySelector("input[name=coordinates]")) return;
 	let inptCoords = document.querySelector("input[name=coordinates]").value;
 	let latlngStr = inptCoords.split(',', 2);
 	let lat = parseFloat(latlngStr[0]);
