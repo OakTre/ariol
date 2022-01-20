@@ -517,6 +517,10 @@
   fill: var(--color-white);
 }
 
+.no-padding {
+  padding-bottom: 0!important;
+}
+
 *,
 ::after,
 ::before {
