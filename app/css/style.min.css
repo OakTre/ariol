@@ -236,6 +236,52 @@
 
 .hero-arrow-down {
   fill: var(--color-white);
+  -webkit-animation: 2s infinite arrow-down;
+  animation: 2s infinite arrow-down;
+  -webkit-transition: fill .2s;
+  -o-transition: fill .2s;
+  transition: fill .2s;
+  cursor: pointer;
+}
+
+.hero-arrow-down:hover {
+  fill: var(--color-green);
+}
+
+@-webkit-keyframes arrow-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0,-1rem);
+    transform: translate(0,-1rem);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(0,1rem);
+    transform: translate(0,1rem);
+  }
+}
+
+@keyframes arrow-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0,-1rem);
+    transform: translate(0,-1rem);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(0,1rem);
+    transform: translate(0,1rem);
+  }
 }
 
 .site-middle-text {
@@ -1370,7 +1416,7 @@ a {
   text-transform: uppercase;
 }
 
-.company-numbers__item-number>span {
+.company-numbers__item-number > span {
   position: relative;
   display: inline-block;
   padding-right: 2rem;
@@ -2883,6 +2929,9 @@ a {
 .group-projects-hero__arrow {
   margin-top: auto;
   padding-bottom: 3.5rem;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
 }
 
 .group-projects-hero__feautures {
@@ -4709,7 +4758,7 @@ a {
     margin-bottom: 2rem;
   }
 
-  .company-numbers__item-number>span {
+  .company-numbers__item-number > span {
     padding-right: 1rem;
   }
 
@@ -5793,4 +5842,3 @@ a {
     font-size: 9px;
   }
 }
-/*# sourceMappingURL=style.min.css.map */

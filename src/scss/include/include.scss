@@ -201,6 +201,27 @@
 
 .hero-arrow-down {
 	fill: var(--color-white);
+	animation: arrow-down 2s infinite;
+	transition: fill 200ms;
+	cursor: pointer;
+
+	&:hover {
+		fill: var(--color-green);
+	}
+}
+
+@keyframes arrow-down {
+    0%{
+        opacity: 0;
+        transform: translate(0,-1rem);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(0,1rem);
+    }
 }
 
 .site-middle-text {
