@@ -332,6 +332,10 @@
   transition: color var(--main-transition);
 }
 
+.markweber img {
+  margin-left: .2rem;
+}
+
 .markweber:hover {
   color: var(--color-green);
 }
@@ -4471,10 +4475,6 @@ a {
     text-decoration: none;
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-
-  .markweber span {
-    color: var(--color-green);
   }
 
   .breadcrumbs {
