@@ -43,15 +43,15 @@
 	}
 
 	&__img {
-		position: sticky;
-		top: 5rem;
+		position: absolute;
 		width: 40rem;
 		height: 60.5rem;
 		display: block;
 		object-fit: cover;
+		transition: top 200ms, opacity 200ms;
 
 		&:not(.mod-show) {
-			display: none;
+			opacity: 0;
 		}
 
 		@include mq(lg) {
@@ -59,6 +59,7 @@
 
 			&.mod-mobile {
 				display: block;
+				opacity: 1;
 				position: static;
 				top: auto;
 				left: auto;
