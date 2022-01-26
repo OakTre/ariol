@@ -52,7 +52,7 @@
 		text-transform: uppercase;
 		transition: color var(--main-transition);
 
-		&:hover {
+		&[href]:hover {
 			color: var(--color-green);
 		}
 

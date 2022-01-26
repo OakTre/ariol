@@ -151,6 +151,23 @@
 				opacity: 1;
 			}
 		}
+
+		&.no-hover:hover {
+			cursor: default !important;
+			border-color: rgba($color: #fff, $alpha: 0.2);
+
+			&::before {
+				background-color: rgba($color: #fff, $alpha: 0.2);
+			}
+
+			.services__item-link span {
+				color: var(--color-white);
+			}
+
+			.services__item-icon {
+				opacity: 0;
+			}
+		}
 	}
 
 	.site-content-grid__block {

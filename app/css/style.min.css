@@ -829,7 +829,7 @@ a {
   transition: color var(--main-transition);
 }
 
-.footer__nav-link:hover {
+.footer__nav-link[href]:hover {
   color: var(--color-green);
 }
 
@@ -1846,6 +1846,23 @@ a {
 .services__item:hover .services__item-icon {
   fill: var(--color-green);
   opacity: 1;
+}
+
+.services__item.no-hover:hover {
+  cursor: default!important;
+  border-color: rgba(255,255,255,.2);
+}
+
+.services__item.no-hover:hover::before {
+  background-color: rgba(255,255,255,.2);
+}
+
+.services__item.no-hover:hover .services__item-link span {
+  color: var(--color-white);
+}
+
+.services__item.no-hover:hover .services__item-icon {
+  opacity: 0;
 }
 
 .projects {

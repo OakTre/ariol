@@ -12,7 +12,7 @@ section.services.lazy(data-bg="img/index/services-bg2.webp" data-bg-fallback="im
 				+button(null, "Перейти в Услуги")(class="services__button")
 		ul.services__list
 			for item in services_arr
-				li.services__item
-					a(href="/" class="services__item-link")
+				li.services__item.no-hover
+					a(class="services__item-link")
 						span=item
 						+icon("arrow-right-button")(class="services__item-icon" width="40" height="40")
