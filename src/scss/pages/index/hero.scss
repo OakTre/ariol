@@ -34,6 +34,7 @@
 		min-width: 100%;
 		min-height: 100%;
 		transform: translate(-50%,-50%);
+		filter: grayscale(100%);
 
 		&._is-img {
 			display: none;

@@ -1075,6 +1075,8 @@ a {
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .hero__video-layer._is-img {
