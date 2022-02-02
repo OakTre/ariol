@@ -16,7 +16,10 @@
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
-		display: none;
+
+		&._is-video {
+			display: none;
+		}
 
 		@include mq(sm) {
 			background-position: 90% 100%;
@@ -31,6 +34,10 @@
 		min-width: 100%;
 		min-height: 100%;
 		transform: translate(-50%,-50%);
+
+		&._is-img {
+			display: none;
+		}
 	}
 
 	&__container {
