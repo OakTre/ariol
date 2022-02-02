@@ -4,6 +4,7 @@
 	height: 100vh;
 	color: var(--color-white);
 	overflow: hidden;
+	background-color: var(--color-dark);
 
 	&__layer {
 		position: absolute;
@@ -15,10 +16,21 @@
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+		display: none;
 
 		@include mq(sm) {
 			background-position: 90% 100%;
 		}
+	}
+
+	&__video-layer {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: -1;
+		min-width: 100%;
+		min-height: 100%;
+		transform: translate(-50%,-50%);
 	}
 
 	&__container {
