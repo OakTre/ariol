@@ -1,13 +1,14 @@
 - let footer_nav = ["Внутренний аудит", "Работа с персоналом", "Автоматизация бизнес процессов и администрирование", "Экономический анализ", "Ведение документооборота", "Оптимизация налоговых и финансовых потоков"]
 - let footer_nav2 = ["Сетка +", "Media Advertizing Group", "Афиша Казани", "КВИНТЭС ГРУПП"]
+- let footer_nav3 = ["О группе", "Команда", "карьера", "Контакты"]
 
 footer.footer
 	.site-container
-		.footer__top-container.site-content-grid
-			.site-content-grid__block
+		.footer__top-container
+			.footer__top-container__block
 				a.logo(href="/")
 					img(class="logo__img" src="img/logo-black.svg" alt="Логотип компании")
-			.site-content-grid__block.footer__nav-container
+			.footer__top-container__block.footer__nav-container
 				.footer__nav-block
 					span.footer__nav-legend
 						|	Услуги
@@ -22,14 +23,21 @@ footer.footer
 						for item in footer_nav2
 							li.footer__nav-item
 								a.footer__nav-link(href="/")=item
+				.footer__nav-block
+					span.footer__nav-legend
+						|	Меню
+					ul.footer__nav-list
+						for item in footer_nav3
+							li.footer__nav-item
+								a.footer__nav-link(href="/")=item
 		.footer__bottom-block
-			span.footer__copyright
+			.footer__copyright
 				|	Общество с ограниченной ответственностью «БИЗНЕС ГРУППА АРИОЛ»
-			span.footer__copyright
-				|	ИНН: 1657264266
-				br
-				|	ОГРН: 1201600070484
+			.footer__copyright
+				.footer__copyright-text
+					|	ИНН: 1657264266
+					br
+					|	ОГРН: 1201600070484
 
-			a.markweber(href="/")
-				|	 Создание сайта
-				img(src="img/markweber_logo.png", alt="markweber logo")
+				a.markweber(href="/")
+					img(src="img/markweber_logo2.svg" alt="markweber logo")

@@ -29,20 +29,45 @@
               <ul class="nav__list header__nav-list">
                 <li class="nav__item">
                   <a class="nav__link _about-group" href="/">	О группе
-                    <span class="header__nav-link-current">
-                      <svg class="icon icon-icon-plus _plus" width="16" height="16">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
-                      </svg>
-                    </span>
+                    <svg class="icon icon-plus2 nav__link-icon" width="16" height="16">
+                      <use xlink:href="img/sprite.svg#plus2"></use>
+                    </svg>
                   </a>
+                  <ul class="nav__sub-menu">
+                    <li class="nav__sub-menu-item">
+                      <a class="nav__sub-menu-link" href="/">	 О НАС</a>
+                    </li>
+                    <li class="nav__sub-menu-item">
+                      <a class="nav__sub-menu-link" href="/">	 КАРЬЕРА</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="nav__item">
                   <a class="nav__link" href="/">	Услуги</a>
                 </li>
                 <li class="nav__item">
                   <a class="nav__link _is-current" href="/">	Проекты
-                    <span class="header__news-link-count">	3</span>
+                    <svg class="icon icon-plus2 nav__link-icon" width="16" height="16">
+                      <use xlink:href="img/sprite.svg#plus2"></use>
+                    </svg>
                   </a>
+                  <ul class="nav__sub-menu">
+                    <li class="nav__sub-menu-item">
+                      <a class="nav__sub-menu-link" href="/">	Сетка плюс</a>
+                    </li>
+                    <li class="nav__sub-menu-item">
+                      <a class="nav__sub-menu-link" href="/">	 Квинтэс групп</a>
+                    </li>
+                    <li class="nav__sub-menu-item">
+                      <a class="nav__sub-menu-link" href="/">	Media advertising group</a>
+                    </li>
+                    <li class="nav__sub-menu-item">
+                      <a class="nav__sub-menu-link" href="/">	Афиша казани</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/">	Команда</a>
                 </li>
               </ul>
             </nav>
@@ -119,45 +144,35 @@
                   <span>	год создания</span>
                 </p>
               </div>
-              <div class="site-content-grid__block">
-                <div class="projects-detail-hero__link lazy" style="background-image: url(img/projects-detail/link-img-svg.svg)">
-                  <a href="/">	 afisha-kazan.ru
+            </div>
+          </div>
+        </section>
+        <section class="about-projects">
+          <div class="site-container">
+            <span class="section-name _color-green">	Коротко о проекте</span>
+            <div class="about-projects__container">
+              <div class="about-projects__top">
+                <div class="about-projects__content">
+                  <p>	«Афиша Казани» — новый крупный медиапортал о культурно-развлекательной жизни города.</p>
+                  <div class="about-company-info__long-arrow_wrap about-projects__arrow">
+                    <svg class="icon icon-arrow-right-button about-company-info__long-arrow" width="20" height="20">
+                      <use xlink:href="img/sprite.svg#arrow-right-button"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="about-projects__logo">
+                  <img class="about-projects__logo" src="img/projects-detail/logo.svg" alt="">
+                  <a class="about-projects__link" href="/">	afisha-kazan.ru
                     <svg class="icon icon-link-icon" width="16" height="16">
                       <use xlink:href="img/sprite.svg#link-icon"></use>
                     </svg>
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-        <section class="about-company-info about-detail-project _about-short">
-          <div class="site-container">
-            <span class="section-name _color-green">	Коротко о проекте</span>
-            <div class="about-company-info__container">
-              <div class="about-company-info__block">
-                <div class="about-company-info__heading">
-                  <h2 class="visually-hidden">	Заголовок о компании для сео</h2>
-                  <div class="about-company-info__heading-text about-detail-project__heading-text">
-                    <p>	Афиша казани  — крупнейший медиапортал о культурно-развлекательной жизни, позиционирующий казань, как современный европейский город</p>
-                  </div>
-                </div>
-              </div>
-              <div class="about-company-info__block js-about-company-info-block">
-                <div class="about-company-info__info-text_left">
-                  <div class="about-company-info__long-arrow_wrap">
-                    <svg class="icon icon-arrow-right-button about-company-info__long-arrow" width="20" height="20">
-                      <use xlink:href="img/sprite.svg#arrow-right-button"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="about-company-info__info-text_right">
-                  <div class="about-company-info__text site-middle-text about-detail-project__text">
-                    <p>	<b>симбиоз</b> справочной и рекомендательной информации</p>
-                    <p>	<b>удобный сервис поиска</b> мероприятий, мест и маршрутов для отдыха</p>
-                    <p>	<b>освещение социальных тем</b> в контексте городской жизни</p>
-                  </div>
-                </div>
+              <div class="about-projects__bottom">
+                <p>	<b>симбиоз</b> справочной и рекомендательной информации</p>
+                <p>	<b>удобный сервис поиска</b> мероприятий, мест и маршрутов для отдыха</p>
+                <p>	<b>освещение социальных тем</b> в контексте городской жизни</p>
               </div>
             </div>
           </div>
@@ -304,7 +319,7 @@
           </div>
         </section>
         <section class="contact-us">
-          <input type="hidden" name="coordinates" value="55.82595916334503, 49.12286216959172">
+          <input type="hidden" name="coordinates" value="55.8326998, 49.0881354">
           <div class="site-container contact-us__container">
             <h2 class="contact-us__title section-title">	Свяжитесь с нами</h2>
             <div class="contact-us__content">
@@ -320,7 +335,7 @@
                   <div class="contact-us__content-item contact-us__content-with-arrow-block">
                     <span class="contact-us__legend">	Контакты</span>
                     <a class="contact-us__tel-link" href="tel:+78435610096">	8 843 561-00-96</a>
-                    <a class="contact-us__mail-link" href="mailto:">	 info@ariol.ru</a>
+                    <a class="contact-us__mail-link" href="mailto:">	 info@ariol.group</a>
                   </div>
                 </div>
               </div>
@@ -329,7 +344,7 @@
                   <div class="_block"></div>
                   <div class="_block">
                     <span class="contact-us__legend">	Офис</span>
-                    <p class="contact-us__text">	Пр-т Ямашева, 49Б, офис 2/4, Казань</p>
+                    <p class="contact-us__text">	Пр-т Ибрагимова, 32, г. Казань</p>
                   </div>
                 </div>
               </div>
@@ -340,13 +355,13 @@
       </main>
       <footer class="footer">
         <div class="site-container">
-          <div class="footer__top-container site-content-grid">
-            <div class="site-content-grid__block">
+          <div class="footer__top-container">
+            <div class="footer__top-container__block">
               <a class="logo" href="/">
                 <img class="logo__img" src="img/logo-black.svg" alt="Логотип компании">
               </a>
             </div>
-            <div class="site-content-grid__block footer__nav-container">
+            <div class="footer__top-container__block footer__nav-container">
               <div class="footer__nav-block">
                 <span class="footer__nav-legend">	Услуги</span>
                 <ul class="footer__nav-list">
@@ -387,14 +402,33 @@
                   </li>
                 </ul>
               </div>
+              <div class="footer__nav-block">
+                <span class="footer__nav-legend">	Меню</span>
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="/">О группе</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="/">Команда</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="/">карьера</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="/">Контакты</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="footer__bottom-block">
-            <span class="footer__copyright">	Общество с ограниченной ответственностью «БИЗНЕС ГРУППА АРИОЛ»</span>
-            <span class="footer__copyright">	ИНН: 1657264266<br>	ОГРН: 1201600070484</span>
-            <a class="markweber" href="/">	 Создание сайта
-              <img src="img/markweber_logo.png" alt="markweber logo">
-            </a>
+            <div class="footer__copyright">	Общество с ограниченной ответственностью «БИЗНЕС ГРУППА АРИОЛ»</div>
+            <div class="footer__copyright">
+              <div class="footer__copyright-text">	ИНН: 1657264266<br>	ОГРН: 1201600070484</div>
+              <a class="markweber" href="/">
+                <img src="img/markweber_logo2.svg" alt="markweber logo">
+              </a>
+            </div>
           </div>
         </div>
       </footer>

@@ -1,31 +1,44 @@
 section.company-numbers
 	.site-container.company-numbers__container
+		span.section-name._color-green.company-numbers__section-name
+			|	Миссия компании
+		p.company-numbers__heading-text
+			|	Мы находим лучшие решения, чтобы вы выбрали наилучшее
+
 		ul.company-numbers__list
 			li.company-numbers__item
-				span.company-numbers__item-number
-					span
-						|	500
-						span._plus +
-					|	млн ₽
+				.company-numbers__item-number-wrapper
+					img(src="img/numbers-icon-arrows.svg", alt="" class="company-numbers__item-number-img")
+					span.company-numbers__item-number-before
+						|	Свыше
+					span.company-numbers__item-number
+						|	1 млрд ₽
 
 				p.company-numbers__item-text.site-middle-text
-					|	в год зарабатывали партнеры под нашим управлением
-			li.company-numbers__item.js-company-numbers1
-				span.company-numbers__item-number
-					span
-						|	15
-						span._plus +
-					|	лет
-
-				p.company-numbers__item-text.site-middle-text
-					|	занимаемся
+					|	Годовой оборот
 					br
-					|	только нашей профессией
-			li.company-numbers__item.js-company-numbers2
-				span.company-numbers__item-number
-					span
-						|	20
-						span._plus +
+					|	проектов
+			li.company-numbers__item.js-company-numbers1
+				.company-numbers__item-number-wrapper
+					img(src="img/numbers-icon-time.svg", alt="" class="company-numbers__item-number-img")
+					span.company-numbers__item-number-before
+						|	более
+					span.company-numbers__item-number
+						|	15  лет
 
 				p.company-numbers__item-text.site-middle-text
-					|	бизнес-направлений. От агробизеса до типографии
+					|	Профессионального
+					br
+					|	опыта
+			li.company-numbers__item.js-company-numbers2
+				.company-numbers__item-number-wrapper
+					img(src="img/numbers-icon-world.svg", alt="" class="company-numbers__item-number-img")
+					span.company-numbers__item-number-before
+						|	более
+					span.company-numbers__item-number
+						|	200
+
+				p.company-numbers__item-text.site-middle-text
+					|	Надежных
+					br
+					|	партнеров

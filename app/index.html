@@ -29,20 +29,45 @@
               <ul class="nav__list header__nav-list">
                 <li class="nav__item">
                   <a class="nav__link _about-group" href="/">	О группе
-                    <span class="header__nav-link-current">
-                      <svg class="icon icon-icon-plus _plus" width="16" height="16">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
-                      </svg>
-                    </span>
+                    <svg class="icon icon-plus2 nav__link-icon" width="16" height="16">
+                      <use xlink:href="img/sprite.svg#plus2"></use>
+                    </svg>
                   </a>
+                  <ul class="nav__sub-menu">
+                    <li class="nav__sub-menu-item">
+                      <a class="nav__sub-menu-link" href="/">	 О НАС</a>
+                    </li>
+                    <li class="nav__sub-menu-item">
+                      <a class="nav__sub-menu-link" href="/">	 КАРЬЕРА</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="nav__item">
                   <a class="nav__link" href="/">	Услуги</a>
                 </li>
                 <li class="nav__item">
                   <a class="nav__link" href="/">	Проекты
-                    <span class="header__news-link-count">	3</span>
+                    <svg class="icon icon-plus2 nav__link-icon" width="16" height="16">
+                      <use xlink:href="img/sprite.svg#plus2"></use>
+                    </svg>
                   </a>
+                  <ul class="nav__sub-menu">
+                    <li class="nav__sub-menu-item">
+                      <a class="nav__sub-menu-link" href="/">	Сетка плюс</a>
+                    </li>
+                    <li class="nav__sub-menu-item">
+                      <a class="nav__sub-menu-link" href="/">	 Квинтэс групп</a>
+                    </li>
+                    <li class="nav__sub-menu-item">
+                      <a class="nav__sub-menu-link" href="/">	Media advertising group</a>
+                    </li>
+                    <li class="nav__sub-menu-item">
+                      <a class="nav__sub-menu-link" href="/">	Афиша казани</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/">	Команда</a>
                 </li>
               </ul>
             </nav>
@@ -92,24 +117,7 @@
           <video class="hero__video-layer" src="resourses/vid.mp4" playsinline muted autoplay loop></video>
           <div class="site-container hero__container">
             <h1 class="visually-hidden">	Организация бизнеса, Запуск проектов, Сопровождение</h1>
-            <div class="hero__feautures">
-              <span class="hero__feautures-item">	Организация бизнеса</span>
-              <div class="hero__feautures-arrow">
-                <svg class="icon icon-arrow-right-button hero__feautures-arrow-long" width="20" height="20">
-                  <use xlink:href="img/sprite.svg#arrow-right-button"></use>
-                </svg>
-              </div>
-              <span class="hero__feautures-item">	Запуск проектов</span>
-            </div>
-            <div class="hero__text">
-              <span class="hero__text-span">	Сопровождение
-                <span class="hero__long-arrow_wrap">
-                  <svg class="icon icon-arrow-right-button hero__long-arrow" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#arrow-right-button"></use>
-                  </svg>
-                </span>
-              </span>
-            </div>
+            <img class="hero__container-img js-hero-img" src="img/hero-layer.svg" alt="">
             <div class="site-content-grid hero__info">
               <div class="site-content-grid__block">
                 <a href="#nextBlock">
@@ -117,9 +125,6 @@
                     <use xlink:href="img/sprite.svg#hero-arrow-down"></use>
                   </svg>
                 </a>
-              </div>
-              <div class="site-content-grid__block">
-                <span class="hero__company-birth">	Бизнес Группа «АРИОЛ» основана в 2020 году</span>
               </div>
             </div>
           </div>
@@ -130,12 +135,10 @@
               <div class="about-company-info__block">
                 <div class="about-company-info__heading">
                   <h2 class="visually-hidden">	Заголовок о компании для сео</h2>
-                  <p class="about-company-info__heading-text">	Мы — управляющая компания, действующая в разнопрофильных  бизнесах:</p>
-                  <ul class="about-company-info__list">
-                    <li class="about-company-info__list-item">	крупное производство строительных материалов,</li>
-                    <li class="about-company-info__list-item">	 наружная&nbsp;реклама,</li>
-                    <li class="about-company-info__list-item">	интернет&nbsp;издание.</li>
-                  </ul>
+                  <div class="about-company-info__content">
+                    <p><b>Наша профессия</b>	— организация, развитие и сопровождение бизнеса</p>
+                    <p><b>Наша цель</b>	— создание экспертной системы управления, способной обеспечить быстрый качественный рост для всех видов бизнеса</p>
+                  </div>
                 </div>
               </div>
               <div class="about-company-info__block js-about-company-info-block">
@@ -147,9 +150,9 @@
                   </div>
                 </div>
                 <div class="about-company-info__info-text_right">
-                  <p class="about-company-info__text site-middle-text">	Бизнес Группа «АРИОЛ» и все обслуживаемые бизнес направления имеют одного собственника, а значит общие бизнес интересы.</p>
+                  <p class="about-company-info__text site-middle-text">	Мы делаем ваш бизнес<br>	понятным</p>
                   <a class="button-reset button about-company-info__button" href="/about-group.html">
-                    <span>	о компании</span>
+                    <span>	О ГРУППЕ</span>
                     <svg class="icon icon-arrow-right-button button__icon" width="20" height="20">
                       <use xlink:href="img/sprite.svg#arrow-right-button"></use>
                     </svg>
@@ -160,48 +163,58 @@
           </section>
         </div>
         <section class="ceo">
-          <div class="ceo__layer lazy parallax" data-bg="img/index/ceo.webp" data-bg-fallback="img/index/ceo.jpg" data-depth="0.10"></div>
+          <div class="ceo__layer lazy parallax" data-bg="img/ceo2.jpg" data-bg-fallback="img/ceo2.jpg" data-depth="0.10"></div>
           <div class="site-container ceo__container">
             <div class="ceo__item">
-              <span class="ceo__item-heading">	Айрат Галиуллин</span>
-              <span class="ceo__item-position">	СЕО</span>
+              <span class="ceo__item-heading">	сергей белов</span>
+              <span class="ceo__item-position">	заместитель<br>	генерального директора</span>
             </div>
             <div class="ceo__item">
-              <span class="ceo__item-heading">	Айрат Галиуллин</span>
-              <span class="ceo__item-position">	СЕО</span>
+              <span class="ceo__item-heading">	Димитрий Савинов</span>
+              <span class="ceo__item-position">	Финансовый Директор</span>
             </div>
             <div class="ceo__item">
-              <span class="ceo__item-heading">	Айрат Галиуллин</span>
-              <span class="ceo__item-position">	СЕО</span>
+              <span class="ceo__item-heading">	Игорь Борисов</span>
+              <span class="ceo__item-position">	HR-директор</span>
+            </div>
+            <div class="ceo__item">
+              <span class="ceo__item-heading">	Любовь зубарева</span>
+              <span class="ceo__item-position">	Руководитель<br>	юридической службы</span>
+            </div>
+            <div class="ceo__item">
+              <span class="ceo__item-heading">	Иван кузнецов</span>
+              <span class="ceo__item-position">	Генеральный директор</span>
             </div>
           </div>
         </section>
         <section class="company-numbers">
           <div class="site-container company-numbers__container">
+            <span class="section-name _color-green company-numbers__section-name">	Миссия компании</span>
+            <p class="company-numbers__heading-text">	Мы находим лучшие решения, чтобы вы выбрали наилучшее</p>
             <ul class="company-numbers__list">
               <li class="company-numbers__item">
-                <span class="company-numbers__item-number">
-                  <span>	500
-                    <span class="_plus">+</span>
-                  </span>	млн ₽
-                </span>
-                <p class="company-numbers__item-text site-middle-text">	в год зарабатывали партнеры под нашим управлением</p>
+                <div class="company-numbers__item-number-wrapper">
+                  <img class="company-numbers__item-number-img" src="img/numbers-icon-arrows.svg" alt="">
+                  <span class="company-numbers__item-number-before">	Свыше</span>
+                  <span class="company-numbers__item-number">	1 млрд ₽</span>
+                </div>
+                <p class="company-numbers__item-text site-middle-text">	Годовой оборот<br>	проектов</p>
               </li>
               <li class="company-numbers__item js-company-numbers1">
-                <span class="company-numbers__item-number">
-                  <span>	15
-                    <span class="_plus">+</span>
-                  </span>	лет
-                </span>
-                <p class="company-numbers__item-text site-middle-text">	занимаемся<br>	только нашей профессией</p>
+                <div class="company-numbers__item-number-wrapper">
+                  <img class="company-numbers__item-number-img" src="img/numbers-icon-time.svg" alt="">
+                  <span class="company-numbers__item-number-before">	более</span>
+                  <span class="company-numbers__item-number">	15  лет</span>
+                </div>
+                <p class="company-numbers__item-text site-middle-text">	Профессионального<br>	опыта</p>
               </li>
               <li class="company-numbers__item js-company-numbers2">
-                <span class="company-numbers__item-number">
-                  <span>	20
-                    <span class="_plus">+</span>
-                  </span>
-                </span>
-                <p class="company-numbers__item-text site-middle-text">	бизнес-направлений. От агробизеса до типографии</p>
+                <div class="company-numbers__item-number-wrapper">
+                  <img class="company-numbers__item-number-img" src="img/numbers-icon-world.svg" alt="">
+                  <span class="company-numbers__item-number-before">	более</span>
+                  <span class="company-numbers__item-number">	200</span>
+                </div>
+                <p class="company-numbers__item-text site-middle-text">	Надежных<br>	партнеров</p>
               </li>
             </ul>
           </div>
@@ -289,36 +302,35 @@
               <h2 class="visually-hidden">	Текст заголовок сео</h2>
               <div class="why-us__top-block_left">
                 <span class="section-name why-us__section-name">	Почему нас выбирают</span>
-                <p class="why-us__p-text _block">	Мы — специалисты из сфер</p>
-                <ul class="why-us__list">
-                  <li class="why-us__item">	финансов,</li>
-                  <li class="why-us__item">	бухгалтерии,</li>
-                  <li class="why-us__item">	экономики,</li>
-                  <li class="why-us__item">	юриспруденции,</li>
-                  <li class="why-us__item">	IT,</li>
-                  <li class="why-us__item">	кадров с необходимым опытом и навыками.</li>
-                </ul>
-                <p class="why-us__p-text">	И главное — у нас есть искреннее желание эффективно использовать накопленный потенциал</p>
+                <p class="why-us__p-text">	Мы являемся сторонниками долговременного и доверительного сотрудничества, гарантируя внедрение наиболее эффективных методов работы, обеспечивая прозрачность финансовых потоков</p>
               </div>
               <div class="why-us__top-block_right"></div>
             </div>
-            <div class="why-us__bottom-block">
-              <div class="why-us__bottom-block_left"></div>
-              <div class="why-us__bottom-block_right why-us__text-block">
-                <p>	<b>С нами удобно</b> при смене старой команды, при разделе бизнеса, при проведении комплексного аудита деятельности компании, помогаем запускать новые проекты</p>
-                <p>	<b>Работаем более 10 лет</b> вместе, в случае предметной заинтересованности предоставим резюме своих специалистов</p>
+            <div class="about-company-info__block js-about-company-info-block">
+              <div class="about-company-info__info-text_left">
+                <div class="about-company-info__long-arrow_wrap">
+                  <svg class="icon icon-arrow-right-button about-company-info__long-arrow" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#arrow-right-button"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="about-company-info__info-text_right">
+                <p class="about-company-info__text site-middle-text">	Мы создаем условия для оптимальной и успешной реализации финансовых возможностей, взяв на себя все трудовые и энергетические затраты</p>
+                <a class="button-reset button about-company-info__button" href="/about-group.html">
+                  <span>	КОМАНДА</span>
+                  <svg class="icon icon-arrow-right-button button__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#arrow-right-button"></use>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
         </section>
         <section class="services lazy" data-bg="img/index/services-bg2.webp" data-bg-fallback="img/index/services-bg2.png">
           <div class="site-container">
-            <div class="services__container site-content-grid">
-              <div class="site-content-grid__block">
+            <div class="services__container">
+              <div class="services__heading-warpper">
                 <h2 class="services__title section-title">	Услуги</h2>
-              </div>
-              <div class="site-content-grid__block services__text-info">
-                <p class="services__text">	Мы нацелены на построение надежных и взаимовыгодных отношений</p>
                 <a class="button-rest button  services__button" href="/">
                   <span>Перейти в Услуги</span>
                   <svg class="icon icon-arrow-right-button button__icon" width="20" height="20">
@@ -392,7 +404,7 @@
             <h2 class="projects__title section-title">	Проекты в управлении</h2>
             <div class="projects__content site-content-grid">
               <div class="site-content-grid__block">
-                <h3 class="projects__content-legend">	Сетка+</h3>
+                <h3 class="projects__content-legend">	Сетка плюс</h3>
                 <p class="projects__content-text">	С 2012 года компания занимается производством и продажей металлических сеток широкого ассортиментного ряда, а с 2020 года — композитных материалов под собственным брендом «Мастер Сеткин».</p>
                 <a class="button-rest button button_green projects__content-link" href="/">
                   <span>Перейти</span>
@@ -527,7 +539,7 @@
           </div>
         </section>
         <section class="contact-us">
-          <input type="hidden" name="coordinates" value="55.82595916334503, 49.12286216959172">
+          <input type="hidden" name="coordinates" value="55.8326998, 49.0881354">
           <div class="site-container contact-us__container">
             <h2 class="contact-us__title section-title">	Свяжитесь с нами</h2>
             <div class="contact-us__content">
@@ -543,7 +555,7 @@
                   <div class="contact-us__content-item contact-us__content-with-arrow-block">
                     <span class="contact-us__legend">	Контакты</span>
                     <a class="contact-us__tel-link" href="tel:+78435610096">	8 843 561-00-96</a>
-                    <a class="contact-us__mail-link" href="mailto:">	 info@ariol.ru</a>
+                    <a class="contact-us__mail-link" href="mailto:">	 info@ariol.group</a>
                   </div>
                 </div>
               </div>
@@ -552,7 +564,7 @@
                   <div class="_block"></div>
                   <div class="_block">
                     <span class="contact-us__legend">	Офис</span>
-                    <p class="contact-us__text">	Пр-т Ямашева, 49Б, офис 2/4, Казань</p>
+                    <p class="contact-us__text">	Пр-т Ибрагимова, 32, г. Казань</p>
                   </div>
                 </div>
               </div>
@@ -563,13 +575,13 @@
       </main>
       <footer class="footer">
         <div class="site-container">
-          <div class="footer__top-container site-content-grid">
-            <div class="site-content-grid__block">
+          <div class="footer__top-container">
+            <div class="footer__top-container__block">
               <a class="logo" href="/">
                 <img class="logo__img" src="img/logo-black.svg" alt="Логотип компании">
               </a>
             </div>
-            <div class="site-content-grid__block footer__nav-container">
+            <div class="footer__top-container__block footer__nav-container">
               <div class="footer__nav-block">
                 <span class="footer__nav-legend">	Услуги</span>
                 <ul class="footer__nav-list">
@@ -610,14 +622,33 @@
                   </li>
                 </ul>
               </div>
+              <div class="footer__nav-block">
+                <span class="footer__nav-legend">	Меню</span>
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="/">О группе</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="/">Команда</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="/">карьера</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="/">Контакты</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="footer__bottom-block">
-            <span class="footer__copyright">	Общество с ограниченной ответственностью «БИЗНЕС ГРУППА АРИОЛ»</span>
-            <span class="footer__copyright">	ИНН: 1657264266<br>	ОГРН: 1201600070484</span>
-            <a class="markweber" href="/">	 Создание сайта
-              <img src="img/markweber_logo.png" alt="markweber logo">
-            </a>
+            <div class="footer__copyright">	Общество с ограниченной ответственностью «БИЗНЕС ГРУППА АРИОЛ»</div>
+            <div class="footer__copyright">
+              <div class="footer__copyright-text">	ИНН: 1657264266<br>	ОГРН: 1201600070484</div>
+              <a class="markweber" href="/">
+                <img src="img/markweber_logo2.svg" alt="markweber logo">
+              </a>
+            </div>
           </div>
         </div>
       </footer>

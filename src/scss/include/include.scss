@@ -134,10 +134,12 @@
 	display: inline-block;
 
 	&__img {
-		max-width: 19.1rem;
+		width: 22.7rem;
+		height: 9.4rem;
 
 		@include mq(sm) {
-			max-width: 11.1rem;
+			width: 11.1rem;
+			height: auto;
 		}
 	}
 }
@@ -153,6 +155,17 @@
 
 		&:last-child {
 			margin-right: 0;
+		}
+
+		&:hover {
+			.nav__sub-menu {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			.nav__link-icon {
+				transform: rotate(-45deg);
+			}
 		}
 	}
 
@@ -195,6 +208,49 @@
 					margin-left: 0.6rem;
 				}
 			}
+		}
+	}
+
+	&__link-icon {
+		position: relative;
+		top: 0.2rem;
+		width: 1.6rem;
+		height: 1.6rem;
+		fill: var(--color-green);
+		stroke: var(--color-green);
+		transition: transform var(--main-transition);
+	}
+
+	&__sub-menu {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		padding-top: 1.8rem;
+		opacity: 0;
+		visibility: hidden;
+
+		transition: opacity var(--main-transition), visibility var(--main-transition);
+	}
+
+	&__sub-menu-item {
+		margin-bottom: 1.2rem;
+		min-width: 23.9rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__sub-menu-link {
+		font-weight: 500;
+		font-size: 1.6rem;
+		line-height: 2rem;
+		text-transform: uppercase;
+		color: var(--color-white);
+		transition: color var(--main-transition);
+
+		&:hover {
+			color: var(--color-green);
 		}
 	}
 }
@@ -288,22 +344,8 @@
 }
 
 .markweber {
-	margin-left: auto;
-	transition: color var(--main-transition);
-
-	img {
-		margin-left: 0.2rem;
-	}
-
-	&:hover {
-		color: var(--color-green);
-	}
-
 	@include mq(sm) {
-		margin-left: 0;
-		text-decoration: none;
-		font-size: 1.5rem;
-		line-height: 2rem;
+		margin-top: 2.4rem;
 	}
 }
 
@@ -551,4 +593,8 @@
 
 .no-padding {
 	padding-bottom: 0 !important;
+}
+
+.magrin-section180 {
+	margin-bottom: 18rem;
 }

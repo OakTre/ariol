@@ -10,7 +10,19 @@
 		background-color: transparent;
 
 		@include mq(sm) {
-			margin-left: 5.8rem;
+			margin-left: auto;
+			margin-top: 1.4rem;
+		}
+	}
+
+	&__heading-warpper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include mq(sm) {
+			flex-direction: column;
+			align-items: flex-start;
 		}
 	}
 
@@ -44,7 +56,7 @@
 	}
 
 	&__list {
-		margin-top: 24.4rem;
+		margin-top: 13.1rem;
 		width: 100%;
 
 		@include mq(custom, max, 1280) {

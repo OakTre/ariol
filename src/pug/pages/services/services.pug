@@ -1,14 +1,12 @@
 - let services_arr = ["Внутренний аудит", "Экономический анализ", "Ведение финансового и бухгалтерского учёта", "Ведение документооборота", "Оптимизация налоговых и финансовых потоков", "Бизнес-моделирование", "Автоматизация бизнес процессов и администрирование"]
 
-section.services.services-page__services.lazy(data-bg="img/index/services-bg2.webp" data-bg-fallback="img/index/services-bg2.png")
+section.services.services-page__services.lazy.magrin-section180(data-bg="img/index/services-bg2.webp" data-bg-fallback="img/index/services-bg2.png")
 	.site-container
-		.services__container.site-content-grid
-			.site-content-grid__block
+		.services__container
+			.services__heading-warpper
 				h2.services__title.section-title
 					|	Услуги
-			.site-content-grid__block.services__text-info
-				p.services__text
-					|	Мы нацелены на построение надежных и взаимовыгодных отношений
+				+button(null, "Перейти в Услуги")(class="services__button")
 		ul.services__list
 			li.services__item.no-hover
 				a(class="services__item-link")

@@ -42,6 +42,7 @@
 	}
 
 	&__container {
+		position: relative;
 		height: 100%;
 		padding-top: 25rem;
 		padding-bottom: 3.5rem;
@@ -69,6 +70,28 @@
 		@include mq(custom,max, 360) {
 			padding-top: 15.4rem;
 			padding-bottom: 3rem;
+		}
+	}
+
+	&__container-img {
+		position: absolute;
+		right: 40px;
+		bottom: 3.2rem;
+		display: block;
+		width: 87.2rem;
+		height: 37.2rem;
+
+		@include mq(sm) {
+			right: 0;
+			width: 43rem;
+			height: 17rem;
+		}
+
+		@include mq(custom, max, 400) {
+			bottom: 7.2rem;
+			right: 16px;
+			width: 26rem;
+			height: 12rem;
 		}
 	}
 

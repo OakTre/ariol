@@ -1,6 +1,14 @@
 .about-company-info {
 	padding-top: 5rem;
-	padding-bottom: 23rem;
+	padding-bottom: 12.3rem;
+
+	&._pb70 {
+		padding-bottom: 7rem;
+	}
+
+	&._pt0 {
+		padding-top: 0;
+	}
 
 	&__block {
 		display: grid;
@@ -19,7 +27,7 @@
 	&__heading {
 		grid-column: 8 span;
 
-		@include mq(md) {
+		@include mq(lg) {
 			grid-column: 12 span;
 		}
 	}
@@ -163,5 +171,34 @@
 	@include mq(sm) {
 		padding-top: 5rem;
 		padding-bottom: 10.4rem;
+	}
+
+	&__content {
+		p {
+			font-weight: 500;
+			font-size: 4.5rem;
+			line-height: 5.5rem;
+			text-transform: uppercase;
+			margin-bottom: 5rem;
+
+			&:nth-last-of-type(1) {
+				margin-bottom: 0;
+			}
+
+			b {
+				color: var(--color-green);
+			}
+
+			@include mq(md) {
+				font-size: 4rem;
+				line-height: 5rem;
+			}
+
+			@include mq(sm) {
+				font-size: 2rem;
+				line-height: 2.6rem;
+				margin-bottom: 2.4rem;
+			}
+		}
 	}
 }

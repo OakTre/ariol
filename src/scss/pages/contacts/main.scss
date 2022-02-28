@@ -61,6 +61,11 @@
 		text-transform: uppercase;
 		color: var(--color-green);
 
+		@include mq(lg) {
+			font-size: 4.5rem;
+			line-height: 1;
+		}
+
 		@include mq(sm) {
 			font-size: 2.5rem;
 			line-height: 3rem;
@@ -82,14 +87,16 @@
 
 		@include mq(sm) {
 			grid-template-columns: repeat(6, 1fr);
+			grid-column: 16px;
 
 			.site-content-grid__block {
 				&:nth-of-type(1) {
-					grid-column: 2 span;
+					grid-column: 6 span;
+					display: none;
 				}
 
 				&:nth-of-type(2) {
-					grid-column: 4 span;
+					grid-column: 6 span;
 				}
 			}
 
@@ -173,6 +180,63 @@
 					margin-bottom: 2.5rem;
 				}
 			}
+		}
+	}
+
+	&__link-list {
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		column-gap: 20px;
+
+		@include mq(sm) {
+			gap: 2.4rem;
+		}
+	}
+
+	&__link-item {
+		grid-column: 4 span;
+
+		@include mq(sm) {
+			grid-column: 12 span;
+		}
+	}
+
+	&__label {
+		display: block;
+		font-weight: 500;
+		font-size: 1.5rem;
+		line-height: 2rem;
+		margin-bottom: 3.8rem;
+
+		@include mq(sm) {
+			margin-bottom: 1.8rem;
+		}
+	}
+
+	&__link {
+		font-weight: 500;
+		font-size: 4.5rem;
+		line-height: 5rem;
+		transition: color var(--main-transition);
+
+		&:hover {
+			color: var(--color-green);
+		}
+
+		@include mq(sm) {
+			font-size: 2.4rem;
+			line-height: 2.8rem;
+		}
+	}
+
+	&__text-link {
+		font-weight: 500;
+		font-size: 2.5rem;
+		line-height: 3rem;
+
+		@include mq(sm) {
+			font-size: 2.4rem;
+			line-height: 2.8rem;
 		}
 	}
 }

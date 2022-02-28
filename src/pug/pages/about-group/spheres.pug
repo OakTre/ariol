@@ -1,18 +1,32 @@
-- let spheresList = ["ФИНАНСЫ и экономика", "бухгалтерия", "ЮРИСПРЮДЕНЦИЯ", "IT-технологии"]
-
-section.spheres
-	.site-container.spheres__container.site-content-grid
-		.site-content-grid__block
-			span.section-name._color-white
-				|	Наши специалисты из следующих сфер
-		.site-content-grid__block.spheres__content-text
-			ul
-				for item in spheresList
-					li=item
-	.site-container.spheres__arrow.site-content-grid
-		.spheres__arrow-long
-			+icon("arrow-right-button")(class="spheres__arrow-arrow" width="20" height="20")
-		.spheres__arrow-content-text.site-middle-text
-			p
-				|	наша команда состоит из разных специалистов, но мы объединены общей целью и&nbsp;неугосаемым стремлением к&nbsp;совершенству
-
+section.ceo.magrin-section180
+	.ceo__layer.lazy.parallax(data-bg="img/ceo2.jpg" data-bg-fallback="img/ceo2.jpg" data-depth='0.10')
+	.site-container.ceo__container
+		.ceo__item
+			span.ceo__item-heading
+				|	сергей белов
+			span.ceo__item-position
+				|	заместитель
+				br
+				|	генерального директора
+		.ceo__item
+			span.ceo__item-heading
+				|	Димитрий Савинов
+			span.ceo__item-position
+				|	Финансовый Директор
+		.ceo__item
+			span.ceo__item-heading
+				|	Игорь Борисов
+			span.ceo__item-position
+				|	HR-директор
+		.ceo__item
+			span.ceo__item-heading
+				|	Любовь зубарева
+			span.ceo__item-position
+				|	Руководитель
+				br
+				|	юридической службы
+		.ceo__item
+			span.ceo__item-heading
+				|	Иван кузнецов
+			span.ceo__item-position
+				|	Генеральный директор

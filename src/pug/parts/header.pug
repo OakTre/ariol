@@ -12,20 +12,41 @@ header.header(class=jsPageClass)(class=(name === "contacts" ? "header_dark" : fa
 			nav.nav.header__nav-block-item
 				ul.nav__list.header__nav-list
 					li.nav__item
-						a.nav__link._about-group(href="/")(class=(name === "group" ? "_is-current" : false))
+						a.nav__link._about-group(href="/" class=(name === "group" ? "_is-current" : false))
 							|	О группе
-							span.header__nav-link-current
-								+icon("icon-plus")(class="_plus" width="16" height="16")
+							+icon("plus2")(class="nav__link-icon" width="16" height="16")
+						ul.nav__sub-menu
+							li.nav__sub-menu-item
+								a.nav__sub-menu-link(href="/")
+									|	 О НАС
+							li.nav__sub-menu-item
+								a.nav__sub-menu-link(href="/")
+									|	 КАРЬЕРА
 					li.nav__item
-						a.nav__link(href="/")(class=(name === "services" ? "_is-current" : false))
+						a.nav__link(href="/" class=(name === "services" ? "_is-current" : false))
 							|	Услуги
 					li.nav__item
-						a.nav__link(href="/")(class=(name === "projects" ? "_is-current" : false))
+						a.nav__link(href="/" class=(name === "projects" ? "_is-current" : false))
 							|	Проекты
-							span.header__news-link-count
-								|	3
+							+icon("plus2")(class="nav__link-icon" width="16" height="16")
+						ul.nav__sub-menu
+							li.nav__sub-menu-item
+								a.nav__sub-menu-link(href="/")
+									|	Сетка плюс
+							li.nav__sub-menu-item
+								a.nav__sub-menu-link(href="/")
+									|	 Квинтэс групп
+							li.nav__sub-menu-item
+								a.nav__sub-menu-link(href="/")
+									|	Media advertising group
+							li.nav__sub-menu-item
+								a.nav__sub-menu-link(href="/")
+									|	Афиша казани
+					li.nav__item
+						a.nav__link(href="/")
+							|	Команда
 			.header__nav-block-item
-				a.header__contacts-link.header__link(href="/")(class=(name === "contacts" ? "_is-current" : false))
+				a.header__contacts-link.header__link(href="/" class=(name === "contacts" ? "_is-current" : false))
 					|	Контакты
 			.header__nav-block-item
 				a.header__lang-page.header__link(href="/")
