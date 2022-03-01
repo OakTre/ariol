@@ -38,7 +38,6 @@ window.onload = function() {
 documentReady(() => {
 	initMobileMenu();
 	lazyImages();
-	// map();
 	initDropMenu();
 	showAccordionBg();
 	initSiteAnim();
@@ -46,6 +45,7 @@ documentReady(() => {
 	accordionImg();
 	initGroupSlider();
 	showImg();
+	map();
 
 	const cookies = document.querySelector(".cookies");
 	const cookiesBtn = document.querySelector(".cookies button");
