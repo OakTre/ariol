@@ -2726,10 +2726,10 @@ a {
 
 .our-team-accordion__item {
   position: relative;
-  border-bottom: 1px solid rgba(255,255,255,.2);
   -webkit-transition: border-color var(--main-transition);
   -o-transition: border-color var(--main-transition);
   transition: border-color var(--main-transition);
+  overflow: hidden;
 }
 
 .our-team-accordion__item:nth-child(1) .our-team-accordion__head {
@@ -2738,6 +2738,18 @@ a {
 
 .our-team-accordion__item:nth-child(1) ._top-line {
   display: none;
+}
+
+.our-team-accordion__item ._bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background-color: rgba(255,255,255,.2);
+  width: 100%;
+  -webkit-transition: background-color var(--main-transition);
+  -o-transition: background-color var(--main-transition);
+  transition: background-color var(--main-transition);
 }
 
 .our-team-accordion__item ._top-line {
@@ -2763,6 +2775,10 @@ a {
 
 .our-team-accordion__item:hover ._top-line {
   opacity: 1;
+}
+
+.our-team-accordion__item:hover ._bottom-line {
+  background-color: var(--color-green);
 }
 
 .our-team-accordion__head {

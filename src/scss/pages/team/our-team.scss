@@ -134,8 +134,8 @@
 .our-team-accordion {
 	&__item {
 		position: relative;
-		border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
 		transition: border-color var(--main-transition);
+		overflow: hidden;
 
 		&:nth-child(1) {
 			.our-team-accordion__head {
@@ -145,6 +145,16 @@
 			._top-line {
 				display: none;
 			}
+		}
+
+		._bottom-line {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 1px;
+			background-color: rgba($color: #fff, $alpha: 0.2);
+			width: 100%;
+			transition: background-color var(--main-transition);
 		}
 
 		._top-line {
@@ -167,6 +177,10 @@
 
 			._top-line {
 				opacity: 1;
+			}
+
+			._bottom-line {
+				background-color:var(--color-green)
 			}
 		}
 	}

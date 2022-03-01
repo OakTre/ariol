@@ -3,7 +3,7 @@
 section.our-team
 	.site-container
 		span.section-name._color-white
-			| Познакомимся ближе?
+			| Наша команда
 
 		.our-team__container.site-content-grid.js-show-img-container
 			.site-content-grid__block
@@ -15,7 +15,8 @@ section.our-team
 				ul.our-team__list.our-team-accordion
 					for item, index in team_arr
 						li.our-team__item.our-team-accordion__item
-							span._top-line
+							span._top-line.js-direction-lines
+							span._bottom-line.js-direction-lines
 							button.button-rest.our-team-accordion__head.js-drop-menu-btn.js-btn-show-img(data-show=index)
 								._block
 									span.our-team-accordion__head-name=item.name
