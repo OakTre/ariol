@@ -2717,6 +2717,10 @@ a {
   justify-content: space-between;
 }
 
+.our-team__links .button {
+  margin-left: auto;
+}
+
 .our-team__text p {
   max-width: 38.5rem;
   font-weight: 500;
@@ -2850,6 +2854,10 @@ a {
   border-radius: 4rem;
   border: 1px solid var(--color-white);
   color: var(--color-white);
+}
+
+.our-team-accordion__head-position.mod-mobile {
+  display: none;
 }
 
 .our-team-accordion__burger {

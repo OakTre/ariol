@@ -118,6 +118,10 @@
 				margin-bottom: 2rem;
 			}
 		}
+
+		.button {
+			margin-left: auto;
+		}
 	}
 
 	&__text {
@@ -256,6 +260,10 @@
 			border-radius: 4rem;
 			border: 1px solid var(--color-white);
 			color: var(--color-white);
+
+			&.mod-mobile {
+				display: none;
+			}
 
 			@include mq(sm) {
 				&.mod-mobile {
