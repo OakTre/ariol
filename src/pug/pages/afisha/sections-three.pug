@@ -14,6 +14,7 @@ section.spheres.projects-spheres.projects-spheres_images.js-show-img-container
 				for item, index in spheresList3
 					li(class="js-show-img-btn" data-show=`b${index}`)
 						span.projects-spheres_images-subname=item.subname
+						img(src="img/spheres-img.png" alt="Основные объекты для аренды" class="projects-spheres__mobile-img" data-item=`b${index}`)
 						.projects-spheres_images-text-wrapper
 							span=item.name
 							span=item.square

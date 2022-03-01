@@ -4,6 +4,7 @@
 			li {
 				display: grid;
 				grid-template-columns: 4fr 4fr;
+
 				&::before {
 					content: none;
 				}
@@ -13,11 +14,20 @@
 					line-height: 1.9rem;
 					text-transform: none;
 					max-width: 52.3rem;
+					align-self: center;
+				}
 
-					&:nth-child(1) {
-						font-size: 4.5rem;
-						line-height: 4.5rem;
-						text-transform: uppercase;
+				> p {
+					font-size: 4.5rem;
+					line-height: 4.5rem;
+					text-transform: uppercase;
+				}
+
+				@include mq(sm) {
+					&.is-active {
+						.projects-spheres__mobile-img {
+							display: block;
+						}
 					}
 				}
 
@@ -49,6 +59,11 @@
 				}
 			}
 		}
+	}
+
+	&__mobile-img {
+		display: none;
+		margin-bottom: 2.4rem;
 	}
 }
 

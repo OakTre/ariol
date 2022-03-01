@@ -1014,7 +1014,7 @@ a {
   font-size: 2.5rem;
   line-height: 3rem;
   text-transform: uppercase;
-  max-width: 52rem;
+  max-width: 39rem;
 }
 
 .contact-us__content-item {
@@ -1413,6 +1413,10 @@ a {
   margin-bottom: 4rem;
 }
 
+.about-company-info__text p b {
+  color: var(--color-green);
+}
+
 .about-company-info__info-text_left {
   -ms-grid-column-span: 8;
   grid-column: 8 span;
@@ -1483,19 +1487,6 @@ a {
 .ceo:hover {
   -webkit-filter: none;
   filter: none;
-}
-
-.ceo::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background: -webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.3)),to(rgba(0,0,0,.3)));
-  background: -o-linear-gradient(bottom,rgba(0,0,0,.3),rgba(0,0,0,.3));
-  background: linear-gradient(0deg,rgba(0,0,0,.3),rgba(0,0,0,.3));
-  content: "";
 }
 
 .ceo__layer {
@@ -2024,23 +2015,28 @@ a {
 .services__item {
   position: relative;
   width: 100%;
-  border-bottom: 1px solid rgba(255,255,255,.2);
   -webkit-transition: border-color var(--main-transition);
   -o-transition: border-color var(--main-transition);
   transition: border-color var(--main-transition);
+  overflow: hidden;
 }
 
-.services__item::before {
+.services__item ._top-line {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 1px;
   background-color: rgba(255,255,255,.2);
-  -webkit-transition: background-color var(--main-transition);
-  -o-transition: background-color var(--main-transition);
-  transition: background-color var(--main-transition);
-  content: "";
+}
+
+.services__item ._bototm-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255,255,255,.2);
 }
 
 .services__item-link {
@@ -2190,8 +2186,8 @@ a {
 }
 
 .content-projects__img {
-  width: 100%;
-  height: 100%;
+  width: 99%;
+  height: 99%;
   -o-object-fit: cover;
   object-fit: cover;
   -webkit-filter: grayscale(100%);
@@ -3168,6 +3164,10 @@ a {
   justify-content: space-between;
 }
 
+.vacancies__links ._links-block:nth-child(2) .button {
+  margin-left: auto;
+}
+
 .group-projects-hero {
   overflow: hidden;
   position: relative;
@@ -3755,12 +3755,20 @@ a {
   line-height: 1.9rem;
   text-transform: none;
   max-width: 52.3rem;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
-.projects-spheres__list ul li p:nth-child(1) {
+.projects-spheres__list ul li>p {
   font-size: 4.5rem;
   line-height: 4.5rem;
   text-transform: uppercase;
+}
+
+.projects-spheres__mobile-img {
+  display: none;
+  margin-bottom: 2.4rem;
 }
 
 .projects-spheres_type2 ul li {
@@ -3894,6 +3902,7 @@ a {
   -ms-flex-align: center;
   align-items: center;
   margin-top: 1.3rem;
+  font-weight: 600;
   font-size: 1.6rem;
   line-height: 2rem;
   -webkit-transition: color var(--main-transition);
@@ -6118,6 +6127,10 @@ a {
   .about-detail-project__text p {
     font-size: 1.5rem;
     line-height: 1.8rem;
+  }
+
+  .projects-spheres__list ul li.is-active .projects-spheres__mobile-img {
+    display: block;
   }
 
   .projects-spheres__list ul li {

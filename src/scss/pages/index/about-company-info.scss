@@ -112,6 +112,12 @@
 	&__text {
 		margin-bottom: 4rem;
 
+		p {
+			b {
+				color: var(--color-green);
+			}
+		}
+
 		@include mq(sm) {
 			margin-bottom: 2rem;
 		}

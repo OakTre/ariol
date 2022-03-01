@@ -11,17 +11,6 @@
 		filter: none;
 	}
 
-	&::before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 1;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-		content: "";
-	}
-
 	&__layer {
 		position: absolute;
 		top: 0;

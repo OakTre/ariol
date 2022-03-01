@@ -75,19 +75,38 @@
 	&__item {
 		position: relative;
 		width: 100%;
-		border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
+		// border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
 		transition: border-color var(--main-transition);
+		overflow: hidden;
 
-		&::before {
+		._top-line {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 1px;
 			background-color: rgba($color: #fff, $alpha: 0.2);
-			transition: background-color var(--main-transition);
-			content: "";
 		}
+
+		._bototm-line {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: rgba($color: #fff, $alpha: 0.2);
+		}
+
+		// &::before {
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	width: 100%;
+		// 	height: 1px;
+		// 	background-color: rgba($color: #fff, $alpha: 0.2);
+		// 	transition: background-color var(--main-transition);
+		// 	content: "";
+		// }
 
 		&-link {
 			display: flex;

@@ -15,7 +15,7 @@ export default () => {
 	const number1 = find(".js-company-numbers1");
 	const number2 = find(".js-company-numbers2");
 	const parallax = find(".parallax");
-	const infoBlockAboutCo = find(".js-about-company-info-block");
+	const infoBlockAboutCo = findAll(".js-about-company-info-block");
 	const infoBlockAboutCo2 = find(".js-about-company-info-block2");
 	const contactArrow = find(".contact-us__content-with-arrow");
 	const spheresArrow = find(".spheres__arrow");
@@ -94,18 +94,24 @@ export default () => {
 			};
 
 			// анмиация в о компании
-			if(infoBlockAboutCo) {
-				gsap.set(infoBlockAboutCo, { x: "-66%" });
-				let tl = gsap.timeline({
-					scrollTrigger: {
-						trigger: infoBlockAboutCo,
-						start: "top bottom",
-						end: "top 60%",
-						scrub: true,
-						scrub: 5,
-					}
+			if(infoBlockAboutCo.length) {
+				infoBlockAboutCo.forEach((el)=>{
+					gsap.set(el, { x: "-66%" });
 				});
-				tl.to(infoBlockAboutCo, {x: 0});
+
+				infoBlockAboutCo.forEach((el)=>{
+					let tl = gsap.timeline({
+						scrollTrigger: {
+							trigger: el,
+							start: "top bottom",
+							end: "top 60%",
+							scrub: true,
+							scrub: 5,
+						}
+					});
+
+					tl.to(el, {x: 0});
+				});
 			};
 			// анмиация в о компании2
 			if (infoBlockAboutCo2) {

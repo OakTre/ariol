@@ -38,7 +38,7 @@ window.onload = function() {
 documentReady(() => {
 	initMobileMenu();
 	lazyImages();
-	map();
+	// map();
 	initDropMenu();
 	showAccordionBg();
 	initSiteAnim();
