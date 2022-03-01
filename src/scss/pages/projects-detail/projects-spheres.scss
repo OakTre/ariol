@@ -15,12 +15,22 @@
 					text-transform: none;
 					max-width: 52.3rem;
 					align-self: center;
+
+					@include mq(sm) {
+						align-self: stretch;
+					}
 				}
 
 				> p {
 					font-size: 4.5rem;
 					line-height: 4.5rem;
 					text-transform: uppercase;
+
+					@include mq(sm) {
+						font-size: 3.5rem !important;
+						line-height: 3.5rem !important;
+						margin-bottom: 2.4rem !important;
+					}
 				}
 
 				@include mq(sm) {
@@ -39,12 +49,6 @@
 					p {
 						font-size: 1.4rem;
 						line-height: 1.6rem;
-
-						&:nth-child(1) {
-							font-size: 3.5rem;
-							line-height: 3.5rem;
-							margin-bottom: 2.4rem;
-						}
 					}
 				}
 

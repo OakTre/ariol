@@ -6129,6 +6129,18 @@ a {
     line-height: 1.8rem;
   }
 
+  .projects-spheres__list ul li p {
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
+  }
+
+  .projects-spheres__list ul li>p {
+    font-size: 3.5rem!important;
+    line-height: 3.5rem!important;
+    margin-bottom: 2.4rem!important;
+  }
+
   .projects-spheres__list ul li.is-active .projects-spheres__mobile-img {
     display: block;
   }
@@ -6148,12 +6160,6 @@ a {
   .projects-spheres__list ul li p {
     font-size: 1.4rem;
     line-height: 1.6rem;
-  }
-
-  .projects-spheres__list ul li p:nth-child(1) {
-    font-size: 3.5rem;
-    line-height: 3.5rem;
-    margin-bottom: 2.4rem;
   }
 
   .projects-spheres_type2 ul li p {
