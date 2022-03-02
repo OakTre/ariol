@@ -33,6 +33,14 @@
 		width: 100%;
 		// border-bottom: 1px solid var(--color-white);
 
+		&:hover {
+			.directions__item-icon {
+				span {
+					background-color: var(--color-green);
+				}
+			}
+		}
+
 		._bottom-line {
 			position: absolute;
 			bottom: 0;
@@ -70,10 +78,17 @@
 			&.mod-open {
 				.directions__item-icon {
 					transform: rotate(-45deg) scale(2) translate(-10px, -10px);
+					span {
+						background-color: var(--color-green);
+					}
 
 					@include mq(sm) {
 						transform: rotate(-45deg) scale(1.4);
 					}
+				}
+
+				.directions__item-heading {
+					color: var(--color-green);
 				}
 			}
 

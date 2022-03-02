@@ -1751,6 +1751,10 @@ a {
   width: 100%;
 }
 
+.directions__item:hover .directions__item-icon span {
+  background-color: var(--color-green);
+}
+
 .directions__item ._bottom-line {
   position: absolute;
   bottom: 0;
@@ -1796,6 +1800,11 @@ a {
   transform: rotate(-45deg) scale(2) translate(-10px,-10px);
 }
 
+.directions__item-head.mod-open .directions__item-icon span {
+  background-color: var(--color-green);
+}
+
+.directions__item-head.mod-open .directions__item-heading,
 .directions__item-head:hover .directions__item-heading {
   color: var(--color-green);
 }
@@ -2073,6 +2082,9 @@ a {
   width: 100%;
   height: 1px;
   background-color: rgba(255,255,255,.2);
+  -webkit-transition: background-color .2s;
+  -o-transition: background-color .2s;
+  transition: background-color .2s;
 }
 
 .services__item ._bototm-line {
@@ -2082,6 +2094,9 @@ a {
   width: 100%;
   height: 1px;
   background-color: rgba(255,255,255,.2);
+  -webkit-transition: background-color .2s;
+  -o-transition: background-color .2s;
+  transition: background-color .2s;
 }
 
 .services__item-link {
@@ -2139,6 +2154,11 @@ a {
 .services__item:hover .services__item-icon {
   fill: var(--color-green);
   opacity: 1;
+}
+
+.services__item:hover ._bototm-line,
+.services__item:hover ._top-line {
+  background-color: var(--color-green);
 }
 
 .services__item.no-hover:hover {
