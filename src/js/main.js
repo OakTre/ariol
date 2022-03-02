@@ -73,4 +73,36 @@ documentReady(() => {
 		})
 	})
 	}
+
+
+	const header = document.querySelector('.header');
+	const first = document.querySelector('.js-intro-block');
+
+	if (!first) return;
+
+	const btntopHeight = header.offsetHeight;
+	const firstHeight = first.offsetHeight;
+	let lastScrollTop = 0;
+
+	window.addEventListener('scroll', () => {
+		let scrollDistance = window.scrollY;
+
+		if (scrollDistance >= firstHeight) {
+			header.classList.add('is-active');
+		} else {
+			header.classList.remove('is-active');
+		}
+
+		// if (scrollDistance > lastScrollTop) {
+		// 	btntop.classList.remove('is-active');
+		// } else {
+		// 	btntop.classList.add('is-active');
+		// }
+
+		// if (scrollDistance === 0) {
+		// 	btntop.classList.remove('is-active');
+		// }
+
+		lastScrollTop = scrollDistance;
+	});
 });
