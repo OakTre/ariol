@@ -5009,7 +5009,7 @@ a {
   }
 
   html {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .header {
@@ -6506,7 +6506,7 @@ a {
 
 @media screen and (max-width:320px) {
   html {
-    font-size: 7px;
+    font-size: 9px;
   }
 
   .ceo__item {
