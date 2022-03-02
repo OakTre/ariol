@@ -1170,8 +1170,6 @@ a {
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
 }
 
 .hero__video-layer._is-img {
@@ -1199,6 +1197,11 @@ a {
   display: block;
   width: 87.2rem;
   height: 37.2rem;
+}
+
+.hero__container-img svg {
+  width: 100%;
+  height: 100%;
 }
 
 .hero__info {

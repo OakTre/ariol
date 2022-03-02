@@ -1,10 +1,14 @@
 section.hero
 	.hero__layer._is-video.lazy(data-bg="img/index/hero-bg.webp" data-bg-fallback="img/index/hero-bg.jpg")
-	video(class="hero__video-layer" src="resourses/vid.mp4" playsinline muted autoplay loop)
+	video(class="hero__video-layer" src="resourses/vid2.mp4" playsinline muted autoplay loop)
 	.site-container.hero__container
 		h1.visually-hidden
 			|	Организация бизнеса, Запуск проектов, Сопровождение
-		img(src="img/hero-layer.svg", alt="" class="hero__container-img js-hero-img")
+
+		.hero__container-img.js-hero-img
+			include ../../../img/hero-layer.svg
+
+		//- img(src="img/hero-layer.svg", alt="" class="")
 
 		//- .hero__feautures
 		//- 	span.hero__feautures-item

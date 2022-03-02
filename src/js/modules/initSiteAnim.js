@@ -220,6 +220,7 @@ export default () => {
 				gsap.fromTo(elem, {y: 0}, {delay: 0.6,duration: 1.25,y: `${y}%`,ease: "expo",overwrite: "auto"});
 			}
 
+
 			if (!projectLayers) return;
 			projectLayers.forEach((el) => {
 				ScrollTrigger.create({
