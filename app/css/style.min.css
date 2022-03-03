@@ -734,7 +734,7 @@ a {
 }
 
 .header.is-active {
-  background: rgba(0,0,0,.7);
+  background: rgba(45,46,51,.7);
   padding-top: 1rem;
   -webkit-animation: 1s totop;
   animation: 1s totop;
@@ -1184,6 +1184,19 @@ a {
   color: var(--color-white);
   overflow: hidden;
   background-color: var(--color-dark);
+}
+
+.hero::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 45;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(-69%,#2d2e33),to(transparent));
+  background: -o-linear-gradient(#2d2e33 -69%,transparent);
+  background: linear-gradient(#2d2e33 -69%,transparent);
+  content: "";
 }
 
 .hero__layer {

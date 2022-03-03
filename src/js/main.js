@@ -82,12 +82,15 @@ documentReady(() => {
 
 	const btntopHeight = header.offsetHeight;
 	const firstHeight = first.offsetHeight;
+	const headerHeight = header.offsetHeight;
 	let lastScrollTop = 0;
 
 	window.addEventListener('scroll', () => {
 		let scrollDistance = window.scrollY;
 
-		if (scrollDistance >= firstHeight) {
+		console.log(scrollDistance);
+
+		if (scrollDistance >= (firstHeight - (headerHeight*1.3))) {
 			header.classList.add('is-active');
 		} else {
 			header.classList.remove('is-active');
