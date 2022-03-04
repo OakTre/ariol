@@ -3,6 +3,8 @@
 header.header(class=jsPageClass)(class=(name === "contacts" ? "header_dark" : false))
 	.site-container.site-content-grid.header__container.js-animated-el
 		.site-content-grid__block
+			a.logo.logo-contacts(href="/index.html")
+				img(class="logo__img" src="img/logo-white.svg" alt="Логотип компании")
 			a.logo(href="/index.html")
 				- if (name === "contacts")
 					img(class="logo__img" src="img/logo-black.svg" alt="Логотип компании")

@@ -144,6 +144,10 @@
 	}
 }
 
+.logo-contacts {
+	display: none;
+}
+
 .nav {
 	&__list {
 		display: flex;
@@ -511,7 +515,7 @@
 	width: 100%;
 	padding: 2rem 40px;
 	color: var(--color-white);
-	background-color: var(--color-green);
+	background-color: var(--color-dark);
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 200ms, visibility 200ms;

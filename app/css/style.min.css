@@ -172,6 +172,10 @@
   height: 9.4rem;
 }
 
+.logo-contacts {
+  display: none;
+}
+
 .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -572,7 +576,7 @@
   width: 100%;
   padding: 2rem 40px;
   color: var(--color-white);
-  background-color: var(--color-green);
+  background-color: var(--color-dark);
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity .2s,visibility .2s;
@@ -845,24 +849,52 @@ a {
 }
 
 .header_dark {
-  position: static;
-  top: auto;
-  left: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 27;
   width: 100%;
   color: var(--color-dark);
   margin-bottom: 10rem;
 }
 
+.header_dark.is-active {
+  background: rgba(45,46,51,.7);
+  padding-top: 1rem;
+  -webkit-animation: 1s totop;
+  animation: 1s totop;
+}
+
+.header_dark.is-active .site-content-grid__block:nth-of-type(2) {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+.header_dark.is-active .logo__img {
+  height: 5.4rem;
+}
+
+.header_dark.is-active .logo {
+  display: none;
+}
+
+.header_dark.is-active .logo-contacts {
+  display: block;
+}
+
 .header_dark .header__link,
-.header_dark .nav__link {
+.header_dark .nav__link,
+.header_dark .nav__sub-menu-link {
   color: var(--color-dark);
 }
 
 .header_dark .header__link._is-current,
 .header_dark .header__link:hover,
 .header_dark .nav__link._is-current,
-.header_dark .nav__link:hover {
+.header_dark .nav__link:hover,
+.header_dark .nav__sub-menu-link._is-current,
+.header_dark .nav__sub-menu-link:hover {
   color: var(--color-green);
 }
 
@@ -3351,6 +3383,10 @@ a {
   left: 0;
 }
 
+.page-contacts {
+  padding-top: 10rem;
+}
+
 .page-contacts__breadcrumbs .breadcrumbs__item {
   color: rgba(45,46,51,.6);
 }
@@ -4060,7 +4096,7 @@ a {
 }
 
 .services-page-hero .group-projects-hero__layer {
-  background-position: 100% -250%;
+  background-position: 100% 0;
 }
 
 .services-page-hero .group-projects-hero__long-arrow {
@@ -5252,8 +5288,6 @@ a {
 
   .contact-us__long-arrow_wrap {
     margin-top: 5rem;
-    margin-left: -100%;
-    padding-left: 100%;
   }
 
   .contact-us__map {
@@ -5932,7 +5966,7 @@ a {
 
   .open-ideas {
     padding: 4rem 0 5rem;
-    margin-bottom: 0;
+    margin-bottom: 4rem;
   }
 
   .open-ideas__title {

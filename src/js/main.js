@@ -96,16 +96,6 @@ documentReady(() => {
 			header.classList.remove('is-active');
 		}
 
-		// if (scrollDistance > lastScrollTop) {
-		// 	btntop.classList.remove('is-active');
-		// } else {
-		// 	btntop.classList.add('is-active');
-		// }
-
-		// if (scrollDistance === 0) {
-		// 	btntop.classList.remove('is-active');
-		// }
-
 		lastScrollTop = scrollDistance;
 	});
 });
