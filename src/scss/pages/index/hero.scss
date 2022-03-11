@@ -112,6 +112,8 @@
 	}
 
 	&__info {
+		position: relative;
+		z-index: 50;
 		margin-top: auto;
 	}
 

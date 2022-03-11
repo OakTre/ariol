@@ -15,6 +15,7 @@ import servicesDetailStartAnim from "./modules/servicesDetailStartAnim.js";
 import projectsDetailStartAnim from "./modules/projectsDetailStartAnim.js";
 import showImg from "./modules/showImg.js";
 import initSiteAnim from "./modules/initSiteAnim.js";
+import errorPageAnim from "./modules/errorPageAnim.js";
 
 if ('scrollRestoration' in history) {
 	history.scrollRestoration = 'manual';
@@ -32,6 +33,7 @@ window.onload = function() {
 		contactsPageAnimation();
 		servicesDetailStartAnim();
 		projectsDetailStartAnim();
+		errorPageAnim();
 	}, 300);
 }
 
