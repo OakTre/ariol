@@ -234,6 +234,26 @@
 		visibility: hidden;
 
 		transition: opacity var(--main-transition), visibility var(--main-transition);
+
+		&::before {
+			position: absolute;
+			top: 2.65rem;
+			right: -1rem;
+			bottom: -1rem;
+			left: -1rem;
+			background: rgba($color: #2D2E33, $alpha: 0.7);
+			opacity: 0;
+			z-index: -1;
+			content: "";
+
+			@include mq(custom, max, 1536) {
+				top: 2.75rem;
+			}
+
+			@include mq(custom, max, 1368) {
+				top: 2.65rem;
+			}
+		}
 	}
 
 	&__sub-menu-item {

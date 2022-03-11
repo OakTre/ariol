@@ -1,5 +1,16 @@
 .page-contacts {
+	position: relative;
 	padding-top: 10rem;
+	
+	.contacts-ghost {
+		position: absolute;
+		top: 50rem;
+		left: 0;
+		height: 2rem;
+		width: 100%;
+		z-index: -1;
+	}
+	
 
 	&__breadcrumbs {
 		.breadcrumbs__item {

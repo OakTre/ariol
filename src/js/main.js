@@ -88,13 +88,22 @@ documentReady(() => {
 	window.addEventListener('scroll', () => {
 		let scrollDistance = window.scrollY;
 
-		console.log(scrollDistance);
+		if (document.querySelector(".page-contacts")) {
+			if (scrollDistance >= (firstHeight - headerHeight)) {
+				header.classList.add('is-active');
+			}
 
-		if (scrollDistance >= (firstHeight - (headerHeight*1.3))) {
-			header.classList.add('is-active');
+			if (scrollDistance < firstHeight) {
+				header.classList.remove('is-active');
+			}
 		} else {
-			header.classList.remove('is-active');
+			if (scrollDistance >= (firstHeight - (headerHeight*1.3))) {
+				header.classList.add('is-active');
+			} else {
+				header.classList.remove('is-active');
+			}
 		}
+		
 
 		lastScrollTop = scrollDistance;
 	});

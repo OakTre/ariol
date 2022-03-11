@@ -27,6 +27,29 @@ header.header(class=jsPageClass)(class=(name === "contacts" ? "header_dark" : fa
 					li.nav__item
 						a.nav__link(href="/" class=(name === "services" ? "_is-current" : false))
 							|	Услуги
+							+icon("plus2")(class="nav__link-icon" width="16" height="16")
+						ul.nav__sub-menu
+							li.nav__sub-menu-item
+								a.nav__sub-menu-link(href="/")
+									|	Внутренний аудит
+							li.nav__sub-menu-item
+								a.nav__sub-menu-link(href="/")
+									|	 Экономический анализ
+							li.nav__sub-menu-item
+								a.nav__sub-menu-link(href="/")
+									|	Ведение финансового и бухгалтерского учёта
+							li.nav__sub-menu-item
+								a.nav__sub-menu-link(href="/")
+									|	Ведение документооборота
+							li.nav__sub-menu-item
+								a.nav__sub-menu-link(href="/")
+									|	Оптимизация налоговых и финансовых потоков
+							li.nav__sub-menu-item
+								a.nav__sub-menu-link(href="/")
+									|	 Бизнес-моделирование
+							li.nav__sub-menu-item
+								a.nav__sub-menu-link(href="/")
+									|	 Автоматизация бизнес процессов и администрирование
 					li.nav__item
 						a.nav__link(href="/" class=(name === "projects" ? "_is-current" : false))
 							|	Проекты

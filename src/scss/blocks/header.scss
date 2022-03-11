@@ -19,6 +19,12 @@
 		.logo__img {
 			height: 5.4rem;
 		}
+
+		.nav__sub-menu {
+			&::before {
+				opacity: 1;
+			}
+		}
 	}
 
 	@keyframes totop {
@@ -155,6 +161,13 @@
 		.logo-contacts {
 			display: block;
 		}
+
+		.nav__link,
+		.header__link, 
+		.nav__sub-menu-link {
+			color: var(--color-white);
+		}
+		
 	}
 
 
