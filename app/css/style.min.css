@@ -2354,7 +2354,7 @@ a {
   top: 0;
   left: 0;
   z-index: -1;
-  height: 99.9rem;
+  height: 81.9rem;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -3339,7 +3339,7 @@ a {
   top: 0;
   left: 0;
   z-index: -1;
-  height: 99.9rem;
+  height: 81rem;
   width: 100%;
   background-position: 100% 379%;
   background-repeat: no-repeat;
@@ -4130,7 +4130,7 @@ a {
 }
 
 .services-page-hero .group-projects-hero__layer {
-  background-position: 100% 0;
+  background-position: center;
 }
 
 .services-page-hero .group-projects-hero__long-arrow {
