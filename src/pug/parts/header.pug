@@ -13,7 +13,7 @@ header.header(class=jsPageClass)(class=(name === "contacts" ? "header_dark" : fa
 		.site-content-grid__block.header__nav-block
 			nav.nav.header__nav-block-item
 				ul.nav__list.header__nav-list
-					li.nav__item
+					li.nav__item.js-has-submenu
 						a.nav__link(href="/" class=(name === "group" ? "_is-current" : false))
 							|	О группе
 							+icon("plus2")(class="nav__link-icon" width="16" height="16")
@@ -24,7 +24,7 @@ header.header(class=jsPageClass)(class=(name === "contacts" ? "header_dark" : fa
 							li.nav__sub-menu-item
 								a.nav__sub-menu-link(href="/")
 									|	 КАРЬЕРА
-					li.nav__item
+					li.nav__item.js-has-submenu
 						a.nav__link(href="/" class=(name === "services" ? "_is-current" : false))
 							|	Услуги
 							+icon("plus2")(class="nav__link-icon" width="16" height="16")
@@ -50,7 +50,7 @@ header.header(class=jsPageClass)(class=(name === "contacts" ? "header_dark" : fa
 							li.nav__sub-menu-item
 								a.nav__sub-menu-link(href="/")
 									|	 Автоматизация бизнес процессов и администрирование
-					li.nav__item
+					li.nav__item.js-has-submenu
 						a.nav__link(href="/" class=(name === "projects" ? "_is-current" : false))
 							|	Проекты
 							+icon("plus2")(class="nav__link-icon" width="16" height="16")

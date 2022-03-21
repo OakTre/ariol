@@ -19,12 +19,6 @@
 		.logo__img {
 			height: 5.4rem;
 		}
-
-		.nav__sub-menu {
-			&::before {
-				opacity: 1;
-			}
-		}
 	}
 
 	@keyframes totop {
@@ -163,11 +157,11 @@
 		}
 
 		.nav__link,
-		.header__link, 
+		.header__link,
 		.nav__sub-menu-link {
 			color: var(--color-white);
 		}
-		
+
 	}
 
 
@@ -189,5 +183,13 @@
 		span {
 			background-color: var(--color-dark);
 		}
+	}
+}
+
+.header_is_dark {
+	.nav__link,
+	.header__link,
+	.nav__sub-menu-link {
+		color: var(--color-white);
 	}
 }

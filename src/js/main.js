@@ -93,20 +93,57 @@ documentReady(() => {
 		if (document.querySelector(".page-contacts")) {
 			if (scrollDistance >= (firstHeight - headerHeight)) {
 				header.classList.add('is-active');
+				layer.style.top = header.offsetHeight + "px";
 			}
 
 			if (scrollDistance < firstHeight) {
 				header.classList.remove('is-active');
+				layer.style.top = 0;
 			}
 		} else {
-			if (scrollDistance >= (firstHeight - (headerHeight*1.3))) {
+			if (scrollDistance >= headerHeight) {
 				header.classList.add('is-active');
+				layer.style.top = header.offsetHeight + "px";
 			} else {
 				header.classList.remove('is-active');
+				layer.style.top = 0;
 			}
 		}
-		
+
 
 		lastScrollTop = scrollDistance;
+	});
+
+	const menuItem = Array.from(document.querySelectorAll(".js-has-submenu"));
+	const layer = document.querySelector(".nav-menu-layer");
+
+	menuItem.forEach(menu=>{
+		menu.addEventListener("mouseenter", ()=>{
+			if(header.classList.contains("is-active")) {
+				layer.style.top = header.offsetHeight + "px";
+				layer.classList.add("is-active");
+			} else {
+				layer.classList.add("is-active");
+				layer.style.top = 0;
+			}
+
+			if(header.classList.contains("header_dark")) {
+				header.classList.add("header_is_dark");
+			}
+		});
+	});
+
+	menuItem.forEach(menu=>{
+		menu.addEventListener("mouseleave", ()=>{
+			layer.classList.remove("is-active");
+
+			if(header.classList.contains("header_is_dark")) {
+				header.classList.remove("header_is_dark");
+			}
+
+			setTimeout(() => {
+				header.offsetHeight + "px"
+			}, 250);
+		});
 	});
 });

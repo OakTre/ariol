@@ -622,3 +622,21 @@
 .magrin-section180 {
 	margin-bottom: 18rem;
 }
+
+.nav-menu-layer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 25;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(45,46,51,.7);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 200ms, visibility 200ms;
+
+	&.is-active {
+		opacity: 1;
+		visibility: visible;
+	}
+}
