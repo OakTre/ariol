@@ -659,8 +659,15 @@
 }
 
 .s24-container section {
-  padding: 0;
   margin: 0 0 4rem!important;
+}
+
+.s24-container .company-numbers {
+  padding-top: 0;
+}
+
+.s24-container .next-project {
+  margin-bottom: 6rem!important;
 }
 
 *,
@@ -2806,6 +2813,17 @@ a {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  -webkit-transition: -webkit-filter .2s;
+  transition: filter .2s;
+  -o-transition: filter .2s;
+  transition: filter .2s,-webkit-filter .2s;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.head-tells__img:hover {
+  -webkit-filter: none;
+  filter: none;
 }
 
 .head-tells__arrow-long {
@@ -2853,9 +2871,20 @@ a {
   display: block;
   -o-object-fit: cover;
   object-fit: cover;
-  -webkit-transition: top .2s,opacity .2s;
-  -o-transition: top .2s,opacity .2s;
-  transition: top .2s,opacity .2s;
+  -webkit-transition: top .2s,opacity .2s,-webkit-filter .2s;
+  transition: top .2s,opacity .2s,filter .2s,-webkit-filter .2s;
+  -o-transition: top .2s,opacity .2s,filter .2s;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.our-team__img.mod-show {
+  z-index: 125;
+}
+
+.our-team__img:hover {
+  -webkit-filter: none;
+  filter: none;
 }
 
 .our-team__img:not(.mod-show) {
@@ -3090,7 +3119,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 5.2rem;
+  margin-bottom: 15.2rem;
 }
 
 .open-ideas ::-moz-selection {
@@ -6400,6 +6429,8 @@ a {
 
   .projects-spheres_type2 ul li p {
     margin-bottom: 0!important;
+    font-size: 2.4rem!important;
+    line-height: 3rem!important;
   }
 
   .projects-spheres_images ul li:hover .projects-spheres_images-text-wrapper span {

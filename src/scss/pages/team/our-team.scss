@@ -48,7 +48,17 @@
 		height: 60.5rem;
 		display: block;
 		object-fit: cover;
-		transition: top 200ms, opacity 200ms;
+		transition: top 200ms, opacity 200ms, filter 200ms;
+		filter: grayscale(100%);
+
+
+		&.mod-show {
+			z-index: 125;
+		}
+
+		&:hover {
+			filter: none;
+		}
 
 		&:not(.mod-show) {
 			opacity: 0;

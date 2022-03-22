@@ -185,6 +185,12 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		transition: filter 200ms;
+		filter: grayscale(100%);
+
+		&:hover {
+			filter: none;
+		}
 	}
 
 	&__arrow-long {
