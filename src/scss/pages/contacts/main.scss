@@ -1,7 +1,14 @@
+.page-contacts-page {
+	padding-top: 20rem;
+
+	@include mq(sm) {
+		padding-top: 10rem;
+	}
+}
+
 .page-contacts {
 	position: relative;
-	padding-top: 10rem;
-	
+
 	.contacts-ghost {
 		position: absolute;
 		top: 50rem;
@@ -10,7 +17,7 @@
 		width: 100%;
 		z-index: -1;
 	}
-	
+
 
 	&__breadcrumbs {
 		.breadcrumbs__item {

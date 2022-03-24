@@ -3478,9 +3478,12 @@ a {
   left: 0;
 }
 
+.page-contacts-page {
+  padding-top: 20rem;
+}
+
 .page-contacts {
   position: relative;
-  padding-top: 10rem;
 }
 
 .page-contacts .contacts-ghost {
@@ -4517,6 +4520,10 @@ a {
 }
 
 @media screen and (max-width:1199px) {
+  .header_dark.is-active .button-burger span {
+    background-color: var(--color-white);
+  }
+
   .hero__container {
     padding-top: 25rem;
   }
@@ -6202,6 +6209,10 @@ a {
     width: 45%;
     max-width: 45%;
     top: -1rem;
+  }
+
+  .page-contacts-page {
+    padding-top: 10rem;
   }
 
   .page-contacts__title {

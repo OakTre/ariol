@@ -184,6 +184,17 @@
 			background-color: var(--color-dark);
 		}
 	}
+
+	@include mq(lg) {
+
+		&.is-active {
+			.button-burger {
+				span {
+					background-color: var(--color-white);
+				}
+			}
+		}
+	}
 }
 
 .header_is_dark {
