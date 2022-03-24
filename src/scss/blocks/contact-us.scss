@@ -188,6 +188,7 @@
 	}
 
 	&__map {
+		position: relative;
 		width: 100%;
 		height: 61rem;
 		background-color: var(--color-dark);
@@ -197,5 +198,13 @@
 			margin-top: 5rem;
 			height: 61rem;
 		}
+	}
+
+	&__map-img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 }
