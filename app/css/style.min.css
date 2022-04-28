@@ -3123,7 +3123,6 @@ a {
   font-size: 2rem;
   line-height: 2.5rem;
   margin-bottom: 1rem;
-  max-width: 80%;
 }
 
 .our-team-accordion__body p:last-of-type {
@@ -4435,6 +4434,27 @@ a {
   .hero__video-layer {
     min-height: 100%;
     height: auto;
+  }
+}
+
+@media screen and (min-width:1920px) {
+  .our-team-accordion__body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[8];
+    grid-template-columns: repeat(8,1fr);
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+  }
+
+  .our-team-accordion__body .our-team__img-mob-wrapper:nth-child(1) {
+    display: none;
+  }
+
+  .our-team-accordion__body .our-team__img-mob-wrapper:nth-child(2) {
+    -ms-grid-column-span: 4;
+    grid-column: 4 span;
   }
 }
 
