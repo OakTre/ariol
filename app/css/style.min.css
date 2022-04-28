@@ -1794,7 +1794,7 @@ a {
   padding-bottom: 3rem;
 }
 
-.company-numbers__item-number>span {
+.company-numbers__item-number > span {
   position: relative;
   display: inline-block;
   padding-right: 2rem;
@@ -3123,6 +3123,7 @@ a {
   font-size: 2rem;
   line-height: 2.5rem;
   margin-bottom: 1rem;
+  max-width: 80%;
 }
 
 .our-team-accordion__body p:last-of-type {
@@ -4008,7 +4009,7 @@ a {
   align-self: center;
 }
 
-.projects-spheres__list ul li>p {
+.projects-spheres__list ul li > p {
   font-size: 4.5rem;
   line-height: 4.5rem;
   text-transform: uppercase;
@@ -5596,7 +5597,7 @@ a {
     margin-right: 1.3rem;
   }
 
-  .company-numbers__item-number>span {
+  .company-numbers__item-number > span {
     padding-right: 1rem;
   }
 
@@ -6098,6 +6099,7 @@ a {
   .our-team-accordion__body p {
     font-size: 1.2rem;
     line-height: 1.7rem;
+    max-width: 100%;
   }
 
   .open-ideas {
@@ -6433,7 +6435,7 @@ a {
     align-self: stretch;
   }
 
-  .projects-spheres__list ul li>p {
+  .projects-spheres__list ul li > p {
     font-size: 3.5rem!important;
     line-height: 3.5rem!important;
     margin-bottom: 2.4rem!important;
@@ -6767,4 +6769,3 @@ a {
     display: none;
   }
 }
-/*# sourceMappingURL=style.min.css.map */

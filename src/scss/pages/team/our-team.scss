@@ -344,10 +344,12 @@
 			font-size: 2rem;
 			line-height: 2.5rem;
 			margin-bottom: 1rem;
+			max-width: 80%;
 
 			@include mq(sm) {
 				font-size: 1.2rem;
 				line-height: 1.7rem;
+				max-width: 100%;
 			}
 
 			&:last-of-type {
