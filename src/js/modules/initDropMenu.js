@@ -8,10 +8,36 @@
 // .js-drop-menu-btn-content-hide.mod-show - текст кнопки, когда меню скрыто
 // .js-drop-menu-btn-content-open - текст кнопки, когда меню открыто
 
+import gsap from "gsap";
+import {
+	ScrollToPlugin
+} from "gsap/dist/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
+
 export default () => {
 	const linksTitleElements = Array.from(document.querySelectorAll('.js-drop-menu-btn'));
 	const menuContainerElements = Array.from(document.querySelectorAll('.js-drop-menu-container'));
 	const menuElements = Array.from(document.querySelectorAll('.js-drop-menu'));
+	const header = document.querySelector('.header')
+	const OFFSET = 160;
+	const DURATION = 1;
+
+	const scrollToAnimation = (elmnt) => {
+		if (elmnt) {
+			gsap.to(window, {
+				duration: DURATION,
+				ease: "power2.out",
+				scrollTo: {
+					y: elmnt,
+					autoKill: false,
+					offsetY: header ? header.offsetHeight * 1.3 : OFFSET,
+				},
+			});
+		} else {
+			console.error("No element to scroll");
+		}
+	};
 
 	const onClose = (btnElem, menuContainerElem, contentBtnHide, contentBtnOpen) => {
 		btnElem.classList.remove('mod-open');
@@ -21,7 +47,7 @@ export default () => {
 		if (contentBtnHide && contentBtnOpen) {
 			contentBtnHide.classList.add('mod-show');
 			contentBtnOpen.classList.remove('mod-show');
-		}
+		};
 	}
 
 	const onOpen = (btnElem, menuContainerElem, menuElem, contentBtnHide, contentBtnOpen) => {
@@ -29,6 +55,10 @@ export default () => {
 		menuContainerElem.classList.add('mod-open');
 		const heightContent = menuElem.clientHeight;
 		menuContainerElem.style.maxHeight = `${heightContent}px`;
+
+		setTimeout(()=>{
+			scrollToAnimation(btnElem);
+		}, 250);
 
 		if (contentBtnHide && contentBtnOpen) {
 			contentBtnHide.classList.remove('mod-show');
