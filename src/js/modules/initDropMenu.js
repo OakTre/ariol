@@ -58,7 +58,7 @@ export default () => {
 
 		setTimeout(()=>{
 			scrollToAnimation(btnElem);
-		}, 250);
+		}, 400);
 
 		if (contentBtnHide && contentBtnOpen) {
 			contentBtnHide.classList.remove('mod-show');
