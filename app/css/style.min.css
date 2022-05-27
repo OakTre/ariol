@@ -5259,6 +5259,12 @@ a {
     margin-top: 2.4rem;
   }
 
+  .drop-menu-container {
+    -webkit-transition: max-height .4s;
+    -o-transition: max-height .4s;
+    transition: max-height .4s;
+  }
+
   .breadcrumbs {
     display: none;
   }

@@ -394,6 +394,10 @@
 	overflow: hidden;
 	transition: max-height var(--main-transition);
 	max-height: 0;
+
+	@include mq(sm) {
+		transition: max-height 400ms;
+	}
 }
 
 
