@@ -56,9 +56,9 @@ export default () => {
 		const heightContent = menuElem.clientHeight;
 		menuContainerElem.style.maxHeight = `${heightContent}px`;
 
-		setTimeout(()=>{
-			scrollToAnimation(btnElem);
-		}, 400);
+		// setTimeout(()=>{
+		// 	scrollToAnimation(btnElem);
+		// }, 400);
 
 		if (contentBtnHide && contentBtnOpen) {
 			contentBtnHide.classList.remove('mod-show');
@@ -78,11 +78,11 @@ export default () => {
 			if (btn.className.includes('mod-open')) {
 				onClose(btn, menuContainerElements[i], contentBtnHide, contentBtnOpen);
 			} else {
-				if (!btn.className.includes('js-drop-menu-leave-open')) {
-					linksTitleElements.map((elem, idx) => {
-						onClose(elem, menuContainerElements[idx], contentBtnHide, contentBtnOpen);
-					});
-				}
+				// if (!btn.className.includes('js-drop-menu-leave-open')) {
+				// 	linksTitleElements.map((elem, idx) => {
+				// 		onClose(elem, menuContainerElements[idx], contentBtnHide, contentBtnOpen);
+				// 	});
+				// }
 				onOpen(btn, menuContainerElements[i], menuElements[i], contentBtnHide, contentBtnOpen);
 			}
 		}
