@@ -21,8 +21,21 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 
-		@include mq(sm) {
+		img {
+			width: 100%;
 			height: 100%;
+			object-fit: cover;
+		}
+
+		@include mq(md) {
+			position: static;
+			top: auto;
+			left: auto;
+			height: auto;
+
+			img {
+				height: auto;
+			}
 		}
 	}
 
@@ -134,11 +147,7 @@
 		}
 	}
 
-	@include mq(sm) {
-		height: 27rem;
-	}
-
-	@include mq(custom, max, 360) {
-		height: 21rem;
+	@include mq(md) {
+		height: auto;
 	}
 }

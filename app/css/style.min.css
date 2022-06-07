@@ -1665,6 +1665,13 @@ a {
   background-repeat: no-repeat;
 }
 
+.ceo__layer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .ceo__container {
   position: relative;
   height: 100%;
@@ -4798,6 +4805,17 @@ a {
     line-height: 5rem;
   }
 
+  .ceo__layer {
+    position: static;
+    top: auto;
+    left: auto;
+    height: auto;
+  }
+
+  .ceo__layer img {
+    height: auto;
+  }
+
   .ceo__item:nth-child(1) {
     left: 2%;
   }
@@ -4820,6 +4838,10 @@ a {
   .ceo__item:nth-child(5) {
     top: 75%;
     right: 5%;
+  }
+
+  .ceo {
+    height: auto;
   }
 
   .company-numbers__heading-text {
@@ -5568,10 +5590,6 @@ a {
     margin-bottom: 2.4rem;
   }
 
-  .ceo__layer {
-    height: 100%;
-  }
-
   .ceo__item-heading {
     font-size: 1rem;
     line-height: 1rem;
@@ -5599,10 +5617,6 @@ a {
   .ceo__item:nth-child(5) {
     top: 80%;
     right: 1%;
-  }
-
-  .ceo {
-    height: 27rem;
   }
 
   .company-numbers.mod-with-section-name .section-name {
@@ -6760,10 +6774,6 @@ a {
 
   .hero {
     height: 61rem;
-  }
-
-  .ceo {
-    height: 21rem;
   }
 
   .about-group-hero__container {
