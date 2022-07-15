@@ -5,32 +5,30 @@ section.our-team
 		span.section-name._color-white
 			| Наша команда
 
-		.our-team__container.site-content-grid.js-show-img-container
-			.site-content-grid__block
-				for item,index in team_arr
-					- let isFirst = index == 0 ? "mod-show" : ""
-					img(src=`img/teset.jpg`, alt=item.name data-item=index class=`our-team__img js-imgs`)
-
-			.site-content-grid__block
-				ul.our-team__list.our-team-accordion
-					for item, index in team_arr
-						li.our-team__item.our-team-accordion__item
-							span._top-line.js-direction-lines
-							span._bottom-line.js-direction-lines
+		.our-team__container.js-show-img-container
+			ul.our-team__list.our-team-accordion
+				for item, index in team_arr
+					li.our-team__item.our-team-accordion__item.site-content-grid
+						.site-content-grid__block
+							img(src="img/team/team0.jpg" alt="" class="our-team__img js-imgs")
+						.site-content-grid__block
 							button.button-rest.our-team-accordion__head.js-drop-menu-btn.js-btn-show-img(data-show=index)
-								._block
-									span.our-team-accordion__head-name=item.name
-								._block
-									span.our-team-accordion__head-position=item.position
-								._block
-									span.our-team-accordion__burger
-										span
-										span
+								span._top-line.js-direction-lines
+								span._bottom-line.js-direction-lines
+								._grid-wrapper
+									._block
+										span.our-team-accordion__head-name=item.name
+									._block
+										span.our-team-accordion__head-position=item.position
+									._block
+										span.our-team-accordion__burger
+											span
+											span
 							.drop-menu-container.js-drop-menu-container
 								.our-team-accordion__body.drop-menu.js-drop-menu
 									.our-team__img-mob-wrapper
 										span.our-team-accordion__head-position.mod-mobile=item.position
-										img(src="img/team/team0.jpg", alt="" class="our-team__img mod-mobile")
+										img(src="img/team/team0.jpg" alt="" class="our-team__img mod-mobile")
 									.our-team__img-mob-wrapper
 										h3
 											|	опыт и образование
@@ -43,8 +41,8 @@ section.our-team
 										p
 											| С 2020 года назначен директором компании “Сетка Плюс”, компании по производству металлических сеток и композитной арматуры. С 2020 года является заместителем генерального директора “БГ АРИОЛ”.
 
-				.our-team__links
-					+button(null, "наши вакансии", "button_transparent")
+			.our-team__links
+				+button(null, "наши вакансии", "button_transparent")
 
 
 

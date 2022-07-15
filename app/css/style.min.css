@@ -2883,13 +2883,10 @@ a {
   position: relative;
 }
 
-.our-team__container {
-  padding-top: 5rem;
-  border-top: 1px solid rgba(255,255,255,.2);
-}
-
 .our-team__img {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 40rem;
   height: 60.5rem;
   display: block;
@@ -2950,12 +2947,12 @@ a {
   overflow: hidden;
 }
 
-.our-team-accordion__item:nth-child(1) .our-team-accordion__head {
-  padding-top: 0;
+.our-team-accordion__item .site-content-grid__block {
+  overflow: hidden;
 }
 
-.our-team-accordion__item:nth-child(1) ._top-line {
-  display: none;
+.our-team-accordion__item:nth-child(1) .our-team-accordion__head {
+  border-top: 1px solid rgba(255,255,255,.2);
 }
 
 .our-team-accordion__item ._bottom-line {
@@ -2983,23 +2980,14 @@ a {
   transition: opacity var(--main-transition);
 }
 
-.our-team-accordion__item:hover {
-  border-color: var(--color-green);
-}
-
-.our-team-accordion__item:hover .our-team-accordion__head-name {
-  color: var(--color-green);
-}
-
-.our-team-accordion__item:hover ._top-line {
-  opacity: 1;
-}
-
-.our-team-accordion__item:hover ._bottom-line {
-  background-color: var(--color-green);
-}
-
 .our-team-accordion__head {
+  width: 100%;
+  cursor: pointer;
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+.our-team-accordion__head ._grid-wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[8];
@@ -3010,9 +2998,6 @@ a {
   -webkit-column-gap: 20px;
   -moz-column-gap: 20px;
   column-gap: 20px;
-  width: 100%;
-  cursor: pointer;
-  padding: 5rem 0;
 }
 
 .our-team-accordion__head.mod-open .our-team-accordion__burger {
@@ -3045,6 +3030,22 @@ a {
   grid-column: 1 span;
   -ms-grid-column-align: end;
   justify-self: end;
+}
+
+.our-team-accordion__head:hover {
+  border-color: var(--color-green);
+}
+
+.our-team-accordion__head:hover .our-team-accordion__head-name {
+  color: var(--color-green);
+}
+
+.our-team-accordion__head:hover ._top-line {
+  opacity: 1;
+}
+
+.our-team-accordion__head:hover ._bottom-line {
+  background-color: var(--color-green);
 }
 
 .our-team-accordion__head-name {
@@ -6061,10 +6062,6 @@ a {
     padding: 4rem 0 7rem;
   }
 
-  .our-team__container {
-    padding-top: 2rem;
-  }
-
   .our-team__img-mob-wrapper:nth-child(1) {
     -ms-flex-negative: 0;
     flex-shrink: 0;
@@ -6094,6 +6091,10 @@ a {
   }
 
   .our-team-accordion__head {
+    padding: 0;
+  }
+
+  .our-team-accordion__head ._grid-wrapper {
     -ms-grid-columns: (1fr)[6];
     grid-template-columns: repeat(6,1fr);
     padding: 2rem 0;

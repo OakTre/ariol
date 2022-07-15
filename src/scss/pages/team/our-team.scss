@@ -33,17 +33,12 @@
 		}
 	}
 
-	&__container {
-		padding-top: 5rem;
-		border-top: 1px solid rgba($color: #fff, $alpha: 0.2);
-
-		@include mq(sm) {
-			padding-top: 2rem;
-		}
-	}
+	&__container {}
 
 	&__img {
 		position: absolute;
+		top: 0;
+		left: 0;
 		width: 40rem;
 		height: 60.5rem;
 		display: block;
@@ -151,13 +146,14 @@
 		transition: border-color var(--main-transition);
 		overflow: hidden;
 
-		&:nth-child(1) {
-			.our-team-accordion__head {
-				padding-top: 0;
-			}
+		.site-content-grid__block {
+			overflow: hidden;
+		}
 
-			._top-line {
-				display: none;
+		&:nth-child(1) {
+
+			.our-team-accordion__head {
+				border-top: 1px solid rgba(255,255,255,.2);
 			}
 		}
 
@@ -181,36 +177,30 @@
 			opacity: 0;
 			transition: opacity var(--main-transition);
 		}
-
-		&:hover {
-			border-color: var(--color-green);
-
-			.our-team-accordion__head-name {
-				color: var(--color-green);
-			}
-
-			._top-line {
-				opacity: 1;
-			}
-
-			._bottom-line {
-				background-color:var(--color-green)
-			}
-		}
 	}
 
 	&__head {
-		display: grid;
-		grid-template-columns: repeat(8, 1fr);
-		align-items: center;
-		column-gap: 20px;
 		width: 100%;
 		cursor: pointer;
 		padding: 5rem 0;
+		overflow: hidden;
+		padding-top: 5rem;
+		// border-top: 1px solid rgba($color: #fff, $alpha: 0.2);
 
 		@include mq(sm) {
-			grid-template-columns: repeat(6, 1fr);
-			padding: 2rem 0;
+			padding: 0;
+		}
+
+		._grid-wrapper {
+			display: grid;
+			grid-template-columns: repeat(8, 1fr);
+			align-items: center;
+			column-gap: 20px;
+
+			@include mq(sm) {
+				grid-template-columns: repeat(6, 1fr);
+				padding: 2rem 0;
+			}
 		}
 
 		&.mod-open {
@@ -233,6 +223,7 @@
 					grid-column: 5 span;
 				}
 			}
+
 			&:nth-child(2) {
 				grid-column: 3 span;
 
@@ -240,9 +231,26 @@
 					display: none;
 				}
 			}
+
 			&:nth-child(3) {
 				grid-column: 1 span;
 				justify-self: end;
+			}
+		}
+
+		&:hover {
+			border-color: var(--color-green);
+
+			.our-team-accordion__head-name {
+				color: var(--color-green);
+			}
+
+			._top-line {
+				opacity: 1;
+			}
+
+			._bottom-line {
+				background-color: var(--color-green)
 			}
 		}
 
@@ -322,6 +330,7 @@
 				&:nth-child(1) {
 					display: none;
 				}
+
 				&:nth-child(2) {
 					grid-column: 4 span;
 				}
